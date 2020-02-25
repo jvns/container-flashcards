@@ -1,10 +1,10 @@
 <template>
     <div id="app">
-        <h1 class="text-3xl"> sql exercises </h1>
+        <h1 class="text-3xl my-8"> container flashcards </h1>
         <div class="w-3/5" style="margin: 0 auto;">
         </div>
 
-        <Flashcard> </Flashcard>
+        <Flashcard front="is a container a kind of virtual machine?" back="no."> </Flashcard>
         <div class="mx-8">
             hi
         </div>
