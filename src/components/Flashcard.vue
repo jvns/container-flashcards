@@ -4,8 +4,8 @@
         <div v-if="!flipped" v-on:click="flipped = !flipped" key="front">
             <img v-bind:src="'/cards/' + front" class="w-full">
         </div>
-        <div v-else v-on:click="flipped = !flipped" key="back" class="bg-pink-200">
-            <img v-bind:src="'/cards/' + back" class="w-full">
+        <div v-else v-on:click="flipped = !flipped" key="back" class="bg-blue-800">
+            <img v-bind:src="'/cards/' + back" class="w-full" style="filter: invert(97%) sepia(57%) saturate(539%) hue-rotate(289deg) brightness(104%) contrast(107%);">
         </div>
         </transition>
     </div>

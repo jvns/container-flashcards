@@ -10,8 +10,8 @@
                     <Flashcard v-if="index == current_card" v-bind:front="card.front" v-bind:back="card.back"></Flashcard>
                 </div>
                 <div class="flex flex-row justify-center mt-8">
-                    <button class="bg-green-600 text-xl text-white rounded px-6 py-3 mx-4" @click="knew">I knew that!</button>
-                    <button class="bg-purple-600 text-xl text-white rounded px-6 py-3" @click="learned">I learned something!</button>
+                    <button class="bg-pink-600 text-xl text-white rounded px-6 py-3 mx-4" @click="knew">I knew that!</button>
+                    <button class="bg-blue-600 text-xl text-white rounded px-6 py-3" @click="learned">I learned something!</button>
                 </div>
             </div>
 
@@ -91,6 +91,18 @@ export default class Main extends Vue {
 
     async created() {
         this.cards = [
+            {front: "image-files.svg", back: "image-files-back.svg"},
+            {front: "image-files.svg", back: "image-files-back.svg"},
+            {front: "image-files.svg", back: "image-files-back.svg"},
+            {front: "image-files.svg", back: "image-files-back.svg"},
+            {front: "image-files.svg", back: "image-files-back.svg"},
+            {front: "image-files.svg", back: "image-files-back.svg"},
+            {front: "image-files.svg", back: "image-files-back.svg"},
+            {front: "image-files.svg", back: "image-files-back.svg"},
+            {front: "image-files.svg", back: "image-files-back.svg"},
+            {front: "image-files.svg", back: "image-files-back.svg"},
+            {front: "image-files.svg", back: "image-files-back.svg"},
+            {front: "image-files.svg", back: "image-files-back.svg"},
             {front: "image-files.svg", back: "image-files-back.svg"},
         ];
     }
