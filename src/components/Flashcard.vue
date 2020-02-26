@@ -1,5 +1,5 @@
 <template>
-    <div class="scene py-4">
+    <div class="scene py-4 px-4">
         <transition name="card-flip" mode="out-in">
         <div v-if="!flipped" v-on:click="flipped = !flipped" class="card text-center text-blue-800 bg-white border rounded-lg p-8" key="front">
             <p v-html="front" class="text-3xl">
