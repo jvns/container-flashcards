@@ -35,7 +35,7 @@ export default class Flashcard extends Vue {
     perspective: 1300px;
 }
 .card {
-    width: 450px;
+    max-width: 600px;
     height: 300px;
     backface-visibility: hidden;
 }

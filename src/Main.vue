@@ -15,7 +15,7 @@
                 </div>
             </div>
 
-            <div v-if="done" style="width: 450px; height: 300px;" class="text-gray-100 bg-gray-700">
+            <div v-if="done" style="width: 600px; height: 300px;" class="text-gray-100 bg-gray-700">
                 <p class="text-4xl px-8 py-8 text-center">
                 that's all!
                 </p>
@@ -91,7 +91,32 @@ export default class Main extends Vue {
         this.cards = [
             {front: "is a container a virtual machine?", back: "nope!"},
             {front: "can you limit a container's CPU/memory?", back: "yes!"},
-            {front: "where do you download container images from?", back: "<p>a container registry!</p><p class='text-2xl'>there are both public and private container registries.</p>"},
+            {
+                front: "where do you download container images from?", 
+                back: `
+                <p>a container registry!</p>
+                <p class='text-2xl'>there are both public and private container registries.</p>`
+            },
+            {
+                front: "where do you download container images from?", 
+                back: `
+                <p>a container registry!</p>
+                <p class='text-2xl'>there are both public and private container registries.</p>`
+            }, {
+                front: `<p>what files does a container image need to have?</p>
+                <ul class="list-disc text-2xl text-left pt-4">
+                <li>just the program's binary!</li>
+                <li>your program + a base operating system</li>
+                <li>your program + a base OS + the Linux kernel</li>
+                </ul>
+                `, 
+                back: `
+                <p>your program + <br>a base operating system!</p>
+                <p class='text-2xl mt-4'>all the containers on a computer share the same Linux kernel.</p>
+                `,
+
+            },
+
         ];
     }
 }
