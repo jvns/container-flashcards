@@ -7,7 +7,7 @@
         <div class="flex flex-row justify-center">
             <div v-if="!done" >
                 <div v-for="(card, index) in cards">
-                    <Flashcard v-if="index == current_card" v-bind:front="card.front" v-bind:back="card.back"></Flashcard>
+                    <Flashcard v-if="index == current_card" v-bind:name="card"></Flashcard>
                 </div>
                 <div class="flex flex-row justify-center mt-8">
                     <button class="bg-pink-600 text-xl text-white rounded px-6 py-3 mx-4" @click="knew">I knew that!</button>
@@ -28,16 +28,16 @@
             <div class="lg:w-1/4 w-full mb-8">
                 <h1 class="text-3xl text-center">Things you learned </h1>
                 <div class="flex flex-row justify-center flex-wrap px-8">
-                    <div v-for="(card, index) in cards">
-                        <Flashcard v-if="learned_list[index]" v-bind:front="card.front" v-bind:back="card.back"></Flashcard>
+                    <div v-for="(name, index) in cards">
+                        <Flashcard v-if="learned_list[index]" v-bind:name="name"></Flashcard>
                     </div>
                 </div>
             </div>
             <div class="lg:w-1/4 w-full">
                 <h1 class="text-3xl text-center">Things you knew </h1>
                 <div class="flex flex-row justify-center flex-wrap px-8">
-                    <div v-for="(card, index) in cards">
-                        <Flashcard v-if="knew_list[index]" v-bind:front="card.front" v-bind:back="card.back"></Flashcard>
+                    <div v-for="(name, index) in cards">
+                        <Flashcard v-if="knew_list[index]" v-bind:name="name"></Flashcard>
                     </div>
                 </div>
             </div>
@@ -91,19 +91,9 @@ export default class Main extends Vue {
 
     async created() {
         this.cards = [
-            {front: "image-files.svg", back: "image-files-back.svg"},
-            {front: "image-files.svg", back: "image-files-back.svg"},
-            {front: "image-files.svg", back: "image-files-back.svg"},
-            {front: "image-files.svg", back: "image-files-back.svg"},
-            {front: "image-files.svg", back: "image-files-back.svg"},
-            {front: "image-files.svg", back: "image-files-back.svg"},
-            {front: "image-files.svg", back: "image-files-back.svg"},
-            {front: "image-files.svg", back: "image-files-back.svg"},
-            {front: "image-files.svg", back: "image-files-back.svg"},
-            {front: "image-files.svg", back: "image-files-back.svg"},
-            {front: "image-files.svg", back: "image-files-back.svg"},
-            {front: "image-files.svg", back: "image-files-back.svg"},
-            {front: "image-files.svg", back: "image-files-back.svg"},
+            "what-is-image",
+            "image-files",
+            "access-files",
         ];
     }
 }

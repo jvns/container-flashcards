@@ -1,11 +1,11 @@
 <template>
-    <div class="scene py-4">
+    <div class="scene py-4 rounded-lg border border-gray-200">
         <transition name="card-flip" mode="out-in">
         <div v-if="!flipped" v-on:click="flipped = !flipped" key="front">
-            <img v-bind:src="'/cards/' + front" class="w-full">
+            <img v-bind:src="'/cards/' + name + '.svg'" class="w-full">
         </div>
         <div v-else v-on:click="flipped = !flipped" key="back" class="bg-blue-800">
-            <img v-bind:src="'/cards/' + back" class="w-full" style="filter: invert(97%) sepia(57%) saturate(539%) hue-rotate(289deg) brightness(104%) contrast(107%);">
+            <img v-bind:src="'/cards/' + name + '-back.svg'" class="w-full" style="filter: invert(97%) sepia(57%) saturate(539%) hue-rotate(289deg) brightness(104%) contrast(107%);">
         </div>
         </transition>
     </div>
@@ -16,14 +16,8 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class Flashcard extends Vue {
-    @Prop() private front!: string;
-    @Prop() private back!: string;
-    @Prop() private width: string;
+    @Prop() private name!: string;
     private flipped: boolean = false;
-
-    async created() {
-        this.flipped = false;
-    }
 }
 </script>
 
