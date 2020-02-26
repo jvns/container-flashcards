@@ -91,7 +91,9 @@ export default class Main extends Vue {
 
     async created() {
         this.cards = [
+            "storage",
             "vm",
+            "memoy",
             "what-is-image",
             "image-files",
             "access-files",
