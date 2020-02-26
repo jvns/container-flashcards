@@ -1,13 +1,11 @@
 <template>
-    <div class="scene py-4 px-4">
+    <div class="scene py-4">
         <transition name="card-flip" mode="out-in">
-        <div v-if="!flipped" v-on:click="flipped = !flipped" class="card text-center text-blue-800 bg-white border rounded-lg p-8" key="front">
-            <p v-html="front" class="text-3xl">
-            </p>
+        <div v-if="!flipped" v-on:click="flipped = !flipped" key="front">
+            <img src="/cards/template.svg" class="w-full">
         </div>
-        <div v-else v-on:click="flipped = !flipped" class="card text-center bg-blue-800 text-blue-100 border rounded-lg p-8" key="back">
-            <p v-html="back" class="text-3xl">
-            </p>
+        <div v-else v-on:click="flipped = !flipped" key="back" class="bg-pink-200">
+            <img src="/cards/back.svg"  class="w-full">
         </div>
         </transition>
     </div>
@@ -20,6 +18,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 export default class Flashcard extends Vue {
     @Prop() private front!: string;
     @Prop() private back!: string;
+    @Prop() private width: string;
     private flipped: boolean = false;
 
     async created() {
@@ -35,8 +34,6 @@ export default class Flashcard extends Vue {
     perspective: 1300px;
 }
 .card {
-    max-width: 600px;
-    height: 300px;
     backface-visibility: hidden;
 }
 

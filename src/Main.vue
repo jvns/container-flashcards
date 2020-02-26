@@ -23,17 +23,19 @@
         </div>
 
         <div class="flex flex-row mt-8 flex-wrap">
-            <div class="lg:w-1/2 w-full mb-8">
+            <div class="lg:w-1/4 w-full mb-8">
+            </div>
+            <div class="lg:w-1/4 w-full mb-8">
                 <h1 class="text-3xl text-center">Things you learned </h1>
-                <div class="flex flex-row justify-center flex-wrap">
+                <div class="flex flex-row justify-center flex-wrap px-8">
                     <div v-for="(card, index) in cards">
                         <Flashcard v-if="learned_list[index]" v-bind:front="card.front" v-bind:back="card.back"></Flashcard>
                     </div>
                 </div>
             </div>
-            <div class="lg:w-1/2 w-full">
+            <div class="lg:w-1/4 w-full">
                 <h1 class="text-3xl text-center">Things you knew </h1>
-                <div class="flex flex-row justify-center flex-wrap">
+                <div class="flex flex-row justify-center flex-wrap px-8">
                     <div v-for="(card, index) in cards">
                         <Flashcard v-if="knew_list[index]" v-bind:front="card.front" v-bind:back="card.back"></Flashcard>
                     </div>
