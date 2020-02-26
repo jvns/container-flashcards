@@ -15,7 +15,7 @@
                 </div>
             </div>
 
-            <div v-if="done" style="width: 600px; height: 300px;" class="text-gray-100 bg-gray-700">
+            <div v-if="done" style="width: 600px; height: 300px;" class="text-gray-100 bg-gray-700 border-gray-200 border rounded-lg">
                 <p class="text-4xl px-8 py-8 text-center">
                 that's all!
                 </p>
@@ -91,6 +91,7 @@ export default class Main extends Vue {
 
     async created() {
         this.cards = [
+            "vm",
             "what-is-image",
             "image-files",
             "access-files",
