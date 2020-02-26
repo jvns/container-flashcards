@@ -2,10 +2,10 @@
     <div class="scene py-4">
         <transition name="card-flip" mode="out-in">
         <div v-if="!flipped" v-on:click="flipped = !flipped" key="front">
-            <img src="/cards/template.svg" class="w-full">
+            <img v-bind:src="'/cards/' + front" class="w-full">
         </div>
         <div v-else v-on:click="flipped = !flipped" key="back" class="bg-pink-200">
-            <img src="/cards/back.svg"  class="w-full">
+            <img v-bind:src="'/cards/' + back" class="w-full">
         </div>
         </transition>
     </div>

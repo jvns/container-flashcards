@@ -91,34 +91,7 @@ export default class Main extends Vue {
 
     async created() {
         this.cards = [
-            {front: "is a container a virtual machine?", back: "nope!"},
-            {front: "can you limit a container's CPU/memory?", back: "yes!"},
-            {
-                front: "where do you download container images from?", 
-                back: `
-                <p>a container registry!</p>
-                <p class='text-2xl'>there are both public and private container registries.</p>`
-            },
-            {
-                front: "where do you download container images from?", 
-                back: `
-                <p>a container registry!</p>
-                <p class='text-2xl'>there are both public and private container registries.</p>`
-            }, {
-                front: `<p>what files does a container image need to have?</p>
-                <ul class="list-disc text-2xl text-left pt-4">
-                <li>just the program's binary!</li>
-                <li>your program + a base operating system</li>
-                <li>your program + a base OS + the Linux kernel</li>
-                </ul>
-                `, 
-                back: `
-                <p>your program + <br>a base operating system!</p>
-                <p class='text-2xl mt-4'>all the containers on a computer share the same Linux kernel.</p>
-                `,
-
-            },
-
+            {front: "image-files.svg", back: "image-files-back.svg"},
         ];
     }
 }
