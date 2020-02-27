@@ -59,6 +59,7 @@ import Flashcard from './components/Flashcard.vue';
 export default class Main extends Vue {
     private cards = [];
     private done: boolean = false;
+    //@ts-ignore
     private current_card: int = 0;
     private knew_list = {};
     private learned_list = {};
@@ -69,6 +70,7 @@ export default class Main extends Vue {
     }
 
     knew(): any {
+        //@ts-ignore
         this.knew_list[this.current_card] = true;
 
         console.log('knew', this.knew_list);
@@ -76,6 +78,7 @@ export default class Main extends Vue {
     }
 
     learned(): any {
+        // @ts-ignore
         this.learned_list[this.current_card] = true;
         console.log('learned', this.learned_list);
         this.next();
@@ -90,12 +93,19 @@ export default class Main extends Vue {
     }
 
     async created() {
+        //@ts-ignore
         this.cards = [
+        //@ts-ignore
             "storage",
+        //@ts-ignore
             "vm",
+        //@ts-ignore
             "memoy",
+        //@ts-ignore
             "what-is-image",
+        //@ts-ignore
             "image-files",
+        //@ts-ignore
             "access-files",
         ];
     }
