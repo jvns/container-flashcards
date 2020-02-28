@@ -17,10 +17,8 @@
                 </div>
             </div>
 
-            <div v-if="done" style="width: 500px; height: 324px;" class="text-gray-100 bg-gray-700 border-gray-200 border rounded-lg">
-                <p class="text-4xl px-8 py-8 text-center">
-                that's all!
-                </p>
+            <div v-if="done" class="w-10/12 lg:w-1/3">
+                <Flashcard name="thats-all" v-bind:card_visible="true"></Flashcard>
             </div>
         </div>
 
