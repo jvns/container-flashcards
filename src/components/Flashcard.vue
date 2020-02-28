@@ -1,13 +1,13 @@
 <template>
 <div class="scene scene--card">
-    <div v-on:click="flipped = !flipped" class="card" v-bind:class="{ flipped: flipped }">
-    <div class="card__face card__face--front">
-        <img v-bind:src="'/cards/' + name + '.png'">
+    <div v-on:click="flipped = !flipped" class="card rounded-lg border-gray-300 border-2" v-bind:class="{ flipped: flipped }">
+        <div class="card__face card__face--front">
+            <img v-bind:src="'/cards/png/' + name + '.png'">
+        </div>
+        <div class="card__face card__face--back">
+            <img v-bind:src="'/cards/png/' + name + '-back.png'" class="bg-yellow-300" style="filter: invert();">
+        </div>
     </div>
-    <div class="card__face card__face--back">
-      <img v-bind:src="'/cards/' + name + '-back.png'">
-    </div>
-  </div>
 </div>
             <!--
     <div class="scene mb-3">
@@ -38,7 +38,6 @@ export default class Flashcard extends Vue {
 body { font-family: sans-serif; }
 
 .scene {
-  border: 1px solid #CCC;
   margin: 40px 0;
   perspective: 600px;
 }
