@@ -1,20 +1,19 @@
 <template>
     <div id="app">
         <h1 class="text-4xl text-center my-8 w-full"> container flashcards </h1>
-        <div class="w-3/5" style="margin: 0 auto;">
-        </div>
 
         <div class="flex flex-row flex-wrap justify-center">
-            <div v-if="!done" >
-                <p class="text-2xl mb-4 text-center">
+            <div v-if="!done" class="w-10/12 lg:w-1/3">
+                <p class="text-l mb-4 text-center">
                 Click the card to see the answer.
                 </p>
                 <div v-for="(card, index) in cards">
                     <Flashcard v-bind:card_left="index < current_card" v-bind:card_hidden="index > current_card" v-bind:card_visible="index == current_card" v-bind:name="card"></Flashcard>
                 </div>
-                <div class="flex flex-row justify-center mt-8">
-                    <button class="bg-pink-600 text-xl text-white rounded px-6 py-3 mx-4" @click="knew">I knew that!</button>
-                    <button class="bg-blue-600 text-xl text-white rounded px-6 py-3" @click="learned">I learned something!</button>
+                <div class="flex flex-row flex-wrap justify-center mt-2">
+                    <button class="bg-pink-600 text-white rounded px-3 py-2 mx-4 my-1" @click="knew">I knew that!</button>
+                    <button class="bg-blue-600 text-white rounded px-3 py-2 mx-4 my-1" @click="learned">I learned something!</button>
+                    <button class="bg-orange-600 text-white rounded px-3 py-2 my-1" @click="confusing">That's confusing</button>
                 </div>
             </div>
 
@@ -30,7 +29,7 @@
                 <h1 class="text-3xl text-center">Things you learned </h1>
                 <div class="flex flex-row justify-center flex-wrap px-8 w-full">
                     <div v-for="(name, index) in cards" class="w-full">
-                        <Flashcard v-bind:card_left="!learned_list[index]" v-bind:card_visible="learned_list[index]" v-bind:small="true" v-bind:name="name"></Flashcard>
+                        <Flashcard v-bind:card_left="!learned_list[index]" v-bind:card_visible="learned_list[index]" v-bind:name="name"></Flashcard>
                     </div>
                 </div>
             </div>
@@ -38,7 +37,7 @@
                 <h1 class="text-3xl text-center">Things you knew </h1>
                 <div class="flex flex-row justify-center flex-wrap px-8 w-full">
                     <div v-for="(name, index) in cards" class="w-full">
-                        <Flashcard v-bind:card_left="!knew_list[index]" v-bind:card_visible="knew_list[index]" v-bind:small="true" v-bind:name="name"></Flashcard>
+                        <Flashcard v-bind:card_left="!knew_list[index]" v-bind:card_visible="knew_list[index]" v-bind:name="name"></Flashcard>
                     </div>
                 </div>
             </div>
@@ -64,6 +63,7 @@ export default class Main extends Vue {
     private current_card: int = 0;
     private knew_list = {};
     private learned_list = {};
+    private confusing_list = {};
 
 
     constructor() {
@@ -84,6 +84,14 @@ export default class Main extends Vue {
         console.log('learned', this.learned_list);
         this.next();
     }
+
+    confusing(): any {
+        // @ts-ignore
+        this.confusing_list[this.current_card] = true;
+        console.log('confusing', this.confusing_list);
+        this.next();
+    }
+
 
     next(): any {
         if (this.current_card >= this.cards.length-1) {

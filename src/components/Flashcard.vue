@@ -17,7 +17,6 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 @Component
 export default class Flashcard extends Vue {
     @Prop() private name!: string;
-    @Prop() private small!: boolean;
     @Prop() private card_left!: boolean;
     @Prop() private card_visible!: boolean;
     @Prop() private card_hidden!: boolean;
@@ -33,15 +32,6 @@ body { font-family: sans-serif; }
 .scene {
   perspective: 1200px;
   transition: all 1s ease-in-out;
-}
-
-.card.small {
-  padding-bottom: 62.4%;
-}
-
-.card.normal {
-  width: 500px;
-  padding-bottom: 62.4%;
 }
 
 .card_hidden {
@@ -66,6 +56,7 @@ body { font-family: sans-serif; }
   cursor: pointer;
   transform-style: preserve-3d;
   transition: transform 0.3s;
+  padding-bottom: 62.4%;
 }
 
 .card.flipped {
