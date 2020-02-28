@@ -100,7 +100,7 @@ export default class Main extends Vue {
         //@ts-ignore
             "vm",
         //@ts-ignore
-            "memoy",
+            "memory",
         //@ts-ignore
             "what-is-image",
         //@ts-ignore

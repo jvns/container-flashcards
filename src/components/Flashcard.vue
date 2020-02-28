@@ -1,14 +1,25 @@
 <template>
+<div class="scene scene--card">
+    <div v-on:click="flipped = !flipped" class="card" v-bind:class="{ flipped: flipped }">
+    <div class="card__face card__face--front">
+        <img v-bind:src="'/cards/' + name + '.png'">
+    </div>
+    <div class="card__face card__face--back">
+      <img v-bind:src="'/cards/' + name + '-back.png'">
+    </div>
+  </div>
+</div>
+            <!--
     <div class="scene mb-3">
-        <transition name="card-flip" mode="out-in">
-        <div v-if="!flipped" v-on:click="flipped = !flipped" key="front">
-            <img v-bind:src="'/cards/' + name + '.svg'" class="px-2 w-full rounded-lg border border-gray-200">
-        </div>
-        <div v-else v-on:click="flipped = !flipped" key="back">
-            <img v-bind:src="'/cards/' + name + '-back.svg'" class="px-2 bg-yellow-300 w-full rounded-lg border border-gray-200" style="filter: invert()">
+            <div v-bind:src="'/cards/' + name + '.png'" class="card__face--front card__face px-2 w-full rounded-lg border border-gray-200" >
+            <div class="card__face--back card__face px-2 bg-yellow-300 w-full rounded-lg border border-gray-200" style="">
+                hi
+                <!--             </div>
+            <img v-bind:src="'/cards/' + name + '-back.png'" class="fake px-2">
         </div>
         </transition>
     </div>
+            -->
 </template>
 
 <script lang="ts">
@@ -24,27 +35,40 @@ export default class Flashcard extends Vue {
 
 
 <style scoped>
+body { font-family: sans-serif; }
+
 .scene {
-    perspective: 1300px;
+  border: 1px solid #CCC;
+  margin: 40px 0;
+  perspective: 600px;
 }
+
 .card {
-    backface-visibility: hidden;
+  position: relative;
+  width: 500px;
+  height: 312px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.3s;
 }
 
-.card-flip-enter-active {
-  transition: all .15s;
-  transform-style: preserve-3d;
-}
-.card-flip-leave-active {
-  transition: all .15s;
-  transform-style: preserve-3d;
-}
-.card-flip-enter 
-/* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: rotateY(90deg);
+.card.flipped {
+  transform: rotateY(-180deg);
 }
 
-.card-flip-leave-to  {
-  transform: rotateY(-90deg);
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  background: white;
+}
+
+.card__face--back {
+  background: white;
+  transform: rotateY(180deg);
 }
 </style>
