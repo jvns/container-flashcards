@@ -1,6 +1,6 @@
 <template>
-<div class="scene scene--card">
-    <div v-on:click="flipped = !flipped" class="card rounded-lg border-gray-300 border-2" v-bind:class="{ flipped: flipped }">
+<div class="scene scene--card w-full">
+    <div v-on:click="flipped = !flipped" class="card w-full rounded-lg border-gray-300 border-2" v-bind:class="{ flipped: flipped, normal: !small, small: small}">
         <div class="card__face card__face--front">
             <img v-bind:src="'/cards/png/' + name + '.png'">
         </div>
@@ -9,17 +9,6 @@
         </div>
     </div>
 </div>
-            <!--
-    <div class="scene mb-3">
-            <div v-bind:src="'/cards/' + name + '.png'" class="card__face--front card__face px-2 w-full rounded-lg border border-gray-200" >
-            <div class="card__face--back card__face px-2 bg-yellow-300 w-full rounded-lg border border-gray-200" style="">
-                hi
-                <!--             </div>
-            <img v-bind:src="'/cards/' + name + '-back.png'" class="fake px-2">
-        </div>
-        </transition>
-    </div>
-            -->
 </template>
 
 <script lang="ts">
@@ -28,6 +17,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 @Component
 export default class Flashcard extends Vue {
     @Prop() private name!: string;
+    @Prop() private small!: boolean;
     private flipped: boolean = false;
 }
 </script>
@@ -39,13 +29,20 @@ body { font-family: sans-serif; }
 
 .scene {
   margin: 40px 0;
-  perspective: 600px;
+  perspective: 1200px;
+}
+
+.card.small {
+  padding-bottom: 62.4%
+}
+
+.card.normal {
+  width: 500px;
+  padding-bottom: 62.4%
 }
 
 .card {
   position: relative;
-  width: 500px;
-  height: 312px;
   cursor: pointer;
   transform-style: preserve-3d;
   transition: transform 0.3s;

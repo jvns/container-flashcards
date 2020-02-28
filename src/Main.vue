@@ -25,19 +25,19 @@
         <div class="flex flex-row mt-8 flex-wrap">
             <div class="lg:w-1/4 w-full mb-8">
             </div>
-            <div class="lg:w-1/4 w-full mb-8">
+            <div class="lg:w-1/4 w-3/4 mb-8 ml-8">
                 <h1 class="text-3xl text-center">Things you learned </h1>
-                <div class="flex flex-row justify-center flex-wrap px-8">
-                    <div v-for="(name, index) in cards">
-                        <Flashcard v-if="learned_list[index]" v-bind:name="name"></Flashcard>
+                <div class="flex flex-row justify-center flex-wrap px-8 w-full">
+                    <div v-for="(name, index) in cards" class="w-full">
+                        <Flashcard v-bind:small="true" v-if="learned_list[index]" v-bind:name="name"></Flashcard>
                     </div>
                 </div>
             </div>
-            <div class="lg:w-1/4 w-full">
+            <div class="lg:w-1/4 w-3/4">
                 <h1 class="text-3xl text-center">Things you knew </h1>
-                <div class="flex flex-row justify-center flex-wrap px-8">
-                    <div v-for="(name, index) in cards">
-                        <Flashcard v-if="knew_list[index]" v-bind:name="name"></Flashcard>
+                <div class="flex flex-row justify-center flex-wrap px-8 w-full">
+                    <div v-for="(name, index) in cards" class="w-full">
+                        <Flashcard v-bind:small="true" v-if="knew_list[index]" v-bind:name="name"></Flashcard>
                     </div>
                 </div>
             </div>
