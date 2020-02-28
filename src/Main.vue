@@ -10,7 +10,7 @@
                 Click the card to see the answer.
                 </p>
                 <div v-for="(card, index) in cards">
-                    <Flashcard v-bind:visible="index == current_card" v-bind:name="card"></Flashcard>
+                    <Flashcard v-bind:card_left="index < current_card" v-bind:card_hidden="index > current_card" v-bind:card_visible="index == current_card" v-bind:name="card"></Flashcard>
                 </div>
                 <div class="flex flex-row justify-center mt-8">
                     <button class="bg-pink-600 text-xl text-white rounded px-6 py-3 mx-4" @click="knew">I knew that!</button>
@@ -18,7 +18,7 @@
                 </div>
             </div>
 
-            <div v-if="done" style="width: 600px; height: 300px;" class="text-gray-100 bg-gray-700 border-gray-200 border rounded-lg">
+            <div v-if="done" style="width: 500px; height: 324px;" class="text-gray-100 bg-gray-700 border-gray-200 border rounded-lg">
                 <p class="text-4xl px-8 py-8 text-center">
                 that's all!
                 </p>
@@ -26,11 +26,11 @@
         </div>
 
         <div class="flex flex-row justify-center mt-8 flex-wrap">
-            <div class="lg:w-1/4 w-3/4 mb-8 ml-8">
+            <div class="lg:w-1/4 w-3/4 mb-8 lg:ml-8">
                 <h1 class="text-3xl text-center">Things you learned </h1>
                 <div class="flex flex-row justify-center flex-wrap px-8 w-full">
                     <div v-for="(name, index) in cards" class="w-full">
-                        <Flashcard v-bind:visible="learned_list[index]" v-bind:small="true" v-bind:name="name"></Flashcard>
+                        <Flashcard v-bind:card_left="!learned_list[index]" v-bind:card_visible="learned_list[index]" v-bind:small="true" v-bind:name="name"></Flashcard>
                     </div>
                 </div>
             </div>
@@ -38,7 +38,7 @@
                 <h1 class="text-3xl text-center">Things you knew </h1>
                 <div class="flex flex-row justify-center flex-wrap px-8 w-full">
                     <div v-for="(name, index) in cards" class="w-full">
-                        <Flashcard v-bind:visible="knew_list[index]" v-bind:small="true" v-bind:name="name"></Flashcard>
+                        <Flashcard v-bind:card_left="!knew_list[index]" v-bind:card_visible="knew_list[index]" v-bind:small="true" v-bind:name="name"></Flashcard>
                     </div>
                 </div>
             </div>

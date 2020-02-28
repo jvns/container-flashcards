@@ -1,5 +1,5 @@
 <template>
-    <div class="scene scene--card w-full" v-bind:class="{card_visible: visible, card_hidden: !visible}">
+    <div class="scene scene--card w-full" v-bind:class="{card_visible: card_visible, card_hidden: card_hidden, card_left: card_left}">
     <div v-on:click="flipped = !flipped" class="card mb-4 w-full rounded-lg border-gray-300 border-2" v-bind:class="{ flipped: flipped, normal: !small, small: small}">
         <div class="card__face card__face--front">
             <img v-bind:src="'/cards/png/' + name + '.png'">
@@ -18,7 +18,9 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 export default class Flashcard extends Vue {
     @Prop() private name!: string;
     @Prop() private small!: boolean;
-    @Prop() private visible!: boolean;
+    @Prop() private card_left!: boolean;
+    @Prop() private card_visible!: boolean;
+    @Prop() private card_hidden!: boolean;
     private flipped: boolean = false;
 }
 </script>
@@ -42,14 +44,20 @@ body { font-family: sans-serif; }
   padding-bottom: 62.4%;
 }
 
+.card_hidden {
+    visibility: hidden;
+    opacity: 0;
+    height: 0px;
+}
+
 .card_visible {
-    opacity: 1;
     visibility: visible;
 }
 
-.card_hidden {
-    opacity: 0;
+.card_left {
     visibility: hidden;
+    opacity: 0;
+    transform: translateX(100%); 
     height: 0px;
 }
 
