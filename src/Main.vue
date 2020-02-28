@@ -17,13 +17,13 @@
                 </div>
             </div>
 
-            <div v-if="done" class="w-10/12 lg:w-1/3">
+            <div v-if="done" class="w-10/12 lg:w-1/3t">
                 <Flashcard name="thats-all" v-bind:card_visible="true"></Flashcard>
             </div>
         </div>
 
         <div class="flex flex-row justify-center mt-8 flex-wrap">
-            <div class="lg:w-1/4 w-3/4 mb-8 lg:ml-8">
+            <div class="lg:w-1/4 w-10/12 mb-8 lg:ml-8">
                 <h1 class="text-3xl text-center">Things you learned </h1>
                 <div class="flex flex-row justify-center flex-wrap px-8 w-full">
                     <div v-for="(name, index) in cards" class="w-full">
@@ -31,7 +31,7 @@
                     </div>
                 </div>
             </div>
-            <div class="lg:w-1/4 w-3/4">
+            <div class="lg:w-1/4 w-10/12">
                 <h1 class="text-3xl text-center">Things you knew </h1>
                 <div class="flex flex-row justify-center flex-wrap px-8 w-full">
                     <div v-for="(name, index) in cards" class="w-full">
