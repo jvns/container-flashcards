@@ -15,7 +15,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="redhat-back.svg">
+   sodipodi:docname="redhat-2-back.svg">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -79,45 +79,35 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.4083333px;line-height:125%;font-family:juliabold;-inkscape-font-specification:juliabold;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="71.143875"
-       y="223.29466"
+       x="70.387924"
+       y="221.59377"
        id="text53"><tspan
          sodipodi:role="line"
-         x="71.143875"
-         y="223.29466"
+         x="70.387924"
+         y="221.59377"
          style="text-align:center;text-anchor:middle;stroke-width:0.26458332px"
          id="tspan55">yes!</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.4083333px;line-height:125%;font-family:juliabold;-inkscape-font-specification:juliabold;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="6.4110718"
-       y="242.48447"
+       x="10.190834"
+       y="234.73596"
        id="text53-3"><tspan
          sodipodi:role="line"
-         x="6.4110718"
-         y="242.48447"
+         x="10.190834"
+         y="234.73596"
          style="font-size:6.3499999px;text-align:start;text-anchor:start;stroke-width:0.26458332px"
-         id="tspan84">The Linux distribution (like Red Hat,</tspan><tspan
+         id="tspan37">On Linux, your OS has 2 parts.</tspan><tspan
          sodipodi:role="line"
-         x="6.4110718"
-         y="252.06238"
+         x="10.190834"
+         y="244.31387"
          style="font-size:6.3499999px;text-align:start;text-anchor:start;stroke-width:0.26458332px"
-         id="tspan33">Ubuntu, CentOS, etc) a container is</tspan><tspan
+         id="tspan40">1. the kernel (like Linux 4.15)</tspan><tspan
          sodipodi:role="line"
-         x="6.4110718"
-         y="261.64029"
+         x="10.190834"
+         y="253.8918"
          style="font-size:6.3499999px;text-align:start;text-anchor:start;stroke-width:0.26458332px"
-         id="tspan35">running is just a bunch of files. You</tspan><tspan
-         sodipodi:role="line"
-         x="6.4110718"
-         y="271.21823"
-         style="font-size:6.3499999px;text-align:start;text-anchor:start;stroke-width:0.26458332px"
-         id="tspan37">can run a container with any Linux</tspan><tspan
-         sodipodi:role="line"
-         x="6.4110718"
-         y="280.79614"
-         style="font-size:6.3499999px;text-align:start;text-anchor:start;stroke-width:0.26458332px"
-         id="tspan39">distribution</tspan></text>
+         id="tspan52">2. the distribution (like Red Hat/Ubuntu)</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot41"
@@ -128,5 +118,26 @@
            height="65"
            x="59.285713"
            y="195.4762" /></flowRegion><flowPara
-         id="flowPara47"></flowPara></flowRoot>  </g>
+         id="flowPara47" /></flowRoot>    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.4083333px;line-height:125%;font-family:juliabold;-inkscape-font-specification:juliabold;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="9.260417"
+       y="268.08484"
+       id="text67"><tspan
+         sodipodi:role="line"
+         x="9.260417"
+         y="268.08484"
+         style="font-size:6.3499999px;stroke-width:0.26458332px"
+         id="tspan75">You can run a different distribution</tspan><tspan
+         sodipodi:role="line"
+         x="9.260417"
+         y="277.66275"
+         style="font-size:6.3499999px;stroke-width:0.26458332px"
+         id="tspan77">in a container, but not a different</tspan><tspan
+         sodipodi:role="line"
+         x="9.260417"
+         y="287.24066"
+         style="font-size:6.3499999px;stroke-width:0.26458332px"
+         id="tspan79">kernel.</tspan></text>
+  </g>
 </svg>

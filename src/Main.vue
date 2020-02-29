@@ -161,11 +161,11 @@ export default class Main extends Vue {
         //@ts-ignore
             "database",
         //@ts-ignore
-            "redhat",
+            "vm-2",
+        //@ts-ignore
+            "redhat-2",
         //@ts-ignore
             "storage",
-        //@ts-ignore
-            "vm",
         //@ts-ignore
             "memory",
         //@ts-ignore

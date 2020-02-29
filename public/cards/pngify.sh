@@ -1,3 +1,5 @@
+rm -rf png/
+mkdir png
 for i in *.svg
 do
     inkscape \

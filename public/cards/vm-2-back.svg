@@ -15,7 +15,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="vm-back.svg">
+   sodipodi:docname="vm-2-back.svg">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -25,8 +25,8 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="113.77306"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="680.36318"
      inkscape:cy="123.65492"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -79,13 +79,55 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.4083333px;line-height:125%;font-family:juliabold;-inkscape-font-specification:juliabold;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="71.143875"
-       y="253.34377"
+       x="11.589377"
+       y="243.06276"
        id="text53"><tspan
          sodipodi:role="line"
-         x="71.143875"
-         y="253.34377"
+         x="11.589377"
+         y="243.06276"
+         style="font-size:6.3499999px;text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan70">VMs each have a completely separate</tspan><tspan
+         sodipodi:role="line"
+         x="11.589377"
+         y="252.64067"
+         style="font-size:6.3499999px;text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan74">operating system. Containers share a</tspan><tspan
+         sodipodi:role="line"
+         x="11.589377"
+         y="262.2186"
+         style="font-size:6.3499999px;text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan76">kernel so they're using the same OS</tspan><tspan
+         sodipodi:role="line"
+         x="11.589377"
+         y="271.79654"
+         style="font-size:6.3499999px;text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan86">underneath</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.4083333px;line-height:125%;font-family:juliabold;-inkscape-font-specification:juliabold;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="69.099045"
+       y="225.51369"
+       id="text53-3"><tspan
+         sodipodi:role="line"
+         x="69.099045"
+         y="225.51369"
          style="text-align:center;text-anchor:middle;stroke-width:0.26458332px"
-         id="tspan55">No.</tspan></text>
+         id="tspan55-6">no.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.4083333px;line-height:125%;font-family:juliabold;-inkscape-font-specification:juliabold;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="34.210499"
+       y="257.17685"
+       id="text101"><tspan
+         sodipodi:role="line"
+         id="tspan99"
+         x="34.210499"
+         y="257.17685"
+         style="stroke-width:0.26458332px"> </tspan><tspan
+         sodipodi:role="line"
+         x="34.210499"
+         y="266.43726"
+         style="stroke-width:0.26458332px"
+         id="tspan103" /></text>
   </g>
 </svg>
