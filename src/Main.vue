@@ -119,9 +119,10 @@ export default class Main extends Vue {
     }
 
     metrics(label: string): any {
-        let update = {}
+        let update: any = {}
         update[this.cards[this.current_card]] = label;
         update['timestamp'] = Math.floor(Date.now() / 1000);
+        // @ts-ignore
 -       this.$firedb.collection("container-flashcards").doc(this.$uuid).update(update)
     }
 
