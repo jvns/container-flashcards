@@ -25,7 +25,7 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8"
+     inkscape:zoom="1.4"
      inkscape:cx="177.76644"
      inkscape:cy="123.65492"
      inkscape:document-units="mm"
@@ -34,7 +34,7 @@
      units="pt"
      inkscape:window-width="1570"
      inkscape:window-height="838"
-     inkscape:window-x="15"
+     inkscape:window-x="30"
      inkscape:window-y="32"
      inkscape:window-maximized="0" />
   <metadata
@@ -97,46 +97,26 @@
          x="14.235176"
          y="247.13368"
          style="font-size:6.3499999px;text-align:start;text-anchor:start;stroke-width:0.26458332px"
-         id="tspan84">a program</tspan><tspan
+         id="tspan84">a. a program</tspan><tspan
          sodipodi:role="line"
          x="14.235176"
          y="256.71161"
          style="font-size:6.3499999px;text-align:start;text-anchor:start;stroke-width:0.26458332px"
-         id="tspan33">a tarball</tspan><tspan
+         id="tspan33">b. a tarball</tspan><tspan
          sodipodi:role="line"
          x="14.235176"
          y="266.28952"
          style="font-size:6.3499999px;text-align:start;text-anchor:start;stroke-width:0.26458332px"
-         id="tspan35">a hard disk image</tspan><tspan
+         id="tspan35">c. a hard disk image</tspan><tspan
          sodipodi:role="line"
          x="14.235176"
          y="275.86743"
          style="font-size:6.3499999px;text-align:start;text-anchor:start;stroke-width:0.26458332px"
-         id="tspan37">a custom binary format developed by</tspan><tspan
+         id="tspan37">d. a custom binary format developed</tspan><tspan
          sodipodi:role="line"
          x="14.235176"
          y="285.44534"
          style="font-size:6.3499999px;text-align:start;text-anchor:start;stroke-width:0.26458332px"
-         id="tspan39">Docker</tspan></text>
-    <path
-       style="opacity:1;fill:#411a35;fill-opacity:1;stroke:#ffffff;stroke-width:0.35699335;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 9.6833134,241.64148 -1.3403337,1.97697 -2.3886265,0.0169 1.4661081,1.88552 -0.7221934,2.2768 2.2464945,-0.81176 1.9421176,1.39048 -0.07777,-2.38729 1.922542,-1.41756 -2.294499,-0.66373 z"
-       id="path88"
-       inkscape:connector-curvature="0" />
-    <path
-       style="opacity:1;fill:#411a35;fill-opacity:1;stroke:#ffffff;stroke-width:0.35699335;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 10.038393,250.86108 -1.3403342,1.97697 -2.3886265,0.0169 1.4661081,1.88552 -0.7221927,2.2768 2.2464948,-0.81176 1.9421175,1.39048 -0.07777,-2.38729 1.922542,-1.41756 -2.294499,-0.66373 z"
-       id="path88-5"
-       inkscape:connector-curvature="0" />
-    <path
-       style="opacity:1;fill:#411a35;fill-opacity:1;stroke:#ffffff;stroke-width:0.35699335;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 10.0946,260.59802 -1.3403341,1.97697 -2.3886275,0.0169 1.4661081,1.88552 -0.7221927,2.2768 2.2464948,-0.81176 1.9421184,1.39048 -0.07777,-2.38729 1.922542,-1.41756 -2.294499,-0.66373 z"
-       id="path88-3"
-       inkscape:connector-curvature="0" />
-    <path
-       style="opacity:1;fill:#411a35;fill-opacity:1;stroke:#ffffff;stroke-width:0.35699335;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 10.434116,270.59793 -1.3403343,1.97697 -2.388627,0.0169 1.466108,1.88552 -0.722193,2.2768 2.246495,-0.81176 1.9421183,1.39048 -0.07777,-2.38729 1.922542,-1.41756 -2.294499,-0.66373 z"
-       id="path88-3-3"
-       inkscape:connector-curvature="0" />
+         id="tspan39">   by Docker</tspan></text>
   </g>
 </svg>
