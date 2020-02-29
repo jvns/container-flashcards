@@ -31,7 +31,7 @@
                     </div>
                 </div>
             </div>
-            <div class="lg:w-1/4 w-10/12">
+            <div class="lg:w-1/4 w-10/12 mb-8 lg:ml-8">
                 <h1 class="text-3xl text-center">Things you knew </h1>
                 <div class="flex flex-row justify-center flex-wrap px-8 w-full">
                     <div v-for="(name, index) in cards" class="w-full">
@@ -39,6 +39,15 @@
                     </div>
                 </div>
             </div>
+            <div class="lg:w-1/4 w-10/12">
+                <h1 class="text-3xl text-center">"That's confusing" </h1>
+                <div class="flex flex-row justify-center flex-wrap px-8 w-full">
+                    <div v-for="(name, index) in cards" class="w-full">
+                        <Flashcard v-bind:card_left="!confusing_list[index]" v-bind:card_visible="confusing_list[index]" v-bind:name="name"></Flashcard>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -48,6 +57,9 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import Flashcard from './components/Flashcard.vue';
+
+import { firebase } from '@firebase/app';
+import '@firebase/firestore'
 
 @Component({
     components: {
@@ -68,28 +80,54 @@ export default class Main extends Vue {
         super()
     }
 
+    firebase() {
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCEbH_2zf9dDzh6Muq-DdK3byHMUIsHfCA",
+            authDomain: "wizard-sql-school.firebaseapp.com",
+            databaseURL: "https://wizard-sql-school.firebaseio.com",
+            projectId: "wizard-sql-school",
+            storageBucket: "",
+            messagingSenderId: "779622015462",
+            appId: "1:779622015462:web:b0ca93a1d5fbb1ea2d3627"
+        };
+        firebase.initializeApp(firebaseConfig);
+        // @ts-ignore
+        Vue.prototype.$firedb = firebase.firestore();
+    }
+
     knew(): any {
+        this.metrics('knew');
         //@ts-ignore
         this.knew_list[this.current_card] = true;
 
-        console.log('knew', this.knew_list);
         this.next();
     }
 
     learned(): any {
+        this.metrics('learned');
         // @ts-ignore
         this.learned_list[this.current_card] = true;
-        console.log('learned', this.learned_list);
         this.next();
     }
 
     confusing(): any {
+        this.metrics('confusing');
         // @ts-ignore
         this.confusing_list[this.current_card] = true;
-        console.log('confusing', this.confusing_list);
         this.next();
     }
 
+    metrics(label: string): any {
+        // @ts-ignore
+        this.$firedb.collection("container-flashcards").add({
+            card: this.cards[this.current_card],
+            label: label,
+            // @ts-ignore
+            uuid: this.$uuid,
+            timestamp: Math.floor(Date.now() / 1000),
+        })
+    }
 
     next(): any {
         if (this.current_card >= this.cards.length-1) {
@@ -99,9 +137,32 @@ export default class Main extends Vue {
         }
     }
 
+    uuidv4() {
+        // @ts-ignore
+        return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, (c: any) =>
+            // @ts-ignore
+            (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+        );
+    }
+
+
+
     async created() {
+        this.firebase()
+        if (!localStorage.getItem('uuid')) {
+            localStorage.setItem('uuid', this.uuidv4());
+        }
+        // @ts-ignore
+        Vue.prototype.$uuid = localStorage.getItem('uuid');
+
         //@ts-ignore
         this.cards = [
+        //@ts-ignore
+            "container-do",
+        //@ts-ignore
+            "database",
+        //@ts-ignore
+            "redhat",
         //@ts-ignore
             "storage",
         //@ts-ignore
@@ -109,7 +170,11 @@ export default class Main extends Vue {
         //@ts-ignore
             "memory",
         //@ts-ignore
+            "mac",
+        //@ts-ignore
             "what-is-image",
+        //@ts-ignore
+            "host",
         //@ts-ignore
             "image-files",
         //@ts-ignore

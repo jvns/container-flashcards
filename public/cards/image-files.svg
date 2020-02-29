@@ -15,7 +15,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="template.svg">
+   sodipodi:docname="image-files.svg">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -25,8 +25,8 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="177.76644"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="131.51644"
      inkscape:cy="123.65492"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -34,7 +34,7 @@
      units="pt"
      inkscape:window-width="1570"
      inkscape:window-height="838"
-     inkscape:window-x="15"
+     inkscape:window-x="30"
      inkscape:window-y="32"
      inkscape:window-maximized="0" />
   <metadata
@@ -95,43 +95,92 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.4083333px;line-height:125%;font-family:juliabold;-inkscape-font-specification:juliabold;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="7.3560123"
-       y="256.65857"
+       x="29.203037"
+       y="254.20172"
        id="text53-3"><tspan
          sodipodi:role="line"
-         x="7.3560123"
-         y="256.65857"
-         style="font-size:6.35px;text-align:start;text-anchor:start;stroke-width:0.26458332px"
-         id="tspan55-7">just the binary of the program</tspan><tspan
+         x="29.203037"
+         y="254.20172"
+         style="font-size:6.3499999px;text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan55-7">your program's binary</tspan><tspan
          sodipodi:role="line"
-         x="7.3560123"
-         y="266.23648"
-         style="font-size:6.35px;text-align:start;text-anchor:start;stroke-width:0.26458332px"
-         id="tspan80">your program + a base operating system</tspan><tspan
+         x="29.203037"
+         y="263.77963"
+         style="font-size:6.3499999px;text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan80">a base operating system</tspan><tspan
          sodipodi:role="line"
-         x="7.3560123"
-         y="275.81439"
-         style="font-size:6.35px;text-align:start;text-anchor:start;stroke-width:0.26458332px"
-         id="tspan82">your program, a base OS, and </tspan><tspan
-         sodipodi:role="line"
-         x="7.3560123"
-         y="285.39233"
-         style="font-size:6.35px;text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         x="29.203037"
+         y="273.35754"
+         style="font-size:6.3499999px;text-align:start;text-anchor:start;stroke-width:0.26458332px"
          id="tspan84">a Linux kernel</tspan></text>
-    <path
-       style="opacity:1;fill:#411a35;fill-opacity:1;stroke:#ffffff;stroke-width:0.35699335;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 3.938075,250.97756 -1.3403337,1.97697 -2.38862684,0.0169 1.46610794,1.88552 -0.72219295,2.2768 2.24649455,-0.81176 1.9421168,1.39048 -0.077768,-2.38729 1.922541,-1.41756 -2.2944975,-0.66373 z"
-       id="path88"
-       inkscape:connector-curvature="0" />
-    <path
-       style="opacity:1;fill:#411a35;fill-opacity:1;stroke:#ffffff;stroke-width:0.35699335;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 4.1986605,261.0476 -1.3403339,1.97697 -2.38862674,0.0169 1.46610794,1.88552 -0.722193,2.2768 2.2464947,-0.81176 1.9421168,1.39048 -0.077768,-2.38729 1.9225411,-1.41756 -2.2944974,-0.66373 z"
-       id="path88-5"
-       inkscape:connector-curvature="0" />
-    <path
-       style="opacity:1;fill:#411a35;fill-opacity:1;stroke:#ffffff;stroke-width:0.35699335;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 4.0658787,271.25701 -1.3403339,1.97697 -2.38862684,0.0169 1.46610804,1.88552 -0.722193,2.2768 2.2464947,-0.81176 1.9421168,1.39048 -0.077768,-2.38729 1.922541,-1.41756 -2.2944973,-0.66373 z"
-       id="path88-3"
-       inkscape:connector-curvature="0" />
+    <g
+       transform="matrix(0.01729975,0,0,0.01729975,19.012835,248.46809)"
+       id="g4">
+      <path
+         inkscape:connector-curvature="0"
+         d="M 377.87,24.126 C 361.786,8.042 342.417,0 319.769,0 H 82.227 C 59.579,0 40.211,8.042 24.125,24.126 8.044,40.212 0.002,59.576 0.002,82.228 v 237.543 c 0,22.647 8.042,42.014 24.123,58.101 16.086,16.085 35.454,24.127 58.102,24.127 h 237.542 c 22.648,0 42.011,-8.042 58.102,-24.127 16.085,-16.087 24.126,-35.453 24.126,-58.101 V 82.228 C 401.993,59.58 393.951,40.212 377.87,24.126 Z m -12.422,295.645 c 0,12.559 -4.47,23.314 -13.415,32.264 -8.945,8.945 -19.698,13.411 -32.265,13.411 H 82.227 C 69.664,365.446 58.91,360.98 49.963,352.035 41.018,343.086 36.545,332.33 36.545,319.771 V 82.228 c 0,-12.562 4.473,-23.316 13.418,-32.264 8.947,-8.946 19.701,-13.418 32.264,-13.418 h 237.542 c 12.566,0 23.319,4.473 32.265,13.418 8.945,8.947 13.415,19.701 13.415,32.264 v 237.543 z"
+         id="path2" />
+    </g>
+    <g
+       transform="matrix(0.02106075,0,0,0.02106075,5.7836554,237.96028)"
+       id="g6" />
+    <g
+       transform="matrix(0.02106075,0,0,0.02106075,5.7836554,237.96028)"
+       id="g8" />
+    <g
+       transform="matrix(0.02106075,0,0,0.02106075,5.7836554,237.96028)"
+       id="g10" />
+    <g
+       transform="matrix(0.02106075,0,0,0.02106075,5.7836554,237.96028)"
+       id="g12" />
+    <g
+       transform="matrix(0.02106075,0,0,0.02106075,5.7836554,237.96028)"
+       id="g14" />
+    <g
+       transform="matrix(0.02106075,0,0,0.02106075,5.7836554,237.96028)"
+       id="g16" />
+    <g
+       transform="matrix(0.02106075,0,0,0.02106075,5.7836554,237.96028)"
+       id="g18" />
+    <g
+       transform="matrix(0.02106075,0,0,0.02106075,5.7836554,237.96028)"
+       id="g20" />
+    <g
+       transform="matrix(0.02106075,0,0,0.02106075,5.7836554,237.96028)"
+       id="g22" />
+    <g
+       transform="matrix(0.02106075,0,0,0.02106075,5.7836554,237.96028)"
+       id="g24" />
+    <g
+       transform="matrix(0.02106075,0,0,0.02106075,5.7836554,237.96028)"
+       id="g26" />
+    <g
+       transform="matrix(0.02106075,0,0,0.02106075,5.7836554,237.96028)"
+       id="g28" />
+    <g
+       transform="matrix(0.02106075,0,0,0.02106075,5.7836554,237.96028)"
+       id="g30" />
+    <g
+       transform="matrix(0.02106075,0,0,0.02106075,5.7836554,237.96028)"
+       id="g32" />
+    <g
+       transform="matrix(0.02106075,0,0,0.02106075,5.7836554,237.96028)"
+       id="g34" />
+    <g
+       transform="matrix(0.01729975,0,0,0.01729975,19.012835,258.2388)"
+       id="g4-3">
+      <path
+         inkscape:connector-curvature="0"
+         d="M 377.87,24.126 C 361.786,8.042 342.417,0 319.769,0 H 82.227 C 59.579,0 40.211,8.042 24.125,24.126 8.044,40.212 0.002,59.576 0.002,82.228 v 237.543 c 0,22.647 8.042,42.014 24.123,58.101 16.086,16.085 35.454,24.127 58.102,24.127 h 237.542 c 22.648,0 42.011,-8.042 58.102,-24.127 16.085,-16.087 24.126,-35.453 24.126,-58.101 V 82.228 C 401.993,59.58 393.951,40.212 377.87,24.126 Z m -12.422,295.645 c 0,12.559 -4.47,23.314 -13.415,32.264 -8.945,8.945 -19.698,13.411 -32.265,13.411 H 82.227 C 69.664,365.446 58.91,360.98 49.963,352.035 41.018,343.086 36.545,332.33 36.545,319.771 V 82.228 c 0,-12.562 4.473,-23.316 13.418,-32.264 8.947,-8.946 19.701,-13.418 32.264,-13.418 h 237.542 c 12.566,0 23.319,4.473 32.265,13.418 8.945,8.947 13.415,19.701 13.415,32.264 v 237.543 z"
+         id="path2-6" />
+    </g>
+    <g
+       transform="matrix(0.01729975,0,0,0.01729975,19.012835,267.76386)"
+       id="g4-7">
+      <path
+         inkscape:connector-curvature="0"
+         d="M 377.87,24.126 C 361.786,8.042 342.417,0 319.769,0 H 82.227 C 59.579,0 40.211,8.042 24.125,24.126 8.044,40.212 0.002,59.576 0.002,82.228 v 237.543 c 0,22.647 8.042,42.014 24.123,58.101 16.086,16.085 35.454,24.127 58.102,24.127 h 237.542 c 22.648,0 42.011,-8.042 58.102,-24.127 16.085,-16.087 24.126,-35.453 24.126,-58.101 V 82.228 C 401.993,59.58 393.951,40.212 377.87,24.126 Z m -12.422,295.645 c 0,12.559 -4.47,23.314 -13.415,32.264 -8.945,8.945 -19.698,13.411 -32.265,13.411 H 82.227 C 69.664,365.446 58.91,360.98 49.963,352.035 41.018,343.086 36.545,332.33 36.545,319.771 V 82.228 c 0,-12.562 4.473,-23.316 13.418,-32.264 8.947,-8.946 19.701,-13.418 32.264,-13.418 h 237.542 c 12.566,0 23.319,4.473 32.265,13.418 8.945,8.947 13.415,19.701 13.415,32.264 v 237.543 z"
+         id="path2-5" />
+    </g>
   </g>
 </svg>

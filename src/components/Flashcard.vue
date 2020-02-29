@@ -1,6 +1,6 @@
 <template>
     <div class="scene scene--card w-full" v-bind:class="{card_visible: card_visible, card_hidden: card_hidden, card_left: card_left}">
-    <div v-on:click="flipped = !flipped" class="card mb-4 w-full rounded-lg border-gray-300 border-2" v-bind:class="{ flipped: flipped, normal: !small, small: small}">
+    <div v-on:click="flipped = !flipped" class="card mb-4 w-full rounded-lg border-gray-300 border-2" v-bind:class="{ flipped: flipped}">
         <div class="card__face card__face--front">
             <img v-bind:src="'/cards/png/' + name + '.png'">
         </div>
