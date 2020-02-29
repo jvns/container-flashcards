@@ -17,7 +17,7 @@
                 </div>
             </div>
 
-            <div v-if="done" class="w-10/12 lg:w-1/3t">
+            <div v-if="done" class="w-10/12 lg:w-1/3">
                 <Flashcard name="thats-all" v-bind:card_visible="true"></Flashcard>
             </div>
         </div>
