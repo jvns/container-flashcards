@@ -151,6 +151,7 @@ export default class Main extends Vue {
         }
         // @ts-ignore
         Vue.prototype.$uuid = localStorage.getItem('uuid');
+        this.$firedb.collection("container-flashcards").doc(this.$uuid).set({timestamp: Math.floor(Date.now() / 1000)});
 
         //@ts-ignore
         this.cards = [
