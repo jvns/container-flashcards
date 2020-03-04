@@ -14,5 +14,10 @@ module.exports = {
       // extracted common chunks and vendor chunks.
       chunks: ['chunk-vendors', 'chunk-common', 'index']
     },
+    "container-basics": {
+        entry: 'src/pages/container-basics.ts',
+        title: 'container flashcards',
+        filename: 'index.html',
+    },
   }
 }
