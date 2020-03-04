@@ -4,7 +4,9 @@
             "proc",
             "read-file",
         ]'
-        basedir='linux'>
+        basedir='linux'
+        title="linux flashcards"
+        >
         </Game>
     </div>
 </template>

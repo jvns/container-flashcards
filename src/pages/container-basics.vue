@@ -13,7 +13,9 @@
             "image-files",
             "access-files",
         ]'
-        basedir='container-basics'>
+        basedir='container-basics'
+        title="container flashcards"
+        >
         </Game>
     </div>
 </template>

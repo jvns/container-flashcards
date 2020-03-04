@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1 class="text-4xl text-center my-8 w-full"> container flashcards </h1>
+        <h1 class="text-4xl text-center my-8 w-full"> {{title}} </h1>
 
         <div class="flex flex-row flex-wrap justify-center">
             <div v-if="!done" class="w-10/12 lg:w-1/3">
@@ -69,6 +69,7 @@ import '@firebase/firestore'
 export default class Game extends Vue {
     @Prop() private cards!: any;
     @Prop() private basedir!: string;
+    @Prop() private title!: string;
     private done: boolean = false;
     //@ts-ignore
     private current_card: int = 0;
