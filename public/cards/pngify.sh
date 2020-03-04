@@ -1,5 +1,5 @@
 rm -rf */*.png
-for i in */*.svg
+for i in "$@"
 do
     inkscape \
         --export-png=${i/.svg/.png} --export-dpi=200 \

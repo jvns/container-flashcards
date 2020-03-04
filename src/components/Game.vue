@@ -18,7 +18,7 @@
             </div>
 
             <div v-if="done" class="w-10/12 lg:w-1/3">
-                <Flashcard v-bind:basedir='basedir' name="thats-all" v-bind:card_visible="true"></Flashcard>
+                <Flashcard basedir='' name="thats-all" v-bind:card_visible="true"></Flashcard>
             </div>
         </div>
 
@@ -35,7 +35,7 @@
                 <h1 class="text-3xl text-center">Things you knew </h1>
                 <div class="flex flex-row justify-center flex-wrap px-8 w-full">
                     <div v-for="(name, index) in cards" class="w-full">
-                        <Flashcard v-bind:card_left="!knew_list[index]" v-bind:card_visible="knew_list[index]" v-bind:name="name"></Flashcard>
+                        <Flashcard v-bind:basedir='basedir' v-bind:card_left="!knew_list[index]" v-bind:card_visible="knew_list[index]" v-bind:name="name"></Flashcard>
                     </div>
                 </div>
             </div>
@@ -43,7 +43,7 @@
                 <h1 class="text-3xl text-center">"That's confusing" </h1>
                 <div class="flex flex-row justify-center flex-wrap px-8 w-full">
                     <div v-for="(name, index) in cards" class="w-full">
-                        <Flashcard v-bind:card_left="!confusing_list[index]" v-bind:card_visible="confusing_list[index]" v-bind:name="name"></Flashcard>
+                        <Flashcard v-bind:basedir='basedir' v-bind:card_left="!confusing_list[index]" v-bind:card_visible="confusing_list[index]" v-bind:name="name"></Flashcard>
                     </div>
                 </div>
             </div>
