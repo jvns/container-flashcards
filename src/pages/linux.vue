@@ -3,6 +3,19 @@
         <Game v-bind:cards='[
             "proc",
             "read-file",
+            "kill",
+            "ctrlc",
+            "stop-kill",
+            "pipe",
+            "use-sockets",
+            "unix-differences",
+            "inherit",
+            "threads-share",
+            "same-address",
+            "allocate-more",
+            "use-more-memory",
+            "shared-library-memory",
+            "mmap",
         ]'
         basedir='linux'
         title="linux flashcards"
