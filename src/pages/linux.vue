@@ -6,7 +6,7 @@
             "kill",
             "ctrlc",
             "stop-kill",
-            "pipe",
+            "pipe-read",
             "use-sockets",
             "unix-differences",
             "inherit",
