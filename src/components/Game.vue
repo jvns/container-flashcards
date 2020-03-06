@@ -7,6 +7,7 @@
                 <p class="text-l mb-4 text-center">
                 Click the card to see the answer.
                 </p>
+                <div class="text-center text-xl"> Card {{current_card+1}}  of {{cards.length}} </div>
                 <div v-for="(card, index) in cards">
                     <Flashcard v-bind:basedir='basedir' v-bind:card_left="index < current_card" v-bind:card_hidden="index > current_card" v-bind:card_visible="index == current_card" v-bind:name="card"></Flashcard>
                 </div>

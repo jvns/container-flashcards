@@ -1,7 +1,6 @@
 <template>
     <div id="app">
         <Game v-bind:cards='[
-            "proc",
             "read-file",
             "kill",
             "ctrlc",
@@ -11,6 +10,7 @@
             "unix-differences",
             "inherit",
             "threads-share",
+            "proc",
             "same-address",
             "allocate-more",
             "use-more-memory",
