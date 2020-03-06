@@ -154,7 +154,10 @@ export default class Game extends Vue {
         // @ts-ignore
         Vue.prototype.$uuid = localStorage.getItem('uuid');
         // @ts-ignore
-        this.$firedb.collection("container-flashcards").doc(this.$uuid).set({timestamp: Math.floor(Date.now() / 1000)});
+        this.$firedb.collection("container-flashcards").doc(this.$uuid).set({
+            timestamp: Math.floor(Date.now() / 1000),
+            game_id: this.basedir,
+        });
 
         //@ts-ignore
     }

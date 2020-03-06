@@ -5,7 +5,7 @@
             <img v-bind:src="'/cards/' + basedir + '/' + name + '.png'">
         </div>
         <div class="card__face card__face--back">
-            <img v-bind:src="'/cards/' + basedir + '/' + name + '-back.png'" class="bg-yellow-300" style="filter: invert();">
+            <img v-bind:src="'/cards/' + basedir + '/' + name + '-back.png'">
         </div>
     </div>
 </div>
