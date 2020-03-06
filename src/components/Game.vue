@@ -126,7 +126,7 @@ export default class Game extends Vue {
         update[this.cards[this.current_card]] = label;
         update['timestamp'] = Math.floor(Date.now() / 1000);
         // @ts-ignore
--       this.$firedb.collection("container-flashcards").doc(this.$uuid).update(update)
+-       this.$firedb.collection("container-flashcards").doc(this.doc()).update(update)
     }
 
     next(): any {
@@ -145,6 +145,9 @@ export default class Game extends Vue {
         );
     }
 
+    doc(): any {
+        return this.$uuid + '--' + this.basedir
+    }
 
 
     async created() {
@@ -155,7 +158,7 @@ export default class Game extends Vue {
         // @ts-ignore
         Vue.prototype.$uuid = localStorage.getItem('uuid');
         // @ts-ignore
-        this.$firedb.collection("container-flashcards").doc(this.$uuid).set({
+        this.$firedb.collection("container-flashcards").doc(this.doc()).set({
             timestamp: Math.floor(Date.now() / 1000),
             game_id: this.basedir,
         });
