@@ -57,8 +57,8 @@ except:
 for name, pair in data.items():
     dest = sys.argv[2]
     with open(dest + '/' + name + '.svg', 'w') as f:
-        f.write(svg(data['containers']['question']))
+        f.write(svg(pair['question']))
     with open(dest + '/' + name + '-back.svg', 'w') as f:
-        f.write(svg(data['containers']['answer']))
+        f.write(svg(pair['answer']))
 
 
