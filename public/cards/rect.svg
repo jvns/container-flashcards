@@ -1,10 +1,13 @@
-<svg width="400" height="250">
+<svg width="400" height="250" 
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+>
   <text x="50%" y="110" dominant-baseline="middle" text-anchor="middle" style="font-size:24px;font-family:juliabold;">
-  <tspan x="50%"> Name 2 kinds of namespaces </tspan>
-  <tspan x="50%" dy="22"> more text here </tspan>
+  <tspan sodipodi:role="line" x="50%"> Name 2 kinds of namespaces </tspan>
+  <tspan sodipodi:role="line" x="50%"> more text here </tspan>
   </text>    
+         
   <text x="20" y="180" style="font-size:21px;font-family:juliabold;">
-  <tspan x="20"> some extra stuff </tspan>
-  <tspan x="20" dy="23"> here </tspan>
+  <tspan sodipodi:role="line" x="20"> some extra stuff </tspan>
+  <tspan sodipodi:role="line" x="20"> here </tspan>
   </text>    
 </svg>
