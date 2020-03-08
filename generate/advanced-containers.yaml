@@ -1,0 +1,118 @@
+kernel-features:
+    question: 
+        big: |
+            what Linux kernel features make containers work?
+    answer: 
+        small: |
+            1. cgroups
+            2. namespaces
+            3. capabilities
+            4. seccomp-bpf
+            5. overlayfs
+
+kernel-feature-memory:
+    question: 
+        big: |
+            which kernel feature lets you restrict memory/cpu usage?
+    answer: 
+        big: cgroups!
+        small: |
+            cgroups let you set memory and/or CPU limits for a group of processes
+
+ps-processes:
+    question: 
+        big: |
+            why can't you see other processes on the computer when you run `ps` in a container?
+    answer: 
+        big: because the container has its own PID namespace
+
+own-pid:
+    question: 
+        big: |
+            can a process have more than one PID?
+    answer: 
+        big: yes!
+        small: |
+            a container process will one PID in its PID namespace and a different PID in the host PID namespace
+
+docker-required:
+    question: 
+        big: |
+            do you need to use Docker to create a container?
+    answer: 
+        big: |
+            no!
+        small: |
+            some other container runtimes are systemd-nspawn and LXC
+
+just-use-cgroups:
+    question: 
+        big: |
+            can you use cgroups without using namespaces?
+    answer: 
+        big: |
+            yes!
+        small: |
+            all of the "container" kernel features (cgroups, namespaces, capabilities, etc) can be used independently of one another
+
+whats-inside:
+    question: 
+        big: |
+            what does it means to run a command "inside" a container
+    answer: 
+        small: |
+            run the command with the same cgroups and namespaces as the container's processes
+
+nsenter-command:
+    question: 
+        big: |
+            what command lets you run a command inside a container's mount namespace?
+    answer: 
+        big: |
+            nsenter!
+        small: |
+            you can run a command inside any/all of a container's namespaces with nsenter
+
+prevent:
+    question: 
+        big: |
+            what are 2 ways to prevent
+            containers from doing
+            scary things?
+    answer: 
+        big: |
+            capabilities
+            and seccomp-bpf!
+        small: |
+            seccomp-bpf whitelists system calls and capabilities only allow certain categories of activity
+exceed-memory:
+    question: 
+        big: |
+            what happens when a container exceeds its memory limit?
+    answer: 
+        small: |
+            depending on your system's configuration, either:
+
+            1. it starts swapping
+            2. processes inside the container get OOM killed
+
+ip-address:
+    question: 
+        big: |
+            do containers have their own IP addresses?
+    answer: 
+        big: |
+            often they do!
+        small: |
+            docker gives containers IP addresses by default. The container IP may or may not be accessible from other computers, though!
+
+memory-tracking:
+    question: 
+        big: |
+            can you track how much memory / CPU a container is using?
+    answer: 
+        big: |
+            yes!
+        small: |
+            look for files named memory.usage_in_bytes in /sys/fs/cgroup
+

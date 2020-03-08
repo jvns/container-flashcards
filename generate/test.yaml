@@ -1,9 +1,0 @@
-prevent:
-    question: 
-        big: |
-            What are 2 ways to prevent containers from doing scary things?
-    answer: 
-        big: |
-            capabilities
-            and seccomp-bpf!
-        small: |
