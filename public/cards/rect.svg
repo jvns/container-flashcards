@@ -1,5 +1,6 @@
 <svg width="400" height="250">
   <text x="50%" y="110" dominant-baseline="middle" text-anchor="middle" style="font-size:21px;font-family:juliabold;">
-  Name 2 kinds of namespaces
+  <tspan x="50%"> Name 2 kinds of namespaces </tspan>
+  <tspan x="50%" dy="22"> more text here </tspan>
   </text>    
 </svg>
