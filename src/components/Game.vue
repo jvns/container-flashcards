@@ -146,6 +146,7 @@ export default class Game extends Vue {
     }
 
     doc(): any {
+        // @ts-ignore
         return this.$uuid + '--' + this.basedir
     }
 
