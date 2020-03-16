@@ -7,6 +7,8 @@
             "many-ips",
             "dns-information",
             "email",
+            "update-instant",
+            "ttl",
             "cname",
             "google-dns",
             "where-dns-responses-come-from",
