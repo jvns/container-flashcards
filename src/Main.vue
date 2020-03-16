@@ -3,11 +3,14 @@
         <h1 class="text-3xl text-center">flashcards!</h1>
         <div class="lg:w-1/3 w-full m-auto">
         <p class="py-4">
-        Here are the 2 sets of flashcards so far:
+        Here are the 3 sets of flashcards so far:
         </p>
         <p class="underline text-blue-800">
-        <a class="hover:text-blue-400" href="/container-basics">Container basics</a><br>
-        <a class="hover:text-blue-400" href="/linux">Linux</a>
+        <ul>
+            <li><a class="hover:text-blue-400" href="/container-basics">Container basics</a></li>
+            <li><a class="hover:text-blue-400" href="/linux">Linux</a></li>
+            <li><a class="hover:text-blue-400" href="/dns">DNS</a></li>
+        </ul>
         </p>
         </div>
     </div>

@@ -56,6 +56,27 @@ email:
         small: |
             the mail server for a domain is in the "MX" DNS record
 
+update-instant:
+    question:
+        big: |
+            when you update your domain's IP address, will everyone get your new IP right away?
+    answer:
+        big: |
+            no!
+        small: |
+            DNS servers all use caching, so it depends when the cache expires.
+
+ttl:
+    question:
+        big: |
+            what decides how long a DNS response gets cached for?
+    answer:
+        big: |
+            the TTL!
+        small: |
+            every DNS response has a parameter called the "TTL" ("time to live"). If you set a shorter TTL, you can update your DNS records faster!
+
+
 cname:
     question:
         big: what does setting a CNAME record to google.com for your domain do?
