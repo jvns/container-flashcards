@@ -25,6 +25,7 @@
 </template>
 
 <script lang="ts">
+// note: for `kill`, "what happens?" is a bit vague
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import Game from '../components/Game.vue';
 
