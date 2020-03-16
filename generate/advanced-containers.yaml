@@ -1,7 +1,7 @@
 kernel-features:
     question: 
         big: |
-            what Linux kernel features make containers work?
+            name 2 Linux kernel features that make containers work?
     answer: 
         small: |
             1. cgroups
@@ -14,17 +14,33 @@ kernel-feature-memory:
     question: 
         big: |
             which kernel feature lets you restrict memory/cpu usage?
+        small: |
+            a. cgroups
+            b. namespaces
+            c. capabilities
+            d. seccomp-bpf
+            e. overlayfs
+
     answer: 
         big: cgroups!
         small: |
-            cgroups let you set memory and/or CPU limits for a group of processes
+            cgroups ("control groups") let you set memory and/or CPU limits for a group of processes (and a few other kinds of limits, like IO)
 
 ps-processes:
     question: 
         big: |
-            why can't you see other processes on the computer when you run `ps` in a container?
+            which kernel feature prevents you from seeing other processes on
+            the computer when you run `ps` in a container?
+        small: |
+            a. cgroups
+            b. namespaces
+            c. capabilities
+            d. seccomp-bpf
+            e. overlayfs
     answer: 
-        big: because the container has its own PID namespace
+        big: namespaces
+        small: |
+            the container has its own PID namespace, so it can only see processes inside its PID namespace
 
 own-pid:
     question: 
@@ -33,7 +49,24 @@ own-pid:
     answer: 
         big: yes!
         small: |
-            a container process will one PID in its PID namespace and a different PID in the host PID namespace
+            a container process will have one PID (like 25) in its PID namespace and a
+            different PID (like 32123) in the host PID namespace
+
+layer-implementation:
+    question: 
+        big: |
+            which kernel feature lets you save disk space by sharing layers between containers?
+        small: |
+            a. cgroups
+            b. namespaces
+            c. capabilities
+            d. seccomp-bpf
+            e. overlayfs
+    answer: 
+        big: overlayfs
+        small: |
+            it's really easy to experiment and make your own overlays -- the `mount` man page explains how!
+
 
 docker-required:
     question: 
@@ -58,43 +91,49 @@ just-use-cgroups:
 whats-inside:
     question: 
         big: |
-            what does it means to run a command "inside" a container
+            what does it mean to run a command "inside" a container
     answer: 
         small: |
             run the command with the same cgroups and namespaces as the container's processes
 
-nsenter-command:
+namespace-command:
     question: 
         big: |
-            what command lets you run a command inside a container's mount namespace?
+            what command lets you run a program using a container's mount namespace?
     answer: 
         big: |
             nsenter!
         small: |
-            you can run a command inside any/all of a container's namespaces with nsenter
-
+            `nsenter -t $PID -a /bin/bash`
+            will start a bash shell using the same namespaces as $PID
 prevent:
     question: 
         big: |
-            what are 2 ways to prevent
-            containers from doing
-            scary things?
+            which 2 Linux kernel features can prevent a container from using privileged system calls?
+        small: |
+            1. cgroups
+            2. namespaces
+            3. capabilities
+            4. seccomp-bpf
+            5. overlayfs
+
     answer: 
         big: |
             capabilities
             and seccomp-bpf!
         small: |
             seccomp-bpf whitelists system calls and capabilities only allow certain categories of activity
+
 exceed-memory:
     question: 
         big: |
-            what happens when a container exceeds its memory limit?
+            what happens if you set a memory limit with cgroups and the container uses more memory than the limit?
     answer: 
         small: |
             depending on your system's configuration, either:
 
             1. it starts swapping
-            2. processes inside the container get OOM killed
+            2. processes inside the container get OOM (out of memory) killed
 
 ip-address:
     question: 
@@ -104,7 +143,18 @@ ip-address:
         big: |
             often they do!
         small: |
-            docker gives containers IP addresses by default. The container IP may or may not be accessible from other computers, though!
+            docker gives containers IP addresses by default. Usually the IP range is 172.17.x.x.
+
+ip-address:
+    question: 
+        big: |
+            can you access a container's IP address from a different computer?
+    answer: 
+        big: |
+            not always!
+        small: |
+            this is complicated to implement but Kubernetes containers usually have IP addresses
+            that can be accessed from any host in the cluster.
 
 memory-tracking:
     question: 
