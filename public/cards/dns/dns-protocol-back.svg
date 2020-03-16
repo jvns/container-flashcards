@@ -47,36 +47,35 @@
      inkscape:window-maximized="0"
      inkscape:current-layer="svg14" />
   <text
-     x="50%"
-     y="80"
+     x="200"
+     y="64"
      dominant-baseline="middle"
-     text-anchor="middle"
-     style="font-size:24px;font-family:juliabold;"
+     style="font-size:24px;font-family:juliabold;dominant-baseline:middle;text-anchor:middle"
      id="text4">
     <tspan
        sodipodi:role="line"
-       x="50%"
-       y="80"
-       id="tspan2">historically UDP</tspan>
+       x="200"
+       y="64"
+       id="tspan2">it can use either!</tspan>
   </text>
   <text
-     x="56"
+     x="52"
      y="140"
      style="font-size:20px;font-family:juliabold"
      id="text12">
     <tspan
        sodipodi:role="line"
-       x="56"
+       x="52"
        y="140"
        id="tspan6">... but we're seeing a recent</tspan>
     <tspan
        sodipodi:role="line"
-       x="56"
+       x="52"
        y="165"
        id="tspan8">move to encrypted DNS over</tspan>
     <tspan
        sodipodi:role="line"
-       x="56"
+       x="52"
        y="190"
        id="tspan10">HTTPS which uses TCP.</tspan>
   </text>

@@ -26,5 +26,12 @@ module.exports = {
         template: 'public/index.html',
         filename: 'linux/index.html',
     },
+    "dns": {
+        entry: 'src/pages/dns.ts',
+        title: 'DNS flashcards',
+        template: 'public/index.html',
+        filename: 'dns/index.html',
+    },
+
   }
 }

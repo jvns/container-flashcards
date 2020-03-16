@@ -153,8 +153,7 @@ ip-address:
         big: |
             not always!
         small: |
-            this is complicated to implement but Kubernetes containers usually have IP addresses
-            that can be accessed from any host in the cluster.
+            this is complicated to implement but Kubernetes containers usually have IP addresses that can be accessed from any host in the cluster.
 
 memory-tracking:
     question: 
