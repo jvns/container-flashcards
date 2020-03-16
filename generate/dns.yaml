@@ -1,0 +1,127 @@
+dns-basics:
+    question: 
+        big: |
+            what's the most common thing we use DNS for?
+    answer: 
+        big: |
+            turning a domain name (like google.com) into an IP address (like 19.3.2.15)
+
+command-line:
+    question: 
+        big: |
+            what command line tool can you use to make DNS queries?
+    answer: 
+        big: dig or host!
+        small:
+            $ dig google.com
+            will give you the IP address for google.com
+            
+opposite:
+    question: 
+        big: |
+            is it possible to go the opposite direction -- get the domain name for an IP address?
+    answer: 
+        big: yes!
+        small: |
+            $ dig -x 172.217.13.174
+            will do a "reverse DNS lookup" for 172.217.13.174. This doesn't
+            always work -- it depends on there being an accurate PTR record.
+many-ips:
+    question: 
+        big: |
+            does every domain only have one IP address?
+    answer: 
+        big: no!
+        small: |
+            it's very common for a nameserver to randomly choose an IP address to resolve to a domain to from a pool of possible servers
+
+dns-information:
+    question:
+        big: |
+            do DNS servers only store IP addresses?
+    answer:
+        big: |
+            no
+        small: |
+            there are many types of DNS records (A, NS, MX, PTR, etc). "A records" store IP
+            addresses, but there are lots of others.
+
+email:
+    question:
+        big: |
+            does email use DNS?
+    answer:
+        big: |
+            yes!
+        small: |
+            the mail server for a domain is in the "MX" DNS record
+
+cname:
+    question:
+        big: what does setting a CNAME record to google.com for your domain do?
+    answer:
+        big: redirect to google.com!
+        small: |
+            it'll return whatever IP address google.com resolves to for DNS queries
+
+google-dns:
+    question:
+        big: |
+            what's 8.8.8.8?
+    answer:
+        big: |
+            a popular DNS server hosted by Google.
+            Anyone can make DNS queries to it.
+
+where-dns-responses-come-from:
+    question:
+        big: |
+            when you ask 8.8.8.8 for an IP address for reddit.com, where does it get that information?
+    answer:
+        big: |
+            from reddit.com's `nameserver`
+        small: |
+            every domain has a nameserver which is the source of truth for DNS queries about that domain
+
+where-nameserver:
+    question:
+        big: |
+            how does 8.8.8.8 know where reddit.com's nameserver is?
+    answer:
+        big: |
+            it makes an `NS` query to the root `.com` DNS server
+        small: |
+            every TLD (.com, .io, etc) has its own DNS servers that store the nameservers for every domain with that TLD.
+
+
+own-dns-server:
+    question:
+        big: |
+            do you need to use 8.8.8.8 to make a DNS query for reddit.com?
+    answer:
+        big: |
+            no
+        small: |
+            you can just make a DNS query to reddit.com's nameserver yourself!
+
+types-of-dns-servers:
+    question:
+        big: |
+            what are the 2 types of DNS servers?
+    answer:
+        big: |
+            authoritative and recursive!
+        small: |
+            "authoritative": nameservers, source of truth
+            "recursive": like 8.8.8.8. they just query authoritative nameservers and cache
+
+dns-protocol:
+    question:
+        big: |
+            what protocol does DNS use under the hood?
+    answer:
+        big: |
+            historically UDP
+        small: |
+            ... but we're seeing a recent move to encrypted DNS over HTTPS which uses TCP.
+
