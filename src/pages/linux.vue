@@ -1,13 +1,13 @@
 <template>
     <div id="app">
         <Game v-bind:cards='[
-            "read-file",
             "kill",
             "ctrlc",
             "stop-kill",
             "pipe-read",
             "use-sockets",
             "unix-differences",
+            "read-file",
             "inherit",
             "threads-share",
             "proc",
