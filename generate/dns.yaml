@@ -91,7 +91,7 @@ where-nameserver:
         big: |
             it makes an `NS` query to the root `.com` DNS server
         small: |
-            every TLD (.com, .io, etc) has its own DNS servers that store the nameservers for every domain with that TLD.
+            each TLD (.com, .io, etc) has DNS servers that store the nameservers for every domain with that TLD.
 
 
 own-dns-server:
@@ -118,10 +118,10 @@ types-of-dns-servers:
 dns-protocol:
     question:
         big: |
-            what protocol does DNS use under the hood?
+            does DNS use TCP or UDP?
     answer:
         big: |
-            historically UDP
+            it can use either!
         small: |
             ... but we're seeing a recent move to encrypted DNS over HTTPS which uses TCP.
 
