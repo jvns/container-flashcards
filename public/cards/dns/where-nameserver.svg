@@ -35,14 +35,14 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1570"
+     inkscape:window-width="640"
      inkscape:window-height="838"
      id="namedview10"
      showgrid="false"
      inkscape:zoom="0.855"
      inkscape:cx="200"
      inkscape:cy="125"
-     inkscape:window-x="15"
+     inkscape:window-x="940"
      inkscape:window-y="32"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg8" />
@@ -56,16 +56,11 @@
        sodipodi:role="line"
        x="200"
        y="110"
-       id="tspan2">how does the 8.8.8.8 DNS</tspan>
+       id="tspan2">how does 8.8.8.8 know where</tspan>
     <tspan
        sodipodi:role="line"
        x="200"
        y="140"
-       id="tspan4">server know where</tspan>
-    <tspan
-       sodipodi:role="line"
-       x="200"
-       y="170"
-       id="tspan825">reddit.com's nameserver is?</tspan>
+       id="tspan4">reddit.com's nameserver is?</tspan>
   </text>
 </svg>

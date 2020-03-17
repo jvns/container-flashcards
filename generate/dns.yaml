@@ -110,7 +110,7 @@ where-nameserver:
             how does 8.8.8.8 know where reddit.com's nameserver is?
     answer:
         big: |
-            it makes an `NS` query to the root `.com` DNS server
+            it queries the root `.com` DNS server
         small: |
             each TLD (.com, .io, etc) has DNS servers that store the nameservers for every domain with that TLD.
 

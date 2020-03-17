@@ -35,61 +35,58 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1570"
+     inkscape:window-width="640"
      inkscape:window-height="838"
      id="namedview20"
      showgrid="false"
      inkscape:zoom="0.855"
-     inkscape:cx="63.74269"
+     inkscape:cx="200"
      inkscape:cy="125"
-     inkscape:window-x="15"
+     inkscape:window-x="940"
      inkscape:window-y="32"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg18" />
   <text
      x="200"
-     y="42"
+     y="38"
      dominant-baseline="middle"
      style="font-size:24px;font-family:juliabold;dominant-baseline:middle;text-anchor:middle"
      id="text6">
     <tspan
        sodipodi:role="line"
        x="200"
-       y="42"
-       id="tspan2">it makes an <tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:inconsolata;-inkscape-font-specification:inconsolata"
-   id="tspan842">NS</tspan>
- query to</tspan>
+       y="38"
+       id="tspan2">it queries the root `.com`</tspan>
     <tspan
        sodipodi:role="line"
        x="200"
-       y="72"
-       id="tspan4">the root .com DNS server</tspan>
+       y="68"
+       id="tspan4">DNS server</tspan>
   </text>
   <text
-     x="42"
-     y="142"
+     x="36"
+     y="136"
      style="font-size:20px;font-family:juliabold"
      id="text16">
     <tspan
        sodipodi:role="line"
-       x="42"
-       y="142"
+       x="36"
+       y="136"
        id="tspan8">each TLD (.com, .io, etc) has</tspan>
     <tspan
        sodipodi:role="line"
-       x="42"
-       y="167"
-       id="tspan12">DNS servers that store the</tspan>
+       x="36"
+       y="161"
+       id="tspan10">DNS servers that store the</tspan>
     <tspan
        sodipodi:role="line"
-       x="42"
-       y="192"
-       id="tspan14">nameservers for every domain</tspan>
+       x="36"
+       y="186"
+       id="tspan12">nameservers for every domain</tspan>
     <tspan
        sodipodi:role="line"
-       x="42"
-       y="217"
-       id="tspan840">with that TLD.</tspan>
+       x="36"
+       y="211"
+       id="tspan14">with that TLD.</tspan>
   </text>
 </svg>

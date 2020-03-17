@@ -50,11 +50,17 @@ def line(text, start, y):
 with open(sys.argv[1]) as f:
     data = yaml.safe_load(f)
 
+if len(sys.argv) > 3:
+    to_render = sys.argv[3:]
+else:
+    to_render = data.keys()
+
 try:
     os.mkdir(dest)
 except:
     pass
-for name, pair in data.items():
+for name in to_render:
+    pair = data[name]
     dest = sys.argv[2]
     with open(dest + '/' + name + '.svg', 'w') as f:
         f.write(svg(pair['question']))
