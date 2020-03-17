@@ -37,10 +37,10 @@ def area(text, size):
     lines = sum(lines, [])
     spans = [line(text, start, y + dy * i) for i, text in enumerate(lines)]
     return """
-      <text x="50%" y="{y}" {middle} style="font-size:{font_size}px;font-family:juliabold;">
+      <text x="{start}" y="{y}" {middle} style="font-size:{font_size}px;font-family:juliabold;">
       {spans}
   </text>
-         """.format(spans='\n'.join(spans), font_size=font_size, middle=middle, y=y)
+         """.format(spans='\n'.join(spans), font_size=font_size, middle=middle, y=y, start=start)
 
 def line(text, start, y):
     return """
