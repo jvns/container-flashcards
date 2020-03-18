@@ -1,0 +1,32 @@
+packets:
+    question: 
+        big: |
+            can network packets that you send from your computer get lost?
+    answer: 
+        big: yes!
+        small: |
+            packets can be lost, delayed, or corrupted! It happens all the time.
+            
+thing:
+    question:
+        big: |
+            suppose you send a network packet in a TCP connection. How can you tell if the recipient got that packet or not?
+    answer:
+        big: they send an ACK!
+        small: |
+            # TODO: WRONG
+            the recipient will send an ACK packet with the sequence number of
+            the most recent packet they've received
+            
+
+http:
+    question: 
+        big: |
+            do HTTP requests use TCP?
+    answer: 
+        big: yes!
+        small: |
+            sometimes they use a newer protocol called QUIC (over UDP) but most
+            HTTP requests are over TCP
+            
+

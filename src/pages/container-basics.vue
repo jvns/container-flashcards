@@ -21,6 +21,8 @@
 </template>
 
 <script lang="ts">
+// can you limit memory + cpu is just "yes"
+// just your program and base os static binary
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import Game from '../components/Game.vue';
 
