@@ -7,6 +7,21 @@ whats-tls-for:
             1. Encryption! It makes sure Bad Guys can't intercept your bank password
             2. Authentication! TLS ensures that when you connect to google.com, it's actually Google's server and not some other random server
 
+tls-wire:
+    question: 
+        big: |
+            after you've established a TLS connection, what algorithm is used to encrypt the data that's sent/received?
+        small:
+            a. ECDSA
+            b. AES
+            c. SHA
+            d. RSA
+    answer: 
+        big: b. AES!
+        small: |
+            it theoretically could use RSA/ECDSA, but those are slow! So instead the client and server negotiate a secret AES symmetric key and use that to encrypt everything.
+
+
 ssl-vs-tls:
     question: 
         big: |
@@ -46,6 +61,20 @@ multiple-domains:
             1. use a "wildcard" certificate, like one for "*.google.com"
             2. list multiple domains/subdomains that the certificate is valid for when you create it
 
+how-get-certificate:
+    question:
+        big: |
+            what do you need to do to convince a certificate authority to sign a certificate for a website?
+
+            a. pay them money
+            b. prove to them that you own the website
+            c. have the right private key
+            d. be in the same country as them
+    answer:
+        big: b. prove to them that you own the website
+        small:
+            if certificate authorities didn't verify that the owner actually owns the website they're getting a certificate for, the whole certificate system would be useless.
+
 can-tls-decrypt:
     question: 
         big: |
@@ -81,7 +110,7 @@ do-i-need-a-ca:
     answer: 
         big: no!
         small: |
-            you can make a "self-signed" TLS computer on your computer in 2 minutes. But if that certificate isn't signed by a trusted certificate authority, browsers won't trust it.
+            you can make a "self-signed" TLS computer on your computer in 2 minutes. But if that certificate isn't signed by a trusted certificate authority, browsers won't accept it.
 
 
 is-ssl-dangerous:
@@ -92,20 +121,6 @@ is-ssl-dangerous:
         big: it can be!
         small: |
             there are known attacks for older versions (like POODLE) which could let an attacker read the data you're sending over the connection
-
-tls-wire:
-    question: 
-        big: |
-            after you've established a TLS connection, what algorithm is used to encrypt the data that's sent/received?
-        small:
-            a. ECDSA
-            b. AES
-            c. SHA
-            d. RSA
-    answer: 
-        big: AES!
-        small: |
-            it theoretically could use RSA/ECDSA, but those are slow! So instead the client and server negotiate a secret AES symmetric key and use that to encrypt everything.
 
 certificate-secret:
     question: 
@@ -121,12 +136,3 @@ certificate-secret:
             - a signature by a certificate authority
 
             the matching private key for the certificate is DEFINITELY secret, though!
-
-require-http:
-    question: 
-        big: |
-            is it possible to prevent people from using your website without encryption?
-    answer:
-        big: yes!
-        small: 
-        TODO
