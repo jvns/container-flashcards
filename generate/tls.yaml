@@ -1,0 +1,132 @@
+whats-tls-for:
+    question: 
+        big: |
+            we use SSL (or TLS) for 2 main reasons. What are they?
+    answer: 
+        small: |
+            1. Encryption! It makes sure Bad Guys can't intercept your bank password
+            2. Authentication! TLS ensures that when you connect to google.com, it's actually Google's server and not some other random server
+
+ssl-vs-tls:
+    question: 
+        big: |
+            are SSL and TLS the same thing?
+    answer: 
+        big: yes!
+        small: |
+            TLS is the new name for SSL. The protocol version went from SSL 3.0 to TLS 1.0
+
+https-vs-tls:
+    question: 
+        big: |
+            are HTTPS and TLS the same thing?
+    answer: 
+        big: basically, yes!
+        small: |
+            you can encrypt any TCP connection with TLS. "HTTPS" is what we call it when we encrypt a HTTP connection with TLS, but it's just a special case of TLS.
+
+every-cert-domain:
+    question:
+        big: |
+            does every TLS certificate have a website (like mail.google.com) on it?
+    answer:
+        big: yes!
+        small: |
+            half the point of a certificate is to prove that a server is the "real" server for a website, so every certificate has a website on it.
+
+multiple-domains:
+    question: 
+        big: |
+            can you use the same certificate for more than one domain/subdomain?
+    answer: 
+        big: yes!
+        small: |
+            there are 2 ways to do this:
+            
+            1. use a "wildcard" certificate, like one for "*.google.com"
+            2. list multiple domains/subdomains that the certificate is valid for when you create it
+
+can-tls-decrypt:
+    question: 
+        big: |
+            if you use HTTPS to connect to a website, can your ISP (or the NSA) see what information you're sending?
+    answer: 
+        big: no!
+        small: |
+            if you're using the newest version of TLS (which you often will be!), there's no known way for anybody to decrypt the information without having the TLS certificate's private key. It's really safe!
+
+are-free-certificates-secure:
+    question: 
+        big: |
+            are free certificates (like the ones from Let's Encrypt) just as secure as ones you pay for?
+    answer: 
+        big: yes!
+        small: |
+            all certificates use the exact same cryptography. You can pay a certificate authority extra for an EV ("extended validation") certificate, which basically means that they check some extra facts about your business. For example apple.com uses an EV cert.
+
+do-tls-certificates-expire:
+    question: 
+        big: |
+            once you get a TLS certificate, can you use it forever?
+    answer: 
+        big: no!
+        small: |
+            every certificate has an expiration date, usually 3 months to a year after it was issued.
+            One reason this is good -- if someone steals your certificate's private key, they can only use it for a limited amount of time!
+
+do-i-need-a-ca:
+    question: 
+        big: |
+            do I need a certificate authority (like Let's Encrypt or Symantec) to create a TLS certificate?
+    answer: 
+        big: no!
+        small: |
+            you can make a "self-signed" TLS computer on your computer in 2 minutes. But if that certificate isn't signed by a trusted certificate authority, browsers won't trust it.
+
+
+is-ssl-dangerous:
+    question: 
+        big: |
+            is it dangerous for your webserver to support old versions of TLS (like SSL 3.0?)
+    answer: 
+        big: it can be!
+        small: |
+            there are known attacks for older versions (like POODLE) which could let an attacker read the data you're sending over the connection
+
+tls-wire:
+    question: 
+        big: |
+            after you've established a TLS connection, what algorithm is used to encrypt the data that's sent/received?
+        small:
+            a. ECDSA
+            b. AES
+            c. SHA
+            d. RSA
+    answer: 
+        big: AES!
+        small: |
+            it theoretically could use RSA/ECDSA, but those are slow! So instead the client and server negotiate a secret AES symmetric key and use that to encrypt everything.
+
+certificate-secret:
+    question: 
+        big: |
+            are TLS certificates private?
+    answer: 
+        big: no!
+        small: |
+            a TLS certificate contains:
+            - a public key
+            - the domain names it's valid for
+            - an expiration date
+            - a signature by a certificate authority
+
+            the matching private key for the certificate is DEFINITELY secret, though!
+
+require-http:
+    question: 
+        big: |
+            is it possible to prevent people from using your website without encryption?
+    answer:
+        big: yes!
+        small: 
+        TODO
