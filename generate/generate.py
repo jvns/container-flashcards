@@ -2,6 +2,7 @@ import yaml
 import textwrap
 import sys
 import os
+import subprocess
 
 def svg(data):
     return """
@@ -74,4 +75,6 @@ for name in to_render:
     with open(dest + '/' + name + '-back.svg', 'w') as f:
         f.write(svg(pair['answer']))
 
-
+for name in to_render:
+    subprocess.check_call(["inkscape", dest + '/' + name + '.svg'])
+    subprocess.check_call(["inkscape", dest + '/' + name + '-back.svg'])
