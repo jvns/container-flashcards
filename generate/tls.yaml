@@ -49,7 +49,7 @@ tls-wire:
 every-cert-domain:
     question:
         big: |
-            does every TLS certificate have a hostname
+            does every TLS server certificate have a hostname
             (like mail.google.com) on it?
     answer:
         big: yes!
