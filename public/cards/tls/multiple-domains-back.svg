@@ -48,55 +48,55 @@
      inkscape:current-layer="svg22" />
   <text
      x="200"
-     y="36"
+     y="30"
      dominant-baseline="middle"
      style="font-size:24px;font-family:juliabold;dominant-baseline:middle;text-anchor:middle;white-space:pre"
      id="text4">
     <tspan
        sodipodi:role="line"
        x="200"
-       y="36"
+       y="30"
        id="tspan2">yes!</tspan>
   </text>
   <text
      x="20"
-     y="84"
+     y="74"
      style="font-size:20px;font-family:juliabold;white-space:pre"
      id="text20">
     <tspan
        sodipodi:role="line"
        x="20"
-       y="84"
+       y="74"
        id="tspan6">there are 2 ways to do this:</tspan>
     <tspan
        sodipodi:role="line"
        x="20"
-       y="109"
+       y="99"
        id="tspan8">1. use a &quot;wildcard&quot; certificate,</tspan>
     <tspan
        sodipodi:role="line"
        x="20"
-       y="134"
+       y="124"
        id="tspan10">   like &quot;*.google.com&quot;</tspan>
     <tspan
        sodipodi:role="line"
        x="20"
-       y="159"
-       id="tspan12">2. list multiple websites that</tspan>
+       y="149"
+       id="tspan12">2. list multiple hostnames that</tspan>
     <tspan
        sodipodi:role="line"
        x="20"
-       y="184"
+       y="174"
        id="tspan14">   the certificate is valid for when</tspan>
     <tspan
        sodipodi:role="line"
        x="20"
-       y="209"
+       y="199"
        id="tspan16">   you create it, like apple.com and</tspan>
     <tspan
        sodipodi:role="line"
        x="20"
-       y="234"
+       y="224"
        id="tspan18">   apple.com.cn</tspan>
   </text>
 </svg>

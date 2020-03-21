@@ -48,40 +48,40 @@
      inkscape:current-layer="svg16" />
   <text
      x="200"
-     y="54"
+     y="38"
      dominant-baseline="middle"
      style="font-size:24px;font-family:juliabold;dominant-baseline:middle;text-anchor:middle;white-space:pre"
      id="text4">
     <tspan
        sodipodi:role="line"
        x="200"
-       y="54"
+       y="38"
        id="tspan2">yes!</tspan>
   </text>
   <text
      x="20"
-     y="116"
+     y="118"
      style="font-size:20px;font-family:juliabold;white-space:pre"
      id="text14">
     <tspan
        sodipodi:role="line"
        x="20"
-       y="116"
+       y="118"
        id="tspan6">the point of a certificate is to</tspan>
     <tspan
        sodipodi:role="line"
        x="20"
-       y="141"
+       y="143"
        id="tspan8">prove that a server is the &quot;real&quot;</tspan>
     <tspan
        sodipodi:role="line"
        x="20"
-       y="166"
-       id="tspan10">server for a website, so every</tspan>
+       y="168"
+       id="tspan10">server for a hostname, so every</tspan>
     <tspan
        sodipodi:role="line"
        x="20"
-       y="191"
-       id="tspan12">certificate has a website on it.</tspan>
+       y="193"
+       id="tspan12">certificate has a hostname on it.</tspan>
   </text>
 </svg>

@@ -49,26 +49,26 @@ tls-wire:
 every-cert-domain:
     question:
         big: |
-            does every TLS certificate have a website
+            does every TLS certificate have a hostname
             (like mail.google.com) on it?
     answer:
         big: yes!
         small: |
-            the point of a certificate is to prove that a server is the "real" server for a website, so every certificate has a website on it.
+            the point of a certificate is to prove that a server is the "real" server for a hostname, so every certificate has a hostname on it.
 
 multiple-domains:
     question: 
         big: |
             can you use the same
             certificate for more
-            than one website?
+            than one hostname?
     answer: 
         big: yes!
         small: |
             there are 2 ways to do this:
             
             1. use a "wildcard" certificate, like "*.google.com"
-            2. list multiple websites that the certificate is valid for when you create it, like apple.com and apple.com.cn
+            2. list multiple hostnames that the certificate is valid for when you create it, like apple.com and apple.com.cn
 
 how-get-certificate:
     question:
@@ -156,7 +156,7 @@ certificate-secret:
         small: |
             a TLS certificate contains:
             - a public key
-            - the website(s) it's valid for
+            - the hostname(s) it's valid for
             - an expiration date
             - signature(s) from a CA
 

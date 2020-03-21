@@ -48,24 +48,24 @@
      inkscape:current-layer="svg10" />
   <text
      x="200"
-     y="90"
+     y="96"
      dominant-baseline="middle"
      style="font-size:24px;font-family:juliabold;dominant-baseline:middle;text-anchor:middle;white-space:pre"
      id="text8">
     <tspan
        sodipodi:role="line"
        x="200"
-       y="90"
+       y="96"
        id="tspan2">can you use the same</tspan>
     <tspan
        sodipodi:role="line"
        x="200"
-       y="120"
+       y="126"
        id="tspan4">certificate for more</tspan>
     <tspan
        sodipodi:role="line"
        x="200"
-       y="150"
-       id="tspan6">than one website?</tspan>
+       y="156"
+       id="tspan6">than one hostname?</tspan>
   </text>
 </svg>
