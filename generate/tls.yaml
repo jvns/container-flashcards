@@ -11,7 +11,7 @@ tls-wire:
     question: 
         big: |
             after you've established a TLS connection, what algorithm is used to encrypt the data that's sent/received?
-        small:
+        small: |
             a. ECDSA
             b. AES
             c. SHA
@@ -58,14 +58,14 @@ multiple-domains:
         small: |
             there are 2 ways to do this:
             
-            1. use a "wildcard" certificate, like one for "*.google.com"
+            1. use a "wildcard" certificate, like a certificate for "*.google.com"
             2. list multiple domains/subdomains that the certificate is valid for when you create it
 
 how-get-certificate:
     question:
         big: |
             what do you need to do to convince a certificate authority to sign a certificate for a website?
-
+        small: |
             a. pay them money
             b. prove to them that you own the website
             c. have the right private key

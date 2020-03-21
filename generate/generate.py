@@ -26,21 +26,28 @@ def area(text, size):
         dy = 28
     else:
         start = '20'
-        wrap = 30
+        wrap = 33
         font_size=20
         middle = ""
         y=140
         dy=24
     if text is None:
         return ''
-    lines = [textwrap.wrap(text, wrap) for text in text.split('\n')]
+    lines = [wraptext(text, wrap) for text in text.split('\n')]
     lines = sum(lines, [])
     spans = [line(text, start, y + dy * i) for i, text in enumerate(lines)]
     return """
-      <text x="{start}" y="{y}" {middle} style="font-size:{font_size}px;font-family:juliabold;">
+      <text x="{start}" y="{y}" {middle} style="white-space: pre; font-size:{font_size}px;font-family:juliabold;">
       {spans}
   </text>
          """.format(spans='\n'.join(spans), font_size=font_size, middle=middle, y=y, start=start)
+
+def wraptext(text, wrap):
+    lines = textwrap.wrap(text, wrap)
+    if len(lines) > 0 and len(lines[0]) >= 2 and lines[0][1] == '.':
+        return [lines[0]] + ['   ' + x for x in lines[1:]]
+    else:
+        return lines
 
 def line(text, start, y):
     return """
