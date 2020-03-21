@@ -8,8 +8,8 @@
                 Click the card to see the answer.
                 </p>
                 <div class="text-center text-xl"> Card {{current_card+1}}  of {{cards.length}} </div>
-                <div v-for="(card, index) in cards">
-                    <Flashcard v-bind:basedir='basedir' v-bind:card_left="index < current_card" v-bind:card_hidden="index > current_card" v-bind:card_visible="index == current_card" v-bind:name="card"></Flashcard>
+                <div v-on:click="start" v-for="(card, index) in cards">
+                    <Flashcard v-bind:ribbon='ribbon' v-bind:basedir='basedir' v-bind:card_left="index < current_card" v-bind:card_hidden="index > current_card" v-bind:card_visible="index == current_card" v-bind:name="card"></Flashcard>
                 </div>
                 <div class="flex flex-row flex-wrap justify-center mt-2">
                     <button class="bg-pink-600 text-white rounded px-3 py-2 mx-4 my-1" @click="knew">I knew that!</button>
@@ -72,6 +72,7 @@ export default class Game extends Vue {
     @Prop() private basedir!: string;
     @Prop() private title!: string;
     private done: boolean = false;
+    private ribbon: boolean = true;
     //@ts-ignore
     private current_card: int = 0;
     private knew_list = {};
@@ -97,6 +98,10 @@ export default class Game extends Vue {
         firebase.initializeApp(firebaseConfig);
         // @ts-ignore
         Vue.prototype.$firedb = firebase.firestore();
+    }
+    start() {
+        this.ribbon = false;
+        console.log(this.ribbon);
     }
 
     knew(): any {

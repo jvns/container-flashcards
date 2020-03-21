@@ -1,7 +1,7 @@
 <template>
     <div class="scene scene--card w-full" v-bind:class="{card_visible: card_visible, card_hidden: card_hidden, card_left: card_left}">
     <div v-on:click="flip" class="card mb-4 w-full rounded-lg border-gray-300 border-2" v-bind:class="{ flipped: flipped}">
-        <div v-if="start" class="ribbon">click card to flip!</div>
+        <div v-if="ribbon" class="ribbon">click card to flip!</div>
         <div class="card__face card__face--front">
             <img v-bind:src="'/cards/' + basedir + '/' + name + '.png'">
         </div>
@@ -20,13 +20,13 @@ export default class Flashcard extends Vue {
     @Prop() private name!: string;
     @Prop() private basedir!: string;
     @Prop() private card_left!: boolean;
+    @Prop() private ribbon!: boolean;
     @Prop() private card_visible!: boolean;
     @Prop() private card_hidden!: boolean;
     private flipped: boolean = false;
-    private start: boolean = true;
     flip () {
         this.flipped = !this.flipped;
-        this.start = false;
+        this.ribbon = false;
     }
 }
 </script>
