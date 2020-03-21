@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="400"
+   height="250"
+   version="1.1"
+   id="svg20"
+   sodipodi:docname="https-vs-tls-back.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata26">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs24" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="838"
+     id="namedview22"
+     showgrid="false"
+     inkscape:zoom="0.855"
+     inkscape:cx="200"
+     inkscape:cy="125"
+     inkscape:window-x="960"
+     inkscape:window-y="32"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg20" />
+  <text
+     x="200"
+     y="42"
+     dominant-baseline="middle"
+     style="font-size:24px;font-family:juliabold;dominant-baseline:middle;text-anchor:middle;white-space:pre"
+     id="text4">
+    <tspan
+       sodipodi:role="line"
+       x="200"
+       y="42"
+       id="tspan2">yes!</tspan>
+  </text>
+  <text
+     x="20"
+     y="100"
+     style="font-size:20px;font-family:juliabold;white-space:pre"
+     id="text18">
+    <tspan
+       sodipodi:role="line"
+       x="20"
+       y="100"
+       id="tspan6">you can encrypt any TCP</tspan>
+    <tspan
+       sodipodi:role="line"
+       x="20"
+       y="125"
+       id="tspan8">connection with TLS (like a</tspan>
+    <tspan
+       sodipodi:role="line"
+       x="20"
+       y="150"
+       id="tspan10">database connection or email).</tspan>
+    <tspan
+       sodipodi:role="line"
+       x="20"
+       y="175"
+       id="tspan12">&quot;HTTPS&quot; is what we call it when</tspan>
+    <tspan
+       sodipodi:role="line"
+       x="20"
+       y="200"
+       id="tspan14">we encrypt a HTTP connection with</tspan>
+    <tspan
+       sodipodi:role="line"
+       x="20"
+       y="225"
+       id="tspan16">TLS.</tspan>
+  </text>
+</svg>

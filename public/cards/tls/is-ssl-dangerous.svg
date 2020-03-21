@@ -1,0 +1,22 @@
+
+    <svg width="400" height="250"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+>
+    
+      <text x="50%" y="80" dominant-baseline="middle" text-anchor="middle" style="white-space: pre; font-size:24px;font-family:juliabold;">
+      
+<tspan sodipodi:role="line" x="50%" y="80">is it dangerous for your</tspan>
+
+
+<tspan sodipodi:role="line" x="50%" y="108">webserver to support old</tspan>
+
+
+<tspan sodipodi:role="line" x="50%" y="136">versions of TLS</tspan>
+
+
+<tspan sodipodi:role="line" x="50%" y="164">(like TLS 1.0 and 1.1?)</tspan>
+
+  </text>
+         
+    
+</svg>

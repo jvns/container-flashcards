@@ -1,7 +1,8 @@
 ssl-vs-tls:
     question: 
         big: |
-            are SSL and TLS the same thing?
+            are SSL and TLS
+            the same thing?
     answer: 
         big: yes!
         small: |
@@ -14,65 +15,74 @@ whats-tls-for:
     answer: 
         small: |
             1. Encryption! It makes sure Bad Guys can't intercept your bank password
+
             2. Authentication! TLS makes sure that when you connect to google.com, it's actually Google and not someone else
 
 https-vs-tls:
     question: 
         big: |
-            are HTTPS and TLS the same thing?
+            does HTTPS use TLS?
     answer: 
-        big: basically, yes!
+        big: yes!
         small: |
-            you can encrypt any TCP connection with TLS. "HTTPS" is what we call it when we encrypt a HTTP connection with TLS, but it's just a special case of TLS.
+            you can encrypt any TCP connection with TLS (like a database connection or email). "HTTPS" is what we call it when we encrypt a HTTP connection with TLS.
 
 tls-wire:
     question: 
         big: |
-            after you've established a TLS connection, what algorithm is used to encrypt the data?
+            after you've established a
+            TLS connection, what
+            algorithm is used to
+            encrypt the data?
         small: |
             a. ECDSA
             b. AES
             c. SHA
             d. RSA
     answer: 
-        big: b. AES!
+        big: |
+            b. a symmetric cipher
+            like AES!
         small: |
-            it theoretically could use RSA/ECDSA, but those are slow! So instead the client and server negotiate a secret AES symmetric key and use that to encrypt everything.
+            RSA and ECDSA are slow! So instead the client and server pick a secret (and faster to use) symmetric key and use that to encrypt everything.
 
 every-cert-domain:
     question:
         big: |
-            does every TLS certificate have a website (like mail.google.com) on it?
+            does every TLS certificate have a website
+            (like mail.google.com) on it?
     answer:
         big: yes!
         small: |
-            half the point of a certificate is to prove that a server is the "real" server for a website, so every certificate has a website on it.
+            the point of a certificate is to prove that a server is the "real" server for a website, so every certificate has a website on it.
 
 multiple-domains:
     question: 
         big: |
-            can you use the same certificate for more than one domain/subdomain?
+            can you use the same
+            certificate for more
+            than one website?
     answer: 
         big: yes!
         small: |
             there are 2 ways to do this:
             
-            1. use a "wildcard" certificate, like a certificate for "*.google.com"
-            2. list multiple websites that the certificate is valid for when you create it
+            1. use a "wildcard" certificate, like "*.google.com"
+            2. list multiple websites that the certificate is valid for when you create it, like apple.com and apple.com.cn
 
 how-get-certificate:
     question:
         big: |
-            what do you need to do get a certificate signed?
+            what do you need to do to
+            get a certificate signed?
         small: |
-            a. pay the certificate authority money
+            a. pay the certificate authority
             b. prove that you own the website
             c. have the right private key
-            d. be in the same country as the CA
     answer:
         big: b. prove that you own the website
         small:
-            half the point of a certificate is to prove that you're the legitimate owner of the website
+            the point of a certificate is to prove that you're the legitimate owner of the website
 
 can-tls-decrypt:
     question: 
@@ -86,45 +96,48 @@ can-tls-decrypt:
 are-free-certificates-secure:
     question: 
         big: |
-            are free certificates (like the ones from Let's Encrypt) just as secure as ones you pay for?
+            are free certificates (like the ones from Let's Encrypt) just as secure as the ones you pay for?
     answer: 
         big: yes!
         small: |
-            all certificates use the exact same cryptography. You can pay a certificate authority extra for an EV ("extended validation") certificate, which basically means that they check some extra facts about your business. For example apple.com uses an EV cert.
+            all certificates use the exact same cryptography. You can pay a certificate authority extra for an EV ("extended validation") certificate, but that won't give you better crypto.
 
 do-tls-certificates-expire:
     question: 
         big: |
-            once you get a TLS certificate, can you use it forever?
+            once you get a
+            TLS certificate, can
+            you use it forever?
     answer: 
         big: no!
         small: |
             every certificate has an expiration date, usually 3 months to a year after it was issued.
-            One reason this is good -- if someone steals your certificate's private key, they can only use it for a limited amount of time!
+            One reason this is good: if someone steals your certificate's private key, they can only use it for a limited amount of time!
 
 do-i-need-a-ca:
     question: 
         big: |
-            do I need a certificate authority (like Let's Encrypt or Symantec) to create a TLS certificate?
+            do you need a certificate authority (like Let's Encrypt or Symantec) to create a TLS certificate?
     answer: 
         big: no!
         small: |
-            you can make a "self-signed" TLS computer on your computer in 2 minutes. But if that certificate isn't signed by a trusted certificate authority, browsers won't accept it.
+            you can make a "self-signed" TLS computer on your computer in 2 minutes. But because that certificate isn't signed by a trusted certificate authority, browsers won't accept it.
 
 
 is-ssl-dangerous:
     question: 
         big: |
-            is it dangerous for your webserver to support old versions of TLS (like SSL 3.0?)
+            is it dangerous for your webserver to support old versions of TLS
+            (like TLS 1.0 and 1.1?)
     answer: 
         big: it can be!
         small: |
-            there are known attacks for older versions (like POODLE) which could let an attacker read the data you're sending over the connection
+            it leaves you vulnerable to downgrade attacks (like POODLE &amp; others).
 
 certificate-secret:
     question: 
         big: |
-            are TLS certificates private?
+            are TLS certificates secret?
     answer: 
         big: no!
         small: |
@@ -132,6 +145,6 @@ certificate-secret:
             - a public key
             - the website(s) it's valid for
             - an expiration date
-            - a signature from a CA
+            - signature(s) from a CA
 
             the private key for the cert is SUPER SECRET though!
