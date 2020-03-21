@@ -5,43 +5,72 @@ import os
 import subprocess
 
 def svg(data):
-    return """
-    <svg width="400" height="250"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    big_lines = into_lines(data.get('big', None), 'big')
+    small_lines = into_lines(data.get('small', None), 'small')
+
+    big_y, small_y = calc_y(len(big_lines), len(small_lines))
+
+    big = area(big_lines, 'big', big_y)
+    small = area(small_lines, 'small', small_y)
+
+    return """<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+ <svg width="400" height="250"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
 >
     {big}
     {small}
 </svg>
 """.format(
-        big=area(data.get('big', None), 'big'),
-        small = area(data.get('small', None), 'small'))
+        big=big,
+        small=small )
 
+DBIG = 28
+DSMALL = 24
 
-def area(text, size):
+def calc_y(big_lines, small_lines):
+    big_height = big_lines * 28
+    height = big_height + small_lines * 24
+    print(height, small_lines, big_lines)
+    if small_lines == 0:
+        return (250 - height)/2.0 + 10, 0
+    elif big_lines == 0:
+        return 0, (250 - height)/2.0 + 20
+    else:
+        return 40, 40 + big_height + (250-height - 40)/2 + 10
+
+def area(lines, size, y):
+    if len(lines) == 0:
+        return ''
     if size == 'big':
         start = '50%'
-        wrap = 29
         font_size=24
         middle = 'dominant-baseline="middle" text-anchor="middle"'
-        y = 80
         dy = 28
     else:
         start = '20'
-        wrap = 33
         font_size=20
         middle = ""
-        y=140
         dy=24
-    if text is None:
-        return ''
-    lines = [wraptext(text, wrap) for text in text.split('\n')]
-    lines = sum(lines, [])
     spans = [line(text, start, y + dy * i) for i, text in enumerate(lines)]
     return """
       <text x="{start}" y="{y}" {middle} style="white-space: pre; font-size:{font_size}px;font-family:juliabold;">
       {spans}
   </text>
          """.format(spans='\n'.join(spans), font_size=font_size, middle=middle, y=y, start=start)
+
+def into_lines(text, size):
+    if text is None:
+        return []
+    if size == 'big':
+        wrap = 29
+    else:
+        wrap = 33
+    lines = [wraptext(text, wrap) for text in text.split('\n')]
+    lines = sum(lines, [])
+    return lines
 
 def wraptext(text, wrap):
     lines = textwrap.wrap(text, wrap)
@@ -70,11 +99,29 @@ except:
 for name in to_render:
     pair = data[name]
     dest = sys.argv[2]
+    print(name)
     with open(dest + '/' + name + '.svg', 'w') as f:
         f.write(svg(pair['question']))
     with open(dest + '/' + name + '-back.svg', 'w') as f:
         f.write(svg(pair['answer']))
 
-for name in to_render:
-    subprocess.check_call(["inkscape", dest + '/' + name + '.svg'])
-    subprocess.check_call(["inkscape", dest + '/' + name + '-back.svg'])
+
+from http.server import HTTPServer, BaseHTTPRequestHandler, SimpleHTTPRequestHandler
+import os
+def run(server_class=HTTPServer, handler_class=SimpleHTTPRequestHandler):
+    server_address = ('', 8000)
+    httpd = server_class(server_address, handler_class)
+    httpd.serve_forever()
+
+os.chdir('..')
+with open('./test.html', 'w') as f:
+    f.write('<html><head><body>')
+    f.write('<style type="text/css"> object { border: 1px #444 solid; } </style>')
+    for name in to_render:
+        f.write('<object type="image/svg+xml" data="%s"></object>' % ('generate/' + dest + '/' + name + '.svg'))
+        f.write('<object type="image/svg+xml" data="%s"></object>' % ('generate/' + dest + '/' + name + '-back.svg'))
+        f.write('<br>')
+    f.write('</body></html>')
+run()
+    #subprocess.check_call(["inkscape", dest + '/' + name + '.svg'])
+    #subprocess.check_call(["inkscape", dest + '/' + name + '-back.svg'])

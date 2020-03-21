@@ -6,7 +6,8 @@ ssl-vs-tls:
     answer: 
         big: yes!
         small: |
-            In 1999, the SSL protocol was updated and renamed to TLS. People often still say "SSL" and "TLS" interchangeably. Basically nobody uses the actual SSL protocol today.
+            In 1999, the SSL protocol was updated and renamed to TLS. People often still say "SSL" and "TLS" interchangeably.
+            Basically nobody uses the old SSL protocol anymore. We all use TLS.
 
 whats-tls-for:
     question: 
