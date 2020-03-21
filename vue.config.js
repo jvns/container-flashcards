@@ -32,6 +32,11 @@ module.exports = {
         template: 'public/index.html',
         filename: 'dns/index.html',
     },
-
+    "tls": {
+        entry: 'src/pages/tls.ts',
+        title: 'TLS flashcards',
+        template: 'public/index.html',
+        filename: 'tls/index.html',
+    },
   }
 }

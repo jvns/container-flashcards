@@ -84,6 +84,19 @@ how-get-certificate:
         small:
             the point of a certificate is to prove that you're the legitimate owner of the website
 
+how-browser-check:
+    question:
+        big: |
+            how does a browser check that your certificate is signed by someone it trust?
+        small: |
+            a. it has a hardcoded list
+            b. it asks a server
+            c. it uses certificate transparency
+    answer:
+        big: a. it has a hardcoded list
+        small:
+            your browser (or sometimes your OS) has a hardcoded list of trusted certificate authorities.
+
 can-tls-decrypt:
     question: 
         big: |

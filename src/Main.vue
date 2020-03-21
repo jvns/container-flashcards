@@ -10,6 +10,7 @@
             <li><a class="hover:text-blue-400" href="/container-basics">Container basics</a></li>
             <li><a class="hover:text-blue-400" href="/linux">Linux</a></li>
             <li><a class="hover:text-blue-400" href="/dns">DNS</a></li>
+            <li><a class="hover:text-blue-400" href="/tls">TLS</a></li>
         </ul>
         </p>
         </div>
