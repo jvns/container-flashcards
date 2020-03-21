@@ -1,0 +1,21 @@
+packet-parts:
+    question: 
+        big: |
+            If you open an HTTP packet in wireshark, has 4 parts. What are they?
+    answer: 
+        small: |
+            1. an ethernet or wifi header.
+            2. an IP header
+            3. a TCP header
+            4. the HTTP data
+
+packet-parts:
+    question: 
+        big: |
+            If you open an HTTP packet in wireshark, has 4 parts. What are they?
+    answer: 
+        small: |
+            1. an ethernet or wifi header.
+            2. an IP header
+            3. a TCP header
+            4. the HTTP data
