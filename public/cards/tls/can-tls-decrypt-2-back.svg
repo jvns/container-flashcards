@@ -10,11 +10,11 @@
    width="400"
    height="250"
    version="1.1"
-   id="svg20"
+   id="svg22"
    sodipodi:docname="can-tls-decrypt-2-back.svg"
    inkscape:version="0.92.3 (2405546, 2018-03-11)">
   <metadata
-     id="metadata26">
+     id="metadata28">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -25,7 +25,7 @@
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs24" />
+     id="defs26" />
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -37,7 +37,7 @@
      inkscape:pageshadow="2"
      inkscape:window-width="640"
      inkscape:window-height="838"
-     id="namedview22"
+     id="namedview24"
      showgrid="false"
      inkscape:zoom="0.855"
      inkscape:cx="200"
@@ -45,7 +45,7 @@
      inkscape:window-x="940"
      inkscape:window-y="32"
      inkscape:window-maximized="0"
-     inkscape:current-layer="svg20" />
+     inkscape:current-layer="svg22" />
   <text
      x="200"
      y="36"
@@ -60,38 +60,43 @@
   </text>
   <text
      x="20"
-     y="92"
+     y="88"
      style="font-size:20px;font-family:juliabold;white-space:pre"
-     id="text18">
+     id="text20">
     <tspan
        sodipodi:role="line"
        x="20"
-       y="92"
+       y="88"
        id="tspan6">as long as your browser only</tspan>
     <tspan
        sodipodi:role="line"
        x="20"
-       y="117"
+       y="113"
        id="tspan8">trusts real certificate</tspan>
     <tspan
        sodipodi:role="line"
        x="20"
-       y="142"
+       y="138"
        id="tspan10">authorities, you're safe.</tspan>
     <tspan
        sodipodi:role="line"
        x="20"
-       y="167"
+       y="163"
        id="tspan12">But employers sometimes install a</tspan>
     <tspan
        sodipodi:role="line"
        x="20"
-       y="192"
+       y="188"
        id="tspan14">fake CA on your computer so they</tspan>
     <tspan
        sodipodi:role="line"
        x="20"
-       y="217"
-       id="tspan28">can intercept and read TLS traffic.</tspan>
+       y="213"
+       id="tspan16">can intercept and read TLS</tspan>
+    <tspan
+       sodipodi:role="line"
+       x="20"
+       y="238"
+       id="tspan18">traffic.</tspan>
   </text>
 </svg>

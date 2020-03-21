@@ -100,7 +100,7 @@ how-browser-check:
 can-tls-decrypt-2:
     question: 
         big: |
-            if you use HTTPS to connect to a website, can your ISP or employer see what information you're sending?
+            if you use HTTPS to connect to a website, can your employer see what information you're sending?
     answer: 
         big: sometimes!
         small: |
