@@ -1,27 +1,3 @@
-whats-tls-for:
-    question: 
-        big: |
-            we use SSL (or TLS) for 2 main reasons. What are they?
-    answer: 
-        small: |
-            1. Encryption! It makes sure Bad Guys can't intercept your bank password
-            2. Authentication! TLS ensures that when you connect to google.com, it's actually Google's server and not some other random server
-
-tls-wire:
-    question: 
-        big: |
-            after you've established a TLS connection, what algorithm is used to encrypt the data that's sent/received?
-        small: |
-            a. ECDSA
-            b. AES
-            c. SHA
-            d. RSA
-    answer: 
-        big: b. AES!
-        small: |
-            it theoretically could use RSA/ECDSA, but those are slow! So instead the client and server negotiate a secret AES symmetric key and use that to encrypt everything.
-
-
 ssl-vs-tls:
     question: 
         big: |
@@ -31,6 +7,15 @@ ssl-vs-tls:
         small: |
             TLS is the new name for SSL. The protocol version went from SSL 3.0 to TLS 1.0
 
+whats-tls-for:
+    question: 
+        big: |
+            we use TLS (aka SSL) for 2 main reasons. What are they?
+    answer: 
+        small: |
+            1. Encryption! It makes sure Bad Guys can't intercept your bank password
+            2. Authentication! TLS makes sure that when you connect to google.com, it's actually Google and not someone else
+
 https-vs-tls:
     question: 
         big: |
@@ -39,6 +24,20 @@ https-vs-tls:
         big: basically, yes!
         small: |
             you can encrypt any TCP connection with TLS. "HTTPS" is what we call it when we encrypt a HTTP connection with TLS, but it's just a special case of TLS.
+
+tls-wire:
+    question: 
+        big: |
+            after you've established a TLS connection, what algorithm is used to encrypt the data?
+        small: |
+            a. ECDSA
+            b. AES
+            c. SHA
+            d. RSA
+    answer: 
+        big: b. AES!
+        small: |
+            it theoretically could use RSA/ECDSA, but those are slow! So instead the client and server negotiate a secret AES symmetric key and use that to encrypt everything.
 
 every-cert-domain:
     question:
@@ -59,21 +58,21 @@ multiple-domains:
             there are 2 ways to do this:
             
             1. use a "wildcard" certificate, like a certificate for "*.google.com"
-            2. list multiple domains/subdomains that the certificate is valid for when you create it
+            2. list multiple websites that the certificate is valid for when you create it
 
 how-get-certificate:
     question:
         big: |
-            what do you need to do to convince a certificate authority to sign a certificate for a website?
+            what do you need to do get a certificate signed?
         small: |
-            a. pay them money
-            b. prove to them that you own the website
+            a. pay the certificate authority money
+            b. prove that you own the website
             c. have the right private key
-            d. be in the same country as them
+            d. be in the same country as the CA
     answer:
-        big: b. prove to them that you own the website
+        big: b. prove that you own the website
         small:
-            if certificate authorities didn't verify that the owner actually owns the website they're getting a certificate for, the whole certificate system would be useless.
+            half the point of a certificate is to prove that you're the legitimate owner of the website
 
 can-tls-decrypt:
     question: 
@@ -131,8 +130,8 @@ certificate-secret:
         small: |
             a TLS certificate contains:
             - a public key
-            - the domain names it's valid for
+            - the website(s) it's valid for
             - an expiration date
-            - a signature by a certificate authority
+            - a signature from a CA
 
-            the matching private key for the certificate is DEFINITELY secret, though!
+            the private key for the cert is SUPER SECRET though!

@@ -19,7 +19,7 @@ def svg(data):
 def area(text, size):
     if size == 'big':
         start = '50%'
-        wrap = 28
+        wrap = 29
         font_size=24
         middle = 'dominant-baseline="middle" text-anchor="middle"'
         y = 80
