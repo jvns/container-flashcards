@@ -10,11 +10,11 @@
    width="400"
    height="250"
    version="1.1"
-   id="svg8"
+   id="svg30"
    sodipodi:docname="ssl-vs-tls.svg"
    inkscape:version="0.92.3 (2405546, 2018-03-11)">
   <metadata
-     id="metadata14">
+     id="metadata36">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -25,7 +25,7 @@
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs12" />
+     id="defs34" />
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -37,30 +37,30 @@
      inkscape:pageshadow="2"
      inkscape:window-width="640"
      inkscape:window-height="838"
-     id="namedview10"
+     id="namedview32"
      showgrid="false"
      inkscape:zoom="0.855"
      inkscape:cx="200"
      inkscape:cy="125"
-     inkscape:window-x="940"
+     inkscape:window-x="960"
      inkscape:window-y="32"
      inkscape:window-maximized="0"
-     inkscape:current-layer="svg8" />
+     inkscape:current-layer="svg30" />
   <text
      x="200"
-     y="102"
+     y="100"
      dominant-baseline="middle"
      style="font-size:24px;font-family:juliabold;dominant-baseline:middle;text-anchor:middle;white-space:pre"
-     id="text6">
+     id="text28">
     <tspan
        sodipodi:role="line"
        x="200"
-       y="102"
-       id="tspan2">are SSL and TLS</tspan>
+       y="100"
+       id="tspan24">are SSL and TLS</tspan>
     <tspan
        sodipodi:role="line"
        x="200"
-       y="132"
-       id="tspan4">the same thing?</tspan>
+       y="130"
+       id="tspan26">the same thing?</tspan>
   </text>
 </svg>

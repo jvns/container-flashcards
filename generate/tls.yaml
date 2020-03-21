@@ -6,7 +6,7 @@ ssl-vs-tls:
     answer: 
         big: yes!
         small: |
-            TLS is the new name for SSL. The protocol version went from SSL 3.0 to TLS 1.0
+            In 1999, the SSL protocol was updated and renamed to TLS. People often still say "SSL" and "TLS" interchangeably.
 
 whats-tls-for:
     question: 
