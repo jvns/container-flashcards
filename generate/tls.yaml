@@ -135,7 +135,7 @@ do-i-need-a-ca:
     answer: 
         big: no!
         small: |
-            you can make a "self-signed" TLS computer on your computer in 2 minutes. But because that certificate isn't signed by a trusted certificate authority, browsers won't accept it.
+            you can make a "self-signed" TLS certificate on your computer in 2 minutes. But because that certificate isn't signed by a trusted certificate authority, browsers won't accept it.
 
 
 is-ssl-dangerous:
