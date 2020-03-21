@@ -3,7 +3,7 @@
         <Game v-bind:cards='[
             "ssl-vs-tls",
             "whats-tls-for",
-            "can-tls-decrypt",
+            "can-tls-decrypt-2",
             "https-vs-tls",
             "tls-wire",
             "every-cert-domain",

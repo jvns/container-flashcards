@@ -97,14 +97,15 @@ how-browser-check:
         small:
             your browser (or sometimes your OS) has a hardcoded list of trusted certificate authorities.
 
-can-tls-decrypt:
+can-tls-decrypt-2:
     question: 
         big: |
-            if you use HTTPS to connect to a website, can your ISP (or the NSA) see what information you're sending?
+            if you use HTTPS to connect to a website, can your ISP or employer see what information you're sending?
     answer: 
-        big: no!
+        big: sometimes!
         small: |
-            if you're using the newest version of TLS (which you often will be!), there's no known way for anybody to decrypt the information without having the TLS certificate's private key. It's really safe!
+            as long as your browser only trusts real certificate authorities, you're safe.
+            But employers sometimes install a fake CA on your computer so they can intercept and read TLS traffic.
 
 are-free-certificates-secure:
     question: 
