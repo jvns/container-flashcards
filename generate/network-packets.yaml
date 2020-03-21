@@ -1,7 +1,7 @@
 packet-parts:
     question: 
         big: |
-            If you open an HTTP packet in wireshark, has 4 parts. What are they?
+            If you open an HTTP packet in wireshark, it has 4 parts. What are they?
     answer: 
         small: |
             1. an ethernet or wifi header.
@@ -9,13 +9,179 @@ packet-parts:
             3. a TCP header
             4. the HTTP data
 
-packet-parts:
+always-packet:
     question: 
         big: |
-            If you open an HTTP packet in wireshark, has 4 parts. What are they?
+            is all information on the internet sent using packets?
+        small: |
+            a. yes! it's packets all the way down!
+            b. no, you can send a stream of data instead!
+    answer: 
+        big: a. yes! it's packets all the way down!
+        small: |
+            protocols like TCP that let you send a stream of data are actually just sending a lot of individual network packets under the hood.
+
+ocean:
+    question: 
+        big: |
+            how do your packets get across the ocean?
+    answer: 
+        big: cables under the ocean!
+        # todo: satellites
+        small: |
+            there are a lot of cables under the ocean and it's really cool. You can find maps of them online!
+
+giant-packet:
+    question: 
+        big: |
+            can you send a 100,000-byte packet if you want?
+        small: |
+            a. yes, but the performance will be really bad
+            b. no, it's impossible
+    answer: 
+        big: no, it's impossible!
+        small: |
+            the Ethernet standard's maximum packet size is 1500 bytes.
+            So if you want to send more data than that, it's gotta be split up into multiple packets.
+
+where-is-port:
+    question: 
+        big: |
+            which part of a HTTP packet contains the port number?
+        small: |
+            a. the ethernet/wifi header.
+            b. the IP header
+            c. the TCP header
+            d. the HTTP data
+    answer: 
+        big: c. the TCP header!
+        small: |
+            the port number is part of the TCP protocol!
+            HTTPS packets use port 443 by default, but you can use a different port if you want.
+
+how-many-ips:
+    question: 
+        big: |
+            how many IP addresses are there in a HTTP packet?
+        small: |
+            a. 0
+            b. 1
+            c. 2
+            d. as many as you want!
+    answer: 
+        big: c. 2
+        small: |
+            they are:
+            1. the source IP (where the packet came from!)
+            2. the destination IP (where it's going!)
+
+            The IP addresses are in the IP header.
+
+biggest-port:
+    question: 
+        big: |
+            can you send a packet
+            to port 60,000?
+    answer: 
+        big: yes!
+        small: |
+            the port field in a packet
+            is 16 bits. 
+            2^16 is 65536, so the maximum port number is 65535.
+
+
+is-udp-same-port:
+    question: 
+        big: |
+            is UDP port 80 the same
+            as TCP port 80?
+    answer: 
+        big: no!
+        small: |
+            UDP &amp; TCP both support the same port numbers (1-65535) but they're different protocols.
+            You can run 2 different servers on UDP port 80 and TCP port 80 at the same time.
+
+udp-header:
+    question: 
+        big: |
+            what information is
+            in a UDP header?
     answer: 
         small: |
-            1. an ethernet or wifi header.
-            2. an IP header
-            3. a TCP header
-            4. the HTTP data
+            UDP is SUPER SIMPLE.
+            All that's in a UDP header is:
+            1. source port
+            2. destination port
+            3. length of data
+            4. checksum
+
+how-packet-routed:
+    question: 
+        big: |
+            what part of a packet do your ISP's routers use to get your packet to the right server?
+        small: |
+            a. the IP address!
+            b. the port!
+            c. the HTTP Host header!
+            d. more than one of these!
+    answer: 
+        big: a. the IP address!
+        small: |
+            routers only care about the information in the IP header. They look at the destination IP address, figure out the best server to send it the packet to next, and move on.
+
+ip-ttl:
+    question:
+        big: |
+            what does it mean if the
+            TTL field on an IP packet
+            is set to 64?
+    answer:
+        small: |
+            it means after it's made 64 hops (to 64 servers or routers), it won't be sent further!
+            The TTL ("time to live") IP field exists so that packets don't get stuck going in a loop on the internet forever.
+
+why-network-packets-dropped:
+    question: 
+        big: |
+            what are 2 reasons network packets can get dropped?
+    answer: 
+        small: |
+            1. a full buffer! If some router in the middle gets overloaded, its queue of packets to process will get full, and it will drop your packet.
+            2. corruption! For example because of interference on a wireless network.
+
+can-network-packets-lost:
+    question: 
+        big: |
+            when you send a UDP network packet, what happens if it gets lost?
+        small: |
+            a. it gets retried
+            b. too bad! it's lost!
+    answer: 
+        big: b. too bad! it's lost!
+        # TODO : fix small
+        small: |
+            by default, it's just lost. Too bad! That's how it works for UDP packets. 
+             packets get retried if they're lost and reassembled in the right order on the other end.
+
+spy-network-packet:
+    question: 
+        big: |
+            is it possible to see what packets are being sent and received on your computer?
+    answer: 
+        big: yes!
+        small: |
+            the graphical tool Wireshark can show you all the details about
+            every single network packet your computer is sending and receiving!
+            it's really fun to look at.
+
+
+does-http-always-use-tcp:
+    question: 
+        big: |
+            do HTTP requests
+            always use TCP?
+    answer: 
+        big: no!
+        small: |
+            HTTP/1.1 and HTTP/2 use TCP.
+            HTTP/3 is still new, but it uses a different protocol called QUIC that works over UDP.

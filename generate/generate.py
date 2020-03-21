@@ -50,7 +50,7 @@ def area(lines, size, y):
         middle = 'dominant-baseline="middle" text-anchor="middle"'
         dy = 28
     else:
-        start = '20'
+        start = '30'
         font_size=20
         middle = ""
         dy=24
@@ -116,7 +116,7 @@ def run(server_class=HTTPServer, handler_class=SimpleHTTPRequestHandler):
 os.chdir('..')
 with open('./test.html', 'w') as f:
     f.write('<html><head><body>')
-    f.write('<style type="text/css"> object { border: 1px #444 solid; } </style>')
+    f.write('<style type="text/css"> object { border: 1px #444 solid; margin-left: 50px; margin-bottom: 25px; } </style>')
     for name in to_render:
         f.write('<object type="image/svg+xml" data="%s"></object>' % ('generate/' + dest + '/' + name + '.svg'))
         f.write('<object type="image/svg+xml" data="%s"></object>' % ('generate/' + dest + '/' + name + '-back.svg'))
