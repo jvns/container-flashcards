@@ -3,6 +3,9 @@ import textwrap
 import sys
 import os
 import subprocess
+from http.server import HTTPServer, BaseHTTPRequestHandler, SimpleHTTPRequestHandler
+import os
+
 
 def svg(data):
     big_lines = into_lines(data.get('big', None), 'big')
@@ -25,10 +28,8 @@ def svg(data):
 </svg>
 """.format(
         big=big,
-        small=small )
+        small=small)
 
-DBIG = 28
-DSMALL = 24
 
 def calc_y(big_lines, small_lines):
     big_height = big_lines * 28
@@ -41,25 +42,27 @@ def calc_y(big_lines, small_lines):
     else:
         return 40, 40 + big_height + (250-height - 40)/2 + 10
 
+
 def area(lines, size, y):
     if len(lines) == 0:
         return ''
     if size == 'big':
         start = '50%'
-        font_size=24
+        font_size = 24
         middle = 'dominant-baseline="middle" text-anchor="middle"'
         dy = 28
     else:
         start = '30'
-        font_size=20
+        font_size = 20
         middle = ""
-        dy=24
+        dy = 24
     spans = [line(text, start, y + dy * i) for i, text in enumerate(lines)]
     return """
       <text x="{start}" y="{y}" {middle} style="white-space: pre; font-size:{font_size}px;font-family:juliabold;">
       {spans}
   </text>
          """.format(spans='\n'.join(spans), font_size=font_size, middle=middle, y=y, start=start)
+
 
 def into_lines(text, size):
     if text is None:
@@ -72,6 +75,7 @@ def into_lines(text, size):
     lines = sum(lines, [])
     return lines
 
+
 def wraptext(text, wrap):
     lines = textwrap.wrap(text, wrap)
     if len(lines) > 0 and len(lines[0]) >= 2 and lines[0][1] == '.':
@@ -79,10 +83,12 @@ def wraptext(text, wrap):
     else:
         return lines
 
+
 def line(text, start, y):
     return """
 <tspan sodipodi:role="line" x="{start}" y="{y}">{text}</tspan>
 """.format(text=text, start=start, y=y)
+
 
 with open(sys.argv[1]) as f:
     data = yaml.safe_load(f)
@@ -106,22 +112,22 @@ for name in to_render:
         f.write(svg(pair['answer']))
 
 
-from http.server import HTTPServer, BaseHTTPRequestHandler, SimpleHTTPRequestHandler
-import os
 def run(server_class=HTTPServer, handler_class=SimpleHTTPRequestHandler):
     server_address = ('', 8000)
     httpd = server_class(server_address, handler_class)
     httpd.serve_forever()
 
+
 os.chdir('..')
 with open('./test.html', 'w') as f:
     f.write('<html><head><body>')
-    f.write('<style type="text/css"> object { border: 1px #444 solid; margin-left: 50px; margin-bottom: 25px; } </style>')
+    f.write(
+        '<style type="text/css"> object { border: 1px #444 solid; margin-left: 50px; margin-bottom: 25px; } </style>')
     for name in to_render:
-        f.write('<object type="image/svg+xml" data="%s"></object>' % ('generate/' + dest + '/' + name + '.svg'))
-        f.write('<object type="image/svg+xml" data="%s"></object>' % ('generate/' + dest + '/' + name + '-back.svg'))
+        f.write('<object type="image/svg+xml" data="%s"></object>' %
+                ('generate/' + dest + '/' + name + '.svg'))
+        f.write('<object type="image/svg+xml" data="%s"></object>' %
+                ('generate/' + dest + '/' + name + '-back.svg'))
         f.write('<br>')
     f.write('</body></html>')
 run()
-    #subprocess.check_call(["inkscape", dest + '/' + name + '.svg'])
-    #subprocess.check_call(["inkscape", dest + '/' + name + '-back.svg'])
