@@ -135,8 +135,8 @@ http-modify-response:
         small: |
             2 common uses for this:
 
-            - compress the response to improve performance
-            - add headers (like for CORS)
+            1. compress the response to improve performance
+            2. add headers (like for CORS)
 
 http2:
     question:
@@ -147,3 +147,18 @@ http2:
             yes!
         small: |
             this is nice because it means your website can support HTTP/2 even if all of your backend servers only speak HTTP/1.1! The reverse proxy can translate.
+
+are-there-limits:
+    question:
+        big: |
+            are there any limits to how many connections a reverse proxy can open at a time?
+    answer:
+        big: |
+            yes! an example:
+        small: |
+            you can have 1 connection per
+            source ip/port + dest ip/port
+
+            So you can have at most ~64000 connections to the a backend server at a time. That's called "ephemeral port exhaustion".
+
+
