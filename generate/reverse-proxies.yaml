@@ -1,0 +1,149 @@
+whats-a-reverse-proxy:
+    question:
+        big: |
+            what does a reverse proxy do?
+    answer:
+        small: |
+            it accepts connections from clients (like a browser), forwards those connections to a backend server, and sends the response back to the client
+
+what-are-lbs-for:
+    question:
+        big: |
+            what are 2 things reverse proxies are used for?
+    answer:
+        # TODO: there are definitely others
+        big: |
+            examples:
+        small: |
+            1. balance connections across many backend servers
+            2. decrypt (aka "terminate") TLS connections
+            3. improve performance
+
+where-are-requests-sent:
+    question:
+        big: |
+            do reverse proxies proxy connections to a web server on the same computer or on a different computer?
+    answer:
+        big: |
+            usually a different computer!
+        small: |
+            typically you won't run any application code on your reverse proxy server -- it just decides where to send the connection to!
+
+lb-examples:
+    question:
+        big: |
+            what are 2 examples of reverse proxy software?
+    answer:
+        big: |
+            a few examples:
+        small: |
+            1. nginx
+            2. haproxy
+            3. varnish (used for caching)
+            4. cloud services like AWS ELBs
+
+types-of-lbs:
+    question: 
+        big: |
+            what are the two types of reverse proxies?
+        small: |
+            a. nginx and haproxy
+            b. server and client.
+            c. HTTP and TCP
+    answer: 
+        big: c. HTTP and TCP
+        small: |
+            They use different data to decide what server to send the connection to.
+            TCP (aka L4): only IP address and port
+            HTTP (aka L7): can also use Host header and other headers
+
+whats-nginx:
+    question:
+        big: |
+            is nginx a TCP or HTTP reverse proxy?
+        small: |
+            a. TCP
+            b. HTTP
+            c. both!
+    answer:
+        big: |
+            both!
+        small: |
+            a lot of reverse proxy software can be configured to work either on the TCP or HTTP level
+
+can-tcp-lb-serve-multiple:
+    question:
+        big: |
+            can a TCP ("L4") reverse proxy serve traffic for 2 web services with different backend servers?
+    answer:
+        big: |
+            yes, but...
+        small: |
+            it can only use the port number (like "8080") to decide where to send the connection.
+            
+            So you need to use a different port number for each service.
+
+can-tcp-lb-modify-response:
+    question:
+        big: |
+            can a TCP ("L4") reverse proxy modify the response your webserver sends?
+    answer:
+        big: |
+            no!
+        small: |
+            the idea behind TCP reverse proxies is that they completely ignore the data sent in the TCP connection and just forward whatever bytes they get.
+
+tcp-encrypted:
+    question:
+        big: |
+            can you use a TCP reverse proxy with an encrypted network connection?
+    answer:
+        big: |
+            yes!
+        small: |
+            TCP reverse proxies don't care if they bytes they're forwarding are encrypted or not. They'll just pass it on.
+
+http-paths:
+    question:
+        big: |
+            can a HTTP reverse proxy send different paths (like website.com/public and website.com/private) to different backend servers?
+    answer:
+        big: |
+            yes!
+        small: |
+            many HTTP reverse proxies let you pick what server by matching the path against some pattern.
+
+http-encrypted:
+    question:
+        big: |
+            can you use a HTTP reverse proxy with an encrypted network connection?
+    answer:
+        big: |
+            no!
+        small: |
+            HTTP reverse proxies need access to the unencrypted HTTP headers.
+            So to use a HTTP reverse proxy, you need to decrypt the network connection first.
+
+
+http-modify-response:
+    question:
+        big: |
+            can a HTTP reverse proxy modify the HTTP response?
+    answer:
+        big: |
+            yes!
+        small: |
+            2 common uses for this:
+
+            - compress the response to improve performance
+            - add headers (like for CORS)
+
+http2:
+    question:
+        big: |
+            can a reverse proxy translate a HTTP/2 request into a HTTP/1.1 request?
+    answer:
+        big: |
+            yes!
+        small: |
+            this is nice because it means your website can support HTTP/2 even if all of your backend servers only speak HTTP/1.1! The reverse proxy can translate.

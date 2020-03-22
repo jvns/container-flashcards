@@ -76,6 +76,8 @@ def into_lines(text, size):
 
 
 def wraptext(text, wrap):
+    if text == '':
+        return ['']
     lines = textwrap.wrap(text, wrap)
     if len(lines) > 0 and len(lines[0]) >= 2 and lines[0][1] == '.':
         return [lines[0]] + ['   ' + x for x in lines[1:]]
