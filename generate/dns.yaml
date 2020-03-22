@@ -113,6 +113,7 @@ where-nameserver:
             it queries the root `.com` DNS server
         small: |
             each TLD (.com, .io, etc) has DNS servers that store the nameservers for every domain with that TLD.
+        # link about TLD outages: https://hackernoon.com/stop-using-io-domain-names-for-production-traffic-b6aa17eeac20
 
 
 own-dns-server:

@@ -27,9 +27,9 @@ ocean:
             how do your packets get across the ocean?
     answer: 
         big: cables under the ocean!
-        # todo: satellites
         small: |
-            there are a lot of cables under the ocean and it's really cool. You can find maps of them online!
+            almost all packets that go long distances use undersea cables (there are maps of them online!). 
+            Some people in very remote locations use satellite internet instead.
 
 giant-packet:
     question: 
@@ -158,10 +158,9 @@ can-network-packets-lost:
             b. too bad! it's lost!
     answer: 
         big: b. too bad! it's lost!
-        # TODO : fix small
         small: |
-            by default, it's just lost. Too bad! That's how it works for UDP packets. 
-             packets get retried if they're lost and reassembled in the right order on the other end.
+            If you want to implement retries on top of UDP, you have to do it yourself.
+            TCP packets do get retried by your operating system's TCP implementation.
 
 spy-network-packet:
     question: 
@@ -172,7 +171,7 @@ spy-network-packet:
         small: |
             the graphical tool Wireshark can show you all the details about
             every single network packet your computer is sending and receiving!
-            it's really fun to look at.
+            It's really fun to look at.
 
 
 does-http-always-use-tcp:
