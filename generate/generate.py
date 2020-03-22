@@ -34,7 +34,6 @@ def svg(data):
 def calc_y(big_lines, small_lines):
     big_height = big_lines * 28
     height = big_height + small_lines * 24
-    print(height, small_lines, big_lines)
     if small_lines == 0:
         return (250 - height)/2.0 + 10, 0
     elif big_lines == 0:
@@ -105,7 +104,6 @@ except:
 for name in to_render:
     pair = data[name]
     dest = sys.argv[2]
-    print(name)
     with open(dest + '/' + name + '.svg', 'w') as f:
         f.write(svg(pair['question']))
     with open(dest + '/' + name + '-back.svg', 'w') as f:
@@ -130,4 +128,5 @@ with open('./test.html', 'w') as f:
                 ('generate/' + dest + '/' + name + '-back.svg'))
         f.write('<br>')
     f.write('</body></html>')
+print("localhost:8000/test.html")
 run()
