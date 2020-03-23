@@ -7,21 +7,21 @@
 >
     
     
-      <text x="30" y="85.0"  style="white-space: pre; font-size:20px;font-family:juliabold;">
+      <text x="30" y="95.0"  style="white-space: pre; font-size:20px;font-family:juliabold;">
       
-<tspan sodipodi:role="line" x="30" y="85.0">1. an ethernet or wifi header.</tspan>
+<tspan sodipodi:role="line" x="30"  y="95.0">1. an ethernet or wifi header.</tspan>
 
 
-<tspan sodipodi:role="line" x="30" y="109.0">2. an IP header</tspan>
+<tspan sodipodi:role="line" x="30"  y="119.0">2. an IP header</tspan>
 
 
-<tspan sodipodi:role="line" x="30" y="133.0">3. a TCP header</tspan>
+<tspan sodipodi:role="line" x="30"  y="143.0">3. a TCP header</tspan>
 
 
-<tspan sodipodi:role="line" x="30" y="157.0">4. the HTTP data</tspan>
+<tspan sodipodi:role="line" x="30"  y="167.0">4. the HTTP data</tspan>
 
 
-<tspan sodipodi:role="line" x="30" y="181.0"></tspan>
+<tspan sodipodi:role="line" x="30"  y="191.0"></tspan>
 
   </text>
          

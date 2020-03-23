@@ -6,15 +6,15 @@
     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
 >
     
-      <text x="50%" y="93.0" dominant-baseline="middle" text-anchor="middle" style="white-space: pre; font-size:24px;font-family:juliabold;">
+      <text x="50%" y="98.0" dominant-baseline="middle" text-anchor="middle" style="white-space: pre; font-size:24px;font-family:juliabold;">
       
-<tspan sodipodi:role="line" x="50%" y="93.0">do HTTP requests</tspan>
+<tspan sodipodi:role="line" x="50%"  y="98.0">do HTTP requests</tspan>
 
 
-<tspan sodipodi:role="line" x="50%" y="121.0">always use TCP?</tspan>
+<tspan sodipodi:role="line" x="50%"  y="126.0">always use TCP?</tspan>
 
 
-<tspan sodipodi:role="line" x="50%" y="149.0"></tspan>
+<tspan sodipodi:role="line" x="50%"  y="154.0"></tspan>
 
   </text>
          

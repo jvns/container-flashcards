@@ -35,9 +35,9 @@ def calc_y(big_lines, small_lines):
     big_height = big_lines * 28
     height = big_height + small_lines * 24
     if small_lines == 0:
-        return (250 - height)/2.0 + 10, 0
+        return (250 - height)/2.0 + 15, 0
     elif big_lines == 0:
-        return 0, (250 - height)/2.0 + 20
+        return 0, (250 - height)/2.0 + 30
     else:
         return 40, 40 + big_height + (250-height - 40)/2 + 10
 

@@ -7,33 +7,33 @@
 >
     
     
-      <text x="30" y="37.0"  style="white-space: pre; font-size:20px;font-family:juliabold;">
+      <text x="30" y="47.0"  style="white-space: pre; font-size:20px;font-family:juliabold;">
       
-<tspan sodipodi:role="line" x="30" y="37.0">1. a full buffer! If some router</tspan>
+<tspan sodipodi:role="line" x="30"  y="47.0">1. a full buffer! If some router</tspan>
 
 
-<tspan sodipodi:role="line" x="30" y="61.0">   in the middle gets overloaded,</tspan>
+<tspan sodipodi:role="line" x="30"  y="71.0">   in the middle gets overloaded,</tspan>
 
 
-<tspan sodipodi:role="line" x="30" y="85.0">   its queue of packets to process</tspan>
+<tspan sodipodi:role="line" x="30"  y="95.0">   its queue of packets to process</tspan>
 
 
-<tspan sodipodi:role="line" x="30" y="109.0">   will get full, and it will drop</tspan>
+<tspan sodipodi:role="line" x="30"  y="119.0">   will get full, and it will drop</tspan>
 
 
-<tspan sodipodi:role="line" x="30" y="133.0">   your packet.</tspan>
+<tspan sodipodi:role="line" x="30"  y="143.0">   your packet.</tspan>
 
 
-<tspan sodipodi:role="line" x="30" y="157.0">2. corruption! For example</tspan>
+<tspan sodipodi:role="line" x="30"  y="167.0">2. corruption! For example</tspan>
 
 
-<tspan sodipodi:role="line" x="30" y="181.0">   because of interference on a</tspan>
+<tspan sodipodi:role="line" x="30"  y="191.0">   because of interference on a</tspan>
 
 
-<tspan sodipodi:role="line" x="30" y="205.0">   wireless network.</tspan>
+<tspan sodipodi:role="line" x="30"  y="215.0">   wireless network.</tspan>
 
 
-<tspan sodipodi:role="line" x="30" y="229.0"></tspan>
+<tspan sodipodi:role="line" x="30"  y="239.0"></tspan>
 
   </text>
          

@@ -8,32 +8,32 @@
     
       <text x="50%" y="40" dominant-baseline="middle" text-anchor="middle" style="white-space: pre; font-size:24px;font-family:juliabold;">
       
-<tspan sodipodi:role="line" x="50%" y="40">no!</tspan>
+<tspan sodipodi:role="line" x="50%"  y="40">no!</tspan>
 
   </text>
          
     
       <text x="30" y="85.0"  style="white-space: pre; font-size:20px;font-family:juliabold;">
       
-<tspan sodipodi:role="line" x="30" y="85.0">UDP &amp; TCP both support the</tspan>
+<tspan sodipodi:role="line" x="30"  y="85.0">UDP &amp; TCP both support the</tspan>
 
 
-<tspan sodipodi:role="line" x="30" y="109.0">same port numbers (1-65535) but</tspan>
+<tspan sodipodi:role="line" x="30"  y="109.0">same port numbers (1-65535) but</tspan>
 
 
-<tspan sodipodi:role="line" x="30" y="133.0">they're different protocols.</tspan>
+<tspan sodipodi:role="line" x="30"  y="133.0">they're different protocols.</tspan>
 
 
-<tspan sodipodi:role="line" x="30" y="157.0">You can run 2 different servers</tspan>
+<tspan sodipodi:role="line" x="30"  y="157.0">You can run 2 different servers</tspan>
 
 
-<tspan sodipodi:role="line" x="30" y="181.0">on UDP port 80 and TCP port 80 at</tspan>
+<tspan sodipodi:role="line" x="30"  y="181.0">on UDP port 80 and TCP port 80 at</tspan>
 
 
-<tspan sodipodi:role="line" x="30" y="205.0">the same time.</tspan>
+<tspan sodipodi:role="line" x="30"  y="205.0">the same time.</tspan>
 
 
-<tspan sodipodi:role="line" x="30" y="229.0"></tspan>
+<tspan sodipodi:role="line" x="30"  y="229.0"></tspan>
 
   </text>
          

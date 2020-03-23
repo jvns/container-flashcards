@@ -8,29 +8,29 @@
     
       <text x="50%" y="40" dominant-baseline="middle" text-anchor="middle" style="white-space: pre; font-size:24px;font-family:juliabold;">
       
-<tspan sodipodi:role="line" x="50%" y="40">when you send a UDP network</tspan>
+<tspan sodipodi:role="line" x="50%"  y="40">when you send a UDP network</tspan>
 
 
-<tspan sodipodi:role="line" x="50%" y="68">packet, what happens if it</tspan>
+<tspan sodipodi:role="line" x="50%"  y="68">packet, what happens if it</tspan>
 
 
-<tspan sodipodi:role="line" x="50%" y="96">gets lost?</tspan>
+<tspan sodipodi:role="line" x="50%"  y="96">gets lost?</tspan>
 
 
-<tspan sodipodi:role="line" x="50%" y="124"></tspan>
+<tspan sodipodi:role="line" x="50%"  y="124"></tspan>
 
   </text>
          
     
       <text x="30" y="175.0"  style="white-space: pre; font-size:20px;font-family:juliabold;">
       
-<tspan sodipodi:role="line" x="30" y="175.0">a. it gets retried</tspan>
+<tspan sodipodi:role="line" x="30"  y="175.0">a. it gets retried</tspan>
 
 
-<tspan sodipodi:role="line" x="30" y="199.0">b. too bad! it's lost!</tspan>
+<tspan sodipodi:role="line" x="30"  y="199.0">b. too bad! it's lost!</tspan>
 
 
-<tspan sodipodi:role="line" x="30" y="223.0"></tspan>
+<tspan sodipodi:role="line" x="30"  y="223.0"></tspan>
 
   </text>
          

@@ -8,29 +8,29 @@
     
       <text x="50%" y="40" dominant-baseline="middle" text-anchor="middle" style="white-space: pre; font-size:24px;font-family:juliabold;">
       
-<tspan sodipodi:role="line" x="50%" y="40">c. the TCP header!</tspan>
+<tspan sodipodi:role="line" x="50%"  y="40">c. the TCP header!</tspan>
 
   </text>
          
     
       <text x="30" y="97.0"  style="white-space: pre; font-size:20px;font-family:juliabold;">
       
-<tspan sodipodi:role="line" x="30" y="97.0">the port number is part of the</tspan>
+<tspan sodipodi:role="line" x="30"  y="97.0">the port number is part of the</tspan>
 
 
-<tspan sodipodi:role="line" x="30" y="121.0">TCP protocol!</tspan>
+<tspan sodipodi:role="line" x="30"  y="121.0">TCP protocol!</tspan>
 
 
-<tspan sodipodi:role="line" x="30" y="145.0">HTTPS packets use port 443 by</tspan>
+<tspan sodipodi:role="line" x="30"  y="145.0">HTTPS packets use port 443 by</tspan>
 
 
-<tspan sodipodi:role="line" x="30" y="169.0">default, but you can use a</tspan>
+<tspan sodipodi:role="line" x="30"  y="169.0">default, but you can use a</tspan>
 
 
-<tspan sodipodi:role="line" x="30" y="193.0">different port if you want.</tspan>
+<tspan sodipodi:role="line" x="30"  y="193.0">different port if you want.</tspan>
 
 
-<tspan sodipodi:role="line" x="30" y="217.0"></tspan>
+<tspan sodipodi:role="line" x="30"  y="217.0"></tspan>
 
   </text>
          

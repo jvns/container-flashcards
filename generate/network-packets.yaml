@@ -71,9 +71,8 @@ how-many-ips:
     answer: 
         big: c. 2
         small: |
-            they are:
-            1. the source IP (where the packet came from!)
-            2. the destination IP (where it's going!)
+            1. the destination IP
+            2. the source IP (where the packet came from!)
 
             The IP addresses are in the IP header.
 
@@ -108,7 +107,8 @@ udp-header:
             in a UDP header?
     answer: 
         small: |
-            UDP is SUPER SIMPLE.
+            UDP is super simple!
+
             All that's in a UDP header is:
             1. source port
             2. destination port
@@ -127,7 +127,7 @@ how-packet-routed:
     answer: 
         big: a. the IP address!
         small: |
-            routers only care about the information in the IP header. They look at the destination IP address, figure out the best server to send it the packet to next, and move on.
+            Routers look at the destination IP address, figure out the best server to send it the packet to next, and move on.
 
 ip-ttl:
     question:
@@ -138,6 +138,7 @@ ip-ttl:
     answer:
         small: |
             it means after it's made 64 hops (to 64 servers or routers), it won't be sent further!
+
             The TTL ("time to live") IP field exists so that packets don't get stuck going in a loop on the internet forever.
 
 why-network-packets-dropped:
