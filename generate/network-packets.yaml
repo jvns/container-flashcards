@@ -1,7 +1,8 @@
 packet-parts:
     question: 
         big: |
-            If you open an HTTP packet in wireshark, it has 4 parts. What are they?
+            an HTTP packet has 4 parts.
+            What are they?
     answer: 
         small: |
             1. an ethernet or wifi header.
