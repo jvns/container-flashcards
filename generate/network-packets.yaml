@@ -35,15 +35,14 @@ ocean:
 giant-packet:
     question: 
         big: |
-            can you send a 100,000-byte packet if you want?
+            can you send a 1,000,000-byte UDP packet if you want?
         small: |
             a. yes, but the performance will be really bad
             b. no, it's impossible
     answer: 
         big: no, it's impossible!
         small: |
-            the Ethernet standard's maximum packet size is 1500 bytes.
-            So if you want to send more data than that, it's gotta be split up into multiple packets.
+            the maximum size of an Ethernet packet on most networks is either 1500 bytes or 9000 bytes.
 
 where-is-port:
     question: 

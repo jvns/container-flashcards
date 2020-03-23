@@ -13,24 +13,18 @@
   </text>
          
     
-      <text x="30" y="97.0"  style="white-space: pre; font-size:20px;font-family:juliabold;">
+      <text x="30" y="121.0"  style="white-space: pre; font-size:20px;font-family:juliabold;">
       
-<tspan sodipodi:role="line" x="30"  y="97.0">the Ethernet standard's maximum</tspan>
+<tspan sodipodi:role="line" x="30"  y="121.0">the maximum size of an Ethernet</tspan>
 
 
-<tspan sodipodi:role="line" x="30"  y="121.0">packet size is 1500 bytes.</tspan>
+<tspan sodipodi:role="line" x="30"  y="145.0">packet on most networks is either</tspan>
 
 
-<tspan sodipodi:role="line" x="30"  y="145.0">So if you want to send more data</tspan>
+<tspan sodipodi:role="line" x="30"  y="169.0">1500 bytes or 9000 bytes.</tspan>
 
 
-<tspan sodipodi:role="line" x="30"  y="169.0">than that, it's gotta be split up</tspan>
-
-
-<tspan sodipodi:role="line" x="30"  y="193.0">into multiple packets.</tspan>
-
-
-<tspan sodipodi:role="line" x="30"  y="217.0"></tspan>
+<tspan sodipodi:role="line" x="30"  y="193.0"></tspan>
 
   </text>
          

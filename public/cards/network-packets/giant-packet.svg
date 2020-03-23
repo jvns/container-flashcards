@@ -8,10 +8,10 @@
     
       <text x="50%" y="40" dominant-baseline="middle" text-anchor="middle" style="white-space: pre; font-size:24px;font-family:juliabold;">
       
-<tspan sodipodi:role="line" x="50%"  y="40">can you send a 100,000-byte</tspan>
+<tspan sodipodi:role="line" x="50%"  y="40">can you send a 1,000,000-byte</tspan>
 
 
-<tspan sodipodi:role="line" x="50%"  y="68">packet if you want?</tspan>
+<tspan sodipodi:role="line" x="50%"  y="68">UDP packet if you want?</tspan>
 
 
 <tspan sodipodi:role="line" x="50%"  y="96"></tspan>
