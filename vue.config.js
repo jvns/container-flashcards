@@ -38,5 +38,11 @@ module.exports = {
         template: 'public/index.html',
         filename: 'tls/index.html',
     },
+    "network-packets": {
+        entry: 'src/pages/network-packets.ts',
+        title: 'flashcards: network packets',
+        template: 'public/index.html',
+        filename: 'network-packets/index.html',
+    }
   }
 }

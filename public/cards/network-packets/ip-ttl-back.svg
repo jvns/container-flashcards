@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+ <svg width="400" height="250"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+>
+    
+    
+      <text x="30" y="49.0"  style="white-space: pre; font-size:20px;font-family:juliabold;">
+      
+<tspan sodipodi:role="line" x="30" y="49.0">it means after it's made 64 hops</tspan>
+
+
+<tspan sodipodi:role="line" x="30" y="73.0">(to 64 servers or routers), it</tspan>
+
+
+<tspan sodipodi:role="line" x="30" y="97.0">won't be sent further!</tspan>
+
+
+<tspan sodipodi:role="line" x="30" y="121.0">The TTL ("time to live") IP field</tspan>
+
+
+<tspan sodipodi:role="line" x="30" y="145.0">exists so that packets don't get</tspan>
+
+
+<tspan sodipodi:role="line" x="30" y="169.0">stuck going in a loop on the</tspan>
+
+
+<tspan sodipodi:role="line" x="30" y="193.0">internet forever.</tspan>
+
+
+<tspan sodipodi:role="line" x="30" y="217.0"></tspan>
+
+  </text>
+         
+</svg>

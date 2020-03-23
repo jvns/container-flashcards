@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+ <svg width="400" height="250"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+>
+    
+      <text x="50%" y="40" dominant-baseline="middle" text-anchor="middle" style="white-space: pre; font-size:24px;font-family:juliabold;">
+      
+<tspan sodipodi:role="line" x="50%" y="40">no!</tspan>
+
+  </text>
+         
+    
+      <text x="30" y="109.0"  style="white-space: pre; font-size:20px;font-family:juliabold;">
+      
+<tspan sodipodi:role="line" x="30" y="109.0">HTTP/1.1 and HTTP/2 use TCP.</tspan>
+
+
+<tspan sodipodi:role="line" x="30" y="133.0">HTTP/3 is still new, but it uses</tspan>
+
+
+<tspan sodipodi:role="line" x="30" y="157.0">a different protocol called QUIC</tspan>
+
+
+<tspan sodipodi:role="line" x="30" y="181.0">that works over UDP.</tspan>
+
+
+<tspan sodipodi:role="line" x="30" y="205.0"></tspan>
+
+  </text>
+         
+</svg>

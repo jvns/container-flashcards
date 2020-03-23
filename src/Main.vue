@@ -3,7 +3,7 @@
         <h1 class="text-3xl text-center">flashcards!</h1>
         <div class="lg:w-1/3 w-full m-auto">
         <p class="py-4">
-        Here are the 4 sets of flashcards so far:
+        Here are the 5 sets of flashcards so far:
         </p>
         <p class="underline text-blue-800">
         <ul>
@@ -11,6 +11,7 @@
             <li><a class="hover:text-blue-400" href="/linux">Linux</a></li>
             <li><a class="hover:text-blue-400" href="/dns">DNS</a></li>
             <li><a class="hover:text-blue-400" href="/tls">TLS</a></li>
+            <li><a class="hover:text-blue-400" href="/network-packets">Network packets</a></li>
         </ul>
         </p>
         </div>
