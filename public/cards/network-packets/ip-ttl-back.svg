@@ -9,13 +9,13 @@
     
       <text x="30" y="47.0"  style="white-space: pre; font-size:20px;font-family:juliabold;">
       
-<tspan sodipodi:role="line" x="30"  y="47.0">it means after it's made 64 hops</tspan>
+<tspan sodipodi:role="line" x="30"  y="47.0">it means after it's made about 63</tspan>
 
 
-<tspan sodipodi:role="line" x="30"  y="71.0">(to 64 servers or routers), it</tspan>
+<tspan sodipodi:role="line" x="30"  y="71.0">hops (to 63 servers or routers),</tspan>
 
 
-<tspan sodipodi:role="line" x="30"  y="95.0">won't be sent further!</tspan>
+<tspan sodipodi:role="line" x="30"  y="95.0">it won't be sent further!</tspan>
 
 
 <tspan sodipodi:role="line" x="30"  y="119.0"></tspan>

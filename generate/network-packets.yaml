@@ -42,7 +42,7 @@ giant-packet:
     answer: 
         big: no, it's impossible!
         small: |
-            the maximum size of an Ethernet packet on most networks is either 1500 bytes or 9000 bytes.
+            the length field on a UDP packet is 16 bits, so the maximum length is 65535
 
 where-is-port:
     question: 
@@ -137,7 +137,7 @@ ip-ttl:
             is set to 64?
     answer:
         small: |
-            it means after it's made 64 hops (to 64 servers or routers), it won't be sent further!
+            it means after it's made about 63 hops (to 63 servers or routers), it won't be sent further!
 
             The TTL ("time to live") IP field exists so that packets don't get stuck going in a loop on the internet forever.
 

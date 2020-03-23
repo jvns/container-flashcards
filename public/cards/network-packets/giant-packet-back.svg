@@ -15,13 +15,13 @@
     
       <text x="30" y="121.0"  style="white-space: pre; font-size:20px;font-family:juliabold;">
       
-<tspan sodipodi:role="line" x="30"  y="121.0">the maximum size of an Ethernet</tspan>
+<tspan sodipodi:role="line" x="30"  y="121.0">the length field on a UDP packet</tspan>
 
 
-<tspan sodipodi:role="line" x="30"  y="145.0">packet on most networks is either</tspan>
+<tspan sodipodi:role="line" x="30"  y="145.0">is 16 bits, so the maximum length</tspan>
 
 
-<tspan sodipodi:role="line" x="30"  y="169.0">1500 bytes or 9000 bytes.</tspan>
+<tspan sodipodi:role="line" x="30"  y="169.0">is 65535</tspan>
 
 
 <tspan sodipodi:role="line" x="30"  y="193.0"></tspan>
