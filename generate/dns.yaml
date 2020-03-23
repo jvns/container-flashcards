@@ -12,24 +12,27 @@ command-line:
             what command line tool can you use to make DNS queries?
     answer: 
         big: dig or host!
-        small:
-            $ dig google.com
+        small: |
+            CODE: $ dig google.com
             will give you the IP address for google.com
             
 opposite:
     question: 
         big: |
-            is it possible to go the opposite direction -- get the domain name for an IP address?
+            is it possible to go the opposite direction --
+            get the domain name
+            for an IP address?
     answer: 
         big: yes!
         small: |
-            $ dig -x 172.217.13.174
+            CODE: $ dig -x 172.217.13.174
             will do a "reverse DNS lookup" for 172.217.13.174. This doesn't
             always work -- it depends on there being an accurate PTR record.
 many-ips:
     question: 
         big: |
-            does every domain only have one IP address?
+            does every domain only
+            have one IP address?
     answer: 
         big: no!
         small: |
@@ -38,13 +41,14 @@ many-ips:
 dns-information:
     question:
         big: |
-            do DNS servers only store IP addresses?
+            do DNS servers only
+            store IP addresses?
     answer:
         big: |
-            no
+            no!
         small: |
-            there are many types of DNS records (A, NS, MX, PTR, etc). "A records" store IP
-            addresses, but there are lots of others.
+            there are many types of DNS records (A, NS, MX, PTR, etc).
+            "A records" store IP addresses, but there are lots of others.
 
 email:
     question:
@@ -59,12 +63,17 @@ email:
 update-instant:
     question:
         big: |
-            when you update your domain's IP address, will everyone get your new IP right away?
+            when you update your
+            domain's IP address,
+            will everyone get your
+            new IP right away?
     answer:
         big: |
             no!
         small: |
-            DNS servers all use caching, so it depends when the cache expires.
+            DNS servers all use caching,
+            so it depends when the
+            cache expires.
 
 ttl:
     question:
@@ -74,14 +83,18 @@ ttl:
         big: |
             the TTL!
         small: |
-            every DNS response has a parameter called the "TTL" ("time to live"). If you set a shorter TTL, you can update your DNS records faster!
+            every DNS response has a parameter called the "TTL"
+            ("time to live"). If you set a shorter TTL, you can update your DNS records faster!
 
 
 cname:
     question:
-        big: what does setting a CNAME record to google.com for your domain do?
+        big: | 
+            what does setting a CNAME
+            record to google.com
+            for your domain do?
     answer:
-        big: redirect to google.com!
+        big: redirect to google.com's server!
         small: |
             it'll return whatever IP address google.com resolves to for DNS queries
 
@@ -92,7 +105,8 @@ google-dns:
     answer:
         big: |
             a popular DNS server hosted by Google.
-            Anyone can make DNS queries to it.
+
+            anyone can make DNS queries to it.
 
 where-dns-responses-come-from:
     question:
@@ -100,7 +114,8 @@ where-dns-responses-come-from:
             when you ask 8.8.8.8 for an IP address for reddit.com, where does it get that information?
     answer:
         big: |
-            from reddit.com's `nameserver`
+            from reddit.com's
+            "nameserver"
         small: |
             every domain has a nameserver which is the source of truth for DNS queries about that domain
 
@@ -110,7 +125,8 @@ where-nameserver:
             how does 8.8.8.8 know where reddit.com's nameserver is?
     answer:
         big: |
-            it queries the root `.com` DNS server
+            it queries the `.com`
+            DNS server
         small: |
             each TLD (.com, .io, etc) has DNS servers that store the nameservers for every domain with that TLD.
         # link about TLD outages: https://hackernoon.com/stop-using-io-domain-names-for-production-traffic-b6aa17eeac20
@@ -125,16 +141,20 @@ own-dns-server:
             no
         small: |
             you can just make a DNS query to reddit.com's nameserver yourself!
+        
+            (or more likely: use any other recursive DNS server you want)
 
 types-of-dns-servers:
     question:
         big: |
-            what are the 2 types of DNS servers?
+            what are the 2 types
+            of DNS servers?
     answer:
         big: |
             authoritative and recursive!
         small: |
-            "authoritative": nameservers, source of truth
+            "authoritative": source of truth
+
             "recursive": like 8.8.8.8. they just query authoritative nameservers and cache
 
 dns-protocol:
@@ -145,5 +165,6 @@ dns-protocol:
         big: |
             it can use either!
         small: |
-            ... but we're seeing a recent move to encrypted DNS over HTTPS which uses TCP.
+            ... but we're seeing a recent move to encrypted DNS over
+            HTTPS which uses TCP.
 

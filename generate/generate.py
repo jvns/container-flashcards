@@ -79,16 +79,21 @@ def wraptext(text, wrap):
     if text == '':
         return ['']
     lines = textwrap.wrap(text, wrap)
-    if len(lines) > 0 and len(lines[0]) >= 2 and lines[0][1] == '.':
+    if len(lines) > 0 and len(lines[0]) >= 2 and lines[0][1] == '.' and lines[0][0] != '.':
         return [lines[0]] + ['   ' + x for x in lines[1:]]
     else:
         return lines
 
 
 def line(text, start, y):
+    if text.startswith('CODE: '):
+        text = text.lstrip('CODE: ')
+        style = 'style="font-family:Inconsolata;"'
+    else:
+        style = ''
     return """
-<tspan sodipodi:role="line" x="{start}" y="{y}">{text}</tspan>
-""".format(text=text, start=start, y=y)
+<tspan sodipodi:role="line" x="{start}" {style} y="{y}">{text}</tspan>
+""".format(text=text, start=start, y=y, style=style)
 
 
 with open(sys.argv[1]) as f:
@@ -130,5 +135,19 @@ with open('./test.html', 'w') as f:
                 ('generate/' + dest + '/' + name + '-back.svg'))
         f.write('<br>')
     f.write('</body></html>')
+
+with open('./test_old.html', 'w') as f:
+    dest = '../public/cards/dns_old'
+    f.write('<html><head><body>')
+    f.write(
+        '<style type="text/css"> object { border: 1px #444 solid; margin-left: 50px; margin-bottom: 25px; } </style>')
+    for name in to_render:
+        f.write('<object type="image/svg+xml" data="%s"></object>' %
+                ('generate/' + dest + '/' + name + '.svg'))
+        f.write('<object type="image/svg+xml" data="%s"></object>' %
+                ('generate/' + dest + '/' + name + '-back.svg'))
+        f.write('<br>')
+    f.write('</body></html>')
+
 print("localhost:8000/test.html")
 run()
