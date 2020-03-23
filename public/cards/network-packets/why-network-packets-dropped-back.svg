@@ -6,34 +6,37 @@
     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
 >
     
-    
-      <text x="30" y="47.0"  style="white-space: pre; font-size:20px;font-family:juliabold;">
+      <text x="50%" y="40" dominant-baseline="middle" text-anchor="middle" style="white-space: pre; font-size:24px;font-family:juliabold;">
       
-<tspan sodipodi:role="line" x="30"  y="47.0">1. a full buffer! If some router</tspan>
+<tspan sodipodi:role="line" x="50%"  y="40">a few examples:</tspan>
 
 
-<tspan sodipodi:role="line" x="30"  y="71.0">   in the middle gets overloaded,</tspan>
+<tspan sodipodi:role="line" x="50%"  y="68"></tspan>
+
+  </text>
+         
+    
+      <text x="30" y="99.0"  style="white-space: pre; font-size:20px;font-family:juliabold;">
+      
+<tspan sodipodi:role="line" x="30"  y="99.0">1. a full buffer!</tspan>
 
 
-<tspan sodipodi:role="line" x="30"  y="95.0">   its queue of packets to process</tspan>
+<tspan sodipodi:role="line" x="30"  y="123.0">2. corruption!</tspan>
 
 
-<tspan sodipodi:role="line" x="30"  y="119.0">   will get full, and it will drop</tspan>
+<tspan sodipodi:role="line" x="30"  y="147.0">3. a firewall rule!</tspan>
 
 
-<tspan sodipodi:role="line" x="30"  y="143.0">   your packet.</tspan>
+<tspan sodipodi:role="line" x="30"  y="171.0">4. a TTL that expired!</tspan>
 
 
-<tspan sodipodi:role="line" x="30"  y="167.0">2. corruption! For example</tspan>
+<tspan sodipodi:role="line" x="30"  y="195.0"></tspan>
 
 
-<tspan sodipodi:role="line" x="30"  y="191.0">   because of interference on a</tspan>
+<tspan sodipodi:role="line" x="30"  y="219.0">and more reasons too.</tspan>
 
 
-<tspan sodipodi:role="line" x="30"  y="215.0">   wireless network.</tspan>
-
-
-<tspan sodipodi:role="line" x="30"  y="239.0"></tspan>
+<tspan sodipodi:role="line" x="30"  y="243.0"></tspan>
 
   </text>
          

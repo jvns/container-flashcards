@@ -141,14 +141,20 @@ ip-ttl:
 
             The TTL ("time to live") IP field exists so that packets don't get stuck going in a loop on the internet forever.
 
-why-network-packets-dropped:
+why-network-packets-dropped-2:
     question: 
         big: |
             what are 2 reasons network packets can get dropped?
     answer: 
+        big: |
+            a few examples:
         small: |
-            1. a full buffer! If some router in the middle gets overloaded, its queue of packets to process will get full, and it will drop your packet.
-            2. corruption! For example because of interference on a wireless network.
+            1. a full buffer!
+            2. corruption!
+            3. a firewall rule!
+            4. a TTL that expired!
+
+            and more reasons too.
 
 can-network-packets-lost:
     question: 
