@@ -18,7 +18,7 @@
 <tspan sodipodi:role="line" x="30"  y="143.0">3. a TCP header</tspan>
 
 
-<tspan sodipodi:role="line" x="30"  y="167.0">4. the HTTP data</tspan>
+<tspan sodipodi:role="line" x="30"  y="167.0">4. the data in the packet</tspan>
 
 
 <tspan sodipodi:role="line" x="30"  y="191.0"></tspan>

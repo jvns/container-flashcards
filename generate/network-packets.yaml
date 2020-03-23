@@ -1,14 +1,14 @@
 packet-parts:
     question: 
         big: |
-            an HTTP packet has 4 parts.
+            a TCP packet has 4 parts.
             What are they?
     answer: 
         small: |
             1. an ethernet or wifi header.
             2. an IP header
             3. a TCP header
-            4. the HTTP data
+            4. the data in the packet
 
 always-packet:
     question: 
@@ -48,12 +48,12 @@ giant-packet:
 where-is-port:
     question: 
         big: |
-            which part of a HTTP packet contains the port number?
+            which part of a TCP packet contains the port number?
         small: |
             a. the ethernet/wifi header.
             b. the IP header
             c. the TCP header
-            d. the HTTP data
+            d. the data in the packet
     answer: 
         big: c. the TCP header!
         small: |

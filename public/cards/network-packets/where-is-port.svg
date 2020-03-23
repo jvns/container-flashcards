@@ -8,7 +8,7 @@
     
       <text x="50%" y="40" dominant-baseline="middle" text-anchor="middle" style="white-space: pre; font-size:24px;font-family:juliabold;">
       
-<tspan sodipodi:role="line" x="50%"  y="40">which part of a HTTP packet</tspan>
+<tspan sodipodi:role="line" x="50%"  y="40">which part of a TCP packet</tspan>
 
 
 <tspan sodipodi:role="line" x="50%"  y="68">contains the port number?</tspan>
@@ -30,7 +30,7 @@
 <tspan sodipodi:role="line" x="30"  y="185.0">c. the TCP header</tspan>
 
 
-<tspan sodipodi:role="line" x="30"  y="209.0">d. the HTTP data</tspan>
+<tspan sodipodi:role="line" x="30"  y="209.0">d. the data in the packet</tspan>
 
 
 <tspan sodipodi:role="line" x="30"  y="233.0"></tspan>
