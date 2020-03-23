@@ -59,10 +59,11 @@ body { font-family: sans-serif; }
 }
 
 .ribbon {
+    opacity: 30%;
     margin-top: 1rem;
     position: absolute;
     z-index: 1;
-    background-color: #666;
+    background-color: #000;
     color: white;
     font-size: 1rem;
     padding: 0.25rem 0.5rem;
