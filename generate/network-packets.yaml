@@ -63,7 +63,7 @@ where-is-port:
 how-many-ips:
     question: 
         big: |
-            how many IP addresses are there in a TCP (or UDP) packet?
+            how many IP addresses are there in a TCP packet?
         small: |
             a. 0
             b. 1
