@@ -129,7 +129,7 @@ export default class Game extends Vue {
     metrics(label: string): any {
         let update: any = {}
         update[this.cards[this.current_card]] = label;
-        update['timestamp'] = Math.floor(Date.now() / 1000);
+        update['timestamp'] = Math.floor((new Date()).getTime() / 1000);
         // @ts-ignore
 -       this.$firedb.collection("container-flashcards").doc(this.doc()).update(update)
     }
