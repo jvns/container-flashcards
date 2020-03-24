@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+ <svg width="400" height="250"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+>
+    
+      <text x="50%" y="40" dominant-baseline="middle" text-anchor="middle" style="white-space: pre; font-size:24px;font-family:juliabold;">
+      
+<tspan sodipodi:role="line" x="50%"  y="40">a few examples:</tspan>
+
+
+<tspan sodipodi:role="line" x="50%"  y="68"></tspan>
+
+  </text>
+         
+    
+      <text x="30" y="99.0"  style="white-space: pre; font-size:20px;font-family:juliabold;">
+      
+<tspan sodipodi:role="line" x="30"  y="99.0">1. a full buffer!</tspan>
+
+
+<tspan sodipodi:role="line" x="30"  y="123.0">2. corruption!</tspan>
+
+
+<tspan sodipodi:role="line" x="30"  y="147.0">3. a firewall rule!</tspan>
+
+
+<tspan sodipodi:role="line" x="30"  y="171.0">4. a TTL that expired!</tspan>
+
+
+<tspan sodipodi:role="line" x="30"  y="195.0"></tspan>
+
+
+<tspan sodipodi:role="line" x="30"  y="219.0">and more reasons too.</tspan>
+
+
+<tspan sodipodi:role="line" x="30"  y="243.0"></tspan>
+
+  </text>
+         
+</svg>
