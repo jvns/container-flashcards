@@ -100,14 +100,15 @@ def into_lines(text, size):
         wrap = 29
     else:
         wrap = 33
-    lines = [wraptext(text, wrap) for text in text.split('\n')]
+    lines = [wraptext(text, wrap) for text in text.strip().split('\n')]
     lines = sum(lines, [])
     return lines
 
 
 def wraptext(text, wrap):
     if text == '':
-        return []
+        # textwrap.wrap will return [], that's not what we want
+        return ['']
     lines = textwrap.wrap(text, wrap)
     if len(lines) > 0 and len(lines[0]) >= 2 and lines[0][1] == '.' and lines[0][0] != '.':
         return [lines[0]] + ['   ' + x for x in lines[1:]]
@@ -118,6 +119,10 @@ def format_styles(styles):
     return ''.join('{}: {};'.format(key, val) for key, val in styles.items())
 
 def from_md(text):
+    if text == '':
+        elt = Element('text')
+        elt.text = ' '
+        return elt
     elt = ElementTree.fromstring(markdown.markdown(text))
     svgize(elt)
     return elt

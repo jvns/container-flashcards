@@ -19,12 +19,25 @@ def test_code_basic():
   </svg>
 """
     data = {'big': 'when you run:\n`$ kill 12345`\nto stop a program, what happens?\n'}
+    print(tostring(data))
     assert(wanted == tostring(data))
 
+def test_newlines():
+    data = {'small': "a\n\nb"}
+    wanted = """<svg>
+  <text class="line small" x="30" y="99.0">a</text>
+  <text class="line small" x="30" y="123.0"> </text>
+  <text class="line small" x="30" y="147.0">b</text>
+  </svg>
+"""
+    assert(wanted == tostring(data))
+
+
+
 ###def test_blah():
-###    with open('linux.yaml') as f:
+###    with open('sql-basics.yaml') as f:
 ###        data = yaml.safe_load(f)
-###    data = data['kill']['question']
+###    data = data['where-aggregation']['answer']
 ###    print(repr(data))
 ###    print(tostring(data))
 ###
