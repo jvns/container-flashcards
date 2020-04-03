@@ -1,15 +1,12 @@
 <template>
-    <div class="scene scene--card w-full" v-bind:class="{card_visible: card_visible, card_hidden: card_hidden, card_left: card_left}">
-    <div v-on:click="flip" class="card mb-4 w-full rounded-lg border-gray-300 border-2" v-bind:class="{ flipped: flipped}">
-        <div v-if="ribbon" class="ribbon">click card to flip!</div>
-        <div class="card__face card__face--front">
-            <img v-bind:src="'/cards/' + basedir + '/' + name + '.png'">
-        </div>
-        <div class="card__face card__face--back">
-            <img v-bind:src="'/cards/' + basedir + '/' + name + '-back.png'">
+    <div class="scene w-full" v-on:click="flip">
+        <div class="card relative border-gray-300 border-2 rounded-lg no_highlights mb-4 w-full" v-bind:class="{ flipped: flipped }">
+            <div v-if="ribbon" class="ribbon">click card to flip!</div>
+            <!-- use object instead of img so that we don't have to embed the font in every svg -->
+            <img class="absolute inset-0 w-full card__face" v-bind:src="'/cards/' + basedir + '/' + name + '.png'"></object>
+            <img class="absolute inset-0 w-full card__face card__face--back"  v-bind:src="'/cards/' + basedir + '/' + name + '-back.png'"></object>
         </div>
     </div>
-</div>
 </template>
 
 <script lang="ts">
@@ -19,53 +16,41 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 export default class Flashcard extends Vue {
     @Prop() private name!: string;
     @Prop() private basedir!: string;
-    @Prop() private card_left!: boolean;
     @Prop() private ribbon!: boolean;
-    @Prop() private card_visible!: boolean;
-    @Prop() private card_hidden!: boolean;
     private flipped: boolean = false;
     flip () {
         this.flipped = !this.flipped;
-        this.ribbon = false;
     }
 }
 </script>
 
-
-
 <style scoped>
-body { font-family: sans-serif; }
-
 .scene {
-  perspective: 1200px;
-  transition: all 1s ease-in-out;
+    perspective: 1200px;
 }
 
-.card_hidden {
-    visibility: hidden;
-    opacity: 0;
-    height: 0px;
+object {
+    pointer-events: none;
+    width: 100%;
 }
 
-.card_visible {
-    visibility: visible;
-}
-
-.card_left {
-    visibility: hidden;
-    opacity: 0;
-    transform: translateX(100%); 
-    height: 0px;
+.no_highlights {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .ribbon {
-    opacity: 30%;
+    opacity: 50%;
     margin-top: 1rem;
     position: absolute;
     z-index: 1;
-    background-color: #000;
+    background-color: #444;
     color: white;
-    font-size: 1rem;
     padding: 0.25rem 0.5rem;
 	-webkit-box-shadow: 0px 2px 2px #888;
 	-moz-box-shadow: 0px 2px 2px #888;
@@ -77,7 +62,7 @@ body { font-family: sans-serif; }
   cursor: pointer;
   transform-style: preserve-3d;
   transition: transform 0.3s;
-  padding-bottom: 62.4%;
+  padding-bottom: 62.5%;
 }
 
 .card.flipped {
@@ -85,18 +70,11 @@ body { font-family: sans-serif; }
 }
 
 .card__face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
   backface-visibility: hidden;
-}
-
-.card__face--front {
   background: white;
 }
 
 .card__face--back {
-  background: white;
   transform: rotateY(180deg);
 }
 </style>
