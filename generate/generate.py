@@ -96,8 +96,6 @@ def into_lines(text, size):
         wrap = 29
     else:
         wrap = 33
-    if text.startswith('CODE:'): # always put code all on one line
-        wrap = 100000
     lines = [wraptext(text, wrap) for text in text.split('\n')]
     lines = sum(lines, [])
     return lines
