@@ -8,7 +8,8 @@ import subprocess
 import os
 from xml.etree.ElementTree import Element
 from xml.etree import ElementTree
-from myxml import indent
+from myxml import indent, svgize
+import markdown
 
 def texts(data, back=False):
     big_lines = into_lines(data.get('big', None), 'big')
@@ -49,6 +50,9 @@ def svg(data, back=False):
 .small {
     white-space: pre;
     font-size: 20px;
+}
+.code {
+    font-family: 'Inconsolata';
 }
 """
     svg_element.append(style_elt)
@@ -113,17 +117,19 @@ def wraptext(text, wrap):
 def format_styles(styles):
     return ''.join('{}: {};'.format(key, val) for key, val in styles.items())
 
+def from_md(text):
+    elt = ElementTree.fromstring(markdown.markdown(text))
+    svgize(elt)
+    return elt
+
 def line(text, attributes, back=False):
     styles = {}
-    if text.startswith('CODE: '):
-        text = text.lstrip('CODE: ')
-        styles['font-family'] = 'Inconsolata'
+    elt = from_md(text)
     if back:
         styles['fill'] = 'white'
     if len(styles) > 0:
         attributes['style'] = format_styles(styles)
-    elt = Element('text', attributes)
-    elt.text = text
+    elt.attrib = attributes
     return elt
 
 def prettify(top):
@@ -144,6 +150,10 @@ def parse_args():
 
 def render(data, set_name, to_render):
     dest = '../public/cards/' + set_name
+    try:
+        os.mkdir(dest)
+    except:
+        pass
     for name in to_render:
         pair = data[name]
         with open(dest + '/' + name + '.svg', 'w') as f:
@@ -163,19 +173,6 @@ def render(data, set_name, to_render):
             f.write('<object width="400px" type="image/svg+xml" data="%s"></object>' %
                     (dest + '/' + name + '.svg'))
             f.write('<object width="400px" type="image/svg+xml" data="%s"></object>' %
-                    (dest + '/' + name + '-back.svg'))
-            f.write('<br>')
-        f.write('</body></html>')
-
-    with open('./test_old.html', 'w') as f:
-        dest = '../public/cards/tls_old'
-        f.write('<html><head><body>')
-        f.write(
-            '<style type="text/css"> object { border: 1px #444 solid; margin-left: 50px; margin-bottom: 25px; } </style>')
-        for name in to_render:
-            f.write('<object type="image/svg+xml" data="%s"></object>' %
-                    (dest + '/' + name + '.svg'))
-            f.write('<object type="image/svg+xml" data="%s"></object>' %
                     (dest + '/' + name + '-back.svg'))
             f.write('<br>')
         f.write('</body></html>')

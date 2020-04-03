@@ -1,8 +1,8 @@
 rm -rf ../preview/*
 mkdir -p ../preview
-for i in linux tls dns network-packets advanced-containers reverse-proxies network-packets
+#for i in linux tls dns network-packets advanced-containers reverse-proxies network-packets
+for i in sql-basics
 do
-    mkdir -p ../public/cards/$i
     ./generate.py $i
 done
 
