@@ -67,7 +67,6 @@ multiple-domains:
         big: yes!
         small: |
             there are 2 ways to do this:
-            
             1. use a "wildcard" certificate, like "*.google.com"
             2. list multiple hostnames that the certificate is valid for when you create it, like apple.com and apple.com.cn
 
@@ -88,7 +87,7 @@ how-get-certificate:
 how-browser-check:
     question:
         big: |
-            how does a browser check that your certificate is signed by someone it trust?
+            how does a browser check that your certificate is signed by someone it trusts?
         small: |
             a. it has a hardcoded list
             b. it asks a server
@@ -162,4 +161,4 @@ certificate-secret:
             - an expiration date
             - signature(s) from a CA
 
-            the private key for the cert is SUPER SECRET though!
+            the private key is secret though!

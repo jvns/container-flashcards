@@ -1,0 +1,168 @@
+kill:
+    question:
+        big: |
+            when you run:
+            CODE: $ kill 12345
+            to stop a program, what happens?
+    answer:
+        small: |
+            The program gets sent a SIGTERM signal.
+            
+            kill -9 sends a SIGKILL signal.
+ctrlc:
+    question:
+        big: |
+            when you press Ctrl+C in the terminal to stop a program, what happens?
+    answer:
+        small: |
+            The program gets sent a SIGINT signal. By default that stops the program immediately, but the program can choose to ignore the signal or do something else before quitting.
+stop-kill:
+    question:
+        big: |
+            is it possible for a program
+            to ignore a SIGKILL signal?
+    answer:
+        big: |
+            no.
+        small: |
+            Programs can't ignore SIGKILL.
+            That's why we use kill -9 when we REALLY want to kill a program.
+pipe-read:
+    question:
+        big: |
+            what happens if you write data to a pipe faster than it's read out the other side?
+        small: |
+            a. the program is killed
+            b. the pipe gets full
+            c. you can keep writing forever
+    answer:
+        big: |
+            b. the pipe gets full
+        small: |
+            Pipes have a limited buffer size.  When a pipe gets full, new writes to the pipe will block, so the program doing the writes gets slowed down.
+use-sockets:
+    question:
+        big: |
+            does curl use sockets
+            to make HTTP requests?
+    answer:
+        big: yes!
+        small: |
+            Basically every program on Linux uses sockets to make network requests.
+unix-differences:
+    question:
+        big: |
+            what's 1 difference between
+            TCP sockets and
+            unix domain sockets?
+    answer:
+        small: |
+            1. you can control access to a unix socket with file permissions
+            2. data sent to a unix socket never gets lost
+            3. you can only use them to communicate between processes on the same computer
+read-file:
+    question:
+        big: |
+            is it possible to read a file on Linux without making a system call?
+    answer:
+        big: no!
+        small: |
+            every program in every programming language uses system calls to read files.
+inherit:
+    question:
+        big: |
+            what are 2 things a child process inherits from its parent?
+    answer:
+        big: |
+            a few right answers:
+        small: |
+            1. user + groups
+            2. environment variables
+            3. working directory
+            4. namespaces &amp; capabilities
+            5. + more as well
+threads-share:
+    question:
+        big: |
+            do threads in the same process share memory?
+    answer:
+        big: yes.
+        small: |
+            this is why threads often have "race conditions". writing to the same memory at the same time can cause a lot of problems!
+proc:
+    question:
+        big: |
+            name 2 pieces of information you can get from the /proc/$PID directory
+    answer:
+        big: |
+            you can get the process's:
+        small: |
+            1. environment variables!
+            2. links to every open file!
+            3. memory maps!
+            4. current working directory!
+            5. command line arguments!
+            6. and lots more!
+same-address:
+    question:
+        big: |
+            can 2 programs have the exact same address (like 0x12345678) in their memory?
+    answer:
+        big: |
+            yes!
+        small: |
+            Linux uses "virtual memory"  which means that every address it gives a process is mapped to a different address in RAM
+
+            CODE: PID   virtual address   real address
+            CODE: 1234  0x123400          0x18293200
+            CODE: 2345  0x123400          0x29312000
+allocate-more:
+    question:
+        big: can a program allocate more memory than you have RAM?
+    answer:
+        big: yes.
+        small: |
+            Linux by default allows something called
+            &quot;overcommit&quot; which lets it give out more
+            memory than it actually has in the hope
+            that not all the memory will actually
+            get used.
+use-more-memory:
+    question:
+        big: |
+            what happens if you use memory but you have no available RAM left?
+    answer:
+        big: |
+            either\:
+        small: |
+            1. use swap
+            2. start killing programs to free up memory!
+
+            It depends on how the computer is
+            configured!
+shared-library-memory:
+    question:
+        big: |
+            when 2 programs use the same library (like openssl) are there 2 copies of that library in memory?
+    answer:
+        big: no.
+        small: |
+            If it's a dynamically linked library 
+            (or &quot;shared library&quot;), then you can just
+            have 1 copy in memory and hundreds of
+            programs can share the same copy
+mmap:
+    question:
+        big: |
+            when you mmap() a 2GB file
+            to load it into memory, does
+            2GB of RAM get used right away?
+    answer:
+        big: no.
+        small: |
+            the exciting thing about mmap is that
+            you can load a file into memory, but it
+            only actually gets read into memory
+            lazily when you access the memory!
+            
+            So no memory gets used right away.
