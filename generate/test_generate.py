@@ -32,12 +32,24 @@ def test_newlines():
 """
     assert(wanted == tostring(data))
 
+def test_numbered():
+    data = {'small': '1. yes! blah blah blah blah blah blah blah\n2. nope!\n', 'big': 'can you use conditionals in SQL?\n'}
+    print(tostring(data))
+    wanted = """<svg>
+  <text class="line big" x="200" y="20">can you use conditionals in</text>
+  <text class="line big" x="200" y="48">SQL?</text>
+  <text class="line small" x="30" y="127">1. yes! blah blah blah blah blah</text>
+  <text class="line small" x="30" y="151">   blah blah</text>
+  <text class="line small" x="30" y="175">2. nope!</text>
+  </svg>
+"""
+    assert(wanted == tostring(data))
 
 
 ###def test_blah():
 ###    with open('sql-basics.yaml') as f:
 ###        data = yaml.safe_load(f)
-###    data = data['where-aggregation']['answer']
+###    data = data['sql-conditionals']['question']
 ###    print(repr(data))
 ###    print(tostring(data))
 ###

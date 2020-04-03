@@ -123,6 +123,12 @@ def from_md(text):
         elt = Element('text')
         elt.text = ' '
         return elt
+    if len(text) > 2 and text[1] == '.' or text.startswith('   '):
+        # markdown will make it an <ol> and we don't want that
+        elt = Element('text')
+        elt.text = text
+        return elt
+
     elt = ElementTree.fromstring(markdown.markdown(text))
     svgize(elt)
     return elt
