@@ -6,6 +6,10 @@
             <!-- put the perspective up here instead of in the flashcard because a perspective creates a new stacking context and we want everything to be in the same stacking-context -->
             <div v-if="!done" class="w-10/12 lg:w-1/3">
                 <p class="text-l mb-4 text-center">
+                The point of this game is to learn something, not to get them
+                all "right"! The more you learn, the better. <br>(knowing the answers is ok too though)
+                </p>
+                <p class="text-l mb-4 text-center">
                 Click the card to see the answer.
                 </p>
                 <div class="text-center text-xl"> Card {{current_card+1}}  of {{cards.length}} </div>
