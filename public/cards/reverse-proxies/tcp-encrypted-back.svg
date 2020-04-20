@@ -20,7 +20,7 @@
 </style>
   <text class="line big" x="200" y="20">yes!</text>
   <text class="line small" x="30" y="101.0">TCP reverse proxies don't care if</text>
-  <text class="line small" x="30" y="125.0">they bytes they're forwarding are</text>
+  <text class="line small" x="30" y="125.0">the bytes they're forwarding are</text>
   <text class="line small" x="30" y="149.0">encrypted or not. They'll just</text>
   <text class="line small" x="30" y="173.0">pass it on.</text>
   </svg>

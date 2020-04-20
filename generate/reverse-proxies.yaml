@@ -88,7 +88,7 @@ tcp-encrypted:
         big: |
             yes!
         small: |
-            TCP reverse proxies don't care if they bytes they're forwarding are encrypted or not. They'll just pass it on.
+            TCP reverse proxies don't care if the bytes they're forwarding are encrypted or not. They'll just pass it on.
 
 http-paths:
     question:
