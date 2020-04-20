@@ -29,12 +29,13 @@ def svg(data, back=False):
         'xmlns:sodipodi':"http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd",
         'xmlns:inkscape':"http://www.inkscape.org/namespaces/inkscape",
     })
-    if back:
-        svg_element.append(Element('rect', {
-            'width': '100%',
-            'height': '100%',
-            'fill': '#265c91',
-        }))
+    # todo: bring back later
+    #if back:
+    #    svg_element.append(Element('rect', {
+    #        'width': '100%',
+    #        'height': '100%',
+    #        'fill': '#305292',
+    #    }))
     style_elt = Element('style')
     style_elt.text = """
 @import url("/fonts/stylesheet.css");
@@ -136,8 +137,9 @@ def from_md(text):
 def line(text, attributes, back=False):
     styles = {}
     elt = from_md(text)
-    if back:
-        styles['fill'] = 'white'
+    # todo: bring back later
+    #if back:
+    #    styles['fill'] = 'white'
     if len(styles) > 0:
         attributes['style'] = format_styles(styles)
     elt.attrib = attributes

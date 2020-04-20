@@ -12,6 +12,7 @@
             <li><a class="hover:text-blue-400" href="/dns">DNS</a></li>
             <li><a class="hover:text-blue-400" href="/tls">TLS</a></li>
             <li><a class="hover:text-blue-400" href="/network-packets">Network packets</a></li>
+            <li><a class="hover:text-blue-400" href="/reverse-proxies">Reverse proxies</a></li>
         </ul>
         </p>
         </div>

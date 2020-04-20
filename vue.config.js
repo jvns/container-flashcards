@@ -43,6 +43,12 @@ module.exports = {
         title: 'flashcards: network packets',
         template: 'public/index.html',
         filename: 'network-packets/index.html',
+    },
+    "reverse-proxies": {
+        entry: 'src/pages/reverse-proxies.ts',
+        title: 'flashcards: reverse proxies',
+        template: 'public/index.html',
+        filename: 'reverse-proxies/index.html',
     }
   }
 }

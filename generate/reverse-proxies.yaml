@@ -11,9 +11,9 @@ what-are-lbs-for:
         big: |
             what are 2 things reverse proxies are used for?
     answer:
-        # TODO: there are definitely others
         big: |
-            examples:
+            some examples
+            (there are more):
         small: |
             1. balance connections across many backend servers
             2. decrypt (aka "terminate") TLS connections
@@ -56,21 +56,6 @@ types-of-lbs:
             They use different data to decide what server to send the connection to.
             TCP (aka L4): only IP address and port
             HTTP (aka L7): can also use Host header and other headers
-
-whats-nginx:
-    question:
-        big: |
-            is nginx a TCP or HTTP reverse proxy?
-        small: |
-            a. TCP
-            b. HTTP
-            c. both!
-    answer:
-        # max says http or both is the only thing that makes esnse to him
-        big: |
-            both!
-        small: |
-            a lot of reverse proxy software can be configured to work either on the TCP or HTTP level
 
 can-tcp-lb-serve-multiple:
     question:
