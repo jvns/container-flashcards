@@ -1,0 +1,138 @@
+count:
+    question: 
+        big: |
+            how many rows does
+            this query return?
+        small: |
+            `SELECT COUNT(*)`
+            `FROM cats`
+            `LIMIT 5`
+    answer: 
+        big: 1!
+        small: |
+            COUNT(*) returns the number of rows in the table. The LIMIT doesn't do anything here.
+case:
+    question: 
+        big: |
+            Are SQL keywords like `SELECT` case sensitive?
+        small: |
+            a. yes!
+            b. nope!
+    answer: 
+        big: nope!
+        small: |
+            You can write 
+            `    sElEcT * fRoM cats`
+            if you want.
+            I like to use all caps for readability though.
+
+query-order:
+    question: 
+        big: |
+            is this a valid query?
+        small: |
+            `FROM cats`
+            `SELECT count(*)`
+    answer: 
+        big: no!
+        small: |
+            You need to write queries in this order:
+
+            `SELECT ... FROM ... `
+            `WHERE ... GROUP BY ... `
+            `HAVING ... ORDER BY ...`
+            `LIMIT ... `
+
+null-equals:
+    question: 
+        big: |
+            how many rows does
+            this query return?
+        small: |
+            `SELECT * from fish`
+            `WHERE name = NULL`
+    answer: 
+        big: 0!
+        small: |
+            `name = NULL` & `name != NULL` always return false, because nothing is equal to `NULL` (not even `NULL`)
+
+            Use `name IS NULL` instead
+
+
+where-aggregation:
+    question: 
+        big: |
+            is this a valid query?
+        small: |
+            `SELECT city, COUNT(*)`
+            `WHERE COUNT(*) > 5 `
+            `GROUP BY city`
+            `ORDER BY COUNT(*) DESC`
+    answer: 
+        big: no!
+        small: |
+            `GROUP BY` happens after `WHERE`, so you can't use aggregations in a `WHERE`.
+
+            Use `HAVING COUNT(*) > 5` instead.
+
+sql-conditionals:
+    question: 
+        big: |
+            can you use
+            conditionals in SQL?
+        small: |
+            a. yes!
+            b. nope!
+    answer: 
+        big: yes!
+        small: |
+            They look like this:
+
+            `CASE WHEN age > 18 THEN 'adult'`
+            `     WHEN age > 12 THEN 'teen'`
+            `     ELSE 'child'`
+            `END`
+
+strings:
+    question: 
+        big: |
+            how do you represent
+            a string in SQL?
+        small: |
+            a. 'single quotes'
+            b. "double quotes"
+    answer: 
+        big: "'single quotes'"
+        small: |
+            double quotes don't represent strings in every SQL variant.
+            Single quotes are safe.
+
+
+inner-join-every-row:
+    question: 
+        big: |
+            do the results of an
+            `INNER JOIN` have data from every row in the two tables that get joined?
+        small: |
+            a. yes!
+            b. nope!
+    answer: 
+        big: nope!
+        small: |
+            `INNER JOIN`s only include rows that match the `ON` condition.
+
+explain:
+    question: 
+        big: |
+            what's then name of the feature that tells you why your queries are slow?
+        small: |
+            a. 
+            b. PROFILE
+            c. EXPLAIN
+            
+    answer: 
+        big: EXPLAIN!
+        small: |
+            `EXPLAIN` can tell you which indexes your query used and much more.
+
+
