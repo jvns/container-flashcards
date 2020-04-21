@@ -15,7 +15,7 @@ what-are-lbs-for:
             some examples
             (there are more):
         small: |
-            1. balance connections across many backend servers
+            1. load balance across many backend servers
             2. decrypt (aka "terminate") TLS connections
             3. improve performance
 
@@ -64,11 +64,10 @@ can-tcp-lb-serve-multiple:
     answer:
         # max: "technically you might want to do it based on src port"
         big: |
-            yes, but...
+            yes!
         small: |
-            it can only use the port number (like "8080") to decide where to send the connection.
-            
-            So you need to use a different port number for each service.
+            the limits: it can only use the TLS server name indicator (like db.example.com) or the port number (like "8080") to decide where to send the request.
+            It can't use HTTP headers!
 
 can-tcp-lb-modify-response:
     question:
@@ -76,9 +75,9 @@ can-tcp-lb-modify-response:
             can a TCP ("L4") reverse proxy modify the response your webserver sends?
     answer:
         big: |
-            no!
+            technically it can...
         small: |
-            the idea behind TCP reverse proxies is that they completely ignore the data sent in the TCP connection and just forward whatever bytes they get.
+            but usually the idea is that L4 proxies just blindly forward whatever bytes they get.
 
 tcp-encrypted:
     question:

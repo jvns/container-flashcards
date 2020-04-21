@@ -18,10 +18,8 @@
     font-family: 'Inconsolata';
 }
 </style>
-  <text class="line big" x="200" y="20">no!</text>
-  <text class="line small" x="30" y="89.0">the idea behind TCP reverse</text>
-  <text class="line small" x="30" y="113.0">proxies is that they completely</text>
-  <text class="line small" x="30" y="137.0">ignore the data sent in the TCP</text>
-  <text class="line small" x="30" y="161.0">connection and just forward</text>
-  <text class="line small" x="30" y="185.0">whatever bytes they get.</text>
+  <text class="line big" x="200" y="20">technically it can...</text>
+  <text class="line small" x="30" y="113.0">but usually the idea is that L4</text>
+  <text class="line small" x="30" y="137.0">proxies just blindly forward</text>
+  <text class="line small" x="30" y="161.0">whatever bytes they get.</text>
   </svg>

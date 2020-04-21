@@ -20,8 +20,8 @@
 </style>
   <text class="line big" x="200" y="20">some examples</text>
   <text class="line big" x="200" y="48">(there are more):</text>
-  <text class="line small" x="30" y="103.0">1. balance connections across</text>
-  <text class="line small" x="30" y="127.0">   many backend servers</text>
+  <text class="line small" x="30" y="103.0">1. load balance across many</text>
+  <text class="line small" x="30" y="127.0">   backend servers</text>
   <text class="line small" x="30" y="151.0">2. decrypt (aka "terminate") TLS</text>
   <text class="line small" x="30" y="175.0">   connections</text>
   <text class="line small" x="30" y="199.0">3. improve performance</text>

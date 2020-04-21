@@ -18,11 +18,11 @@
     font-family: 'Inconsolata';
 }
 </style>
-  <text class="line big" x="200" y="20">yes, but...</text>
-  <text class="line small" x="30" y="77.0">it can only use the port number</text>
-  <text class="line small" x="30" y="101.0">(like "8080") to decide where to</text>
-  <text class="line small" x="30" y="125.0">send the connection.</text>
-  <text class="line small" x="30" y="149.0"> </text>
-  <text class="line small" x="30" y="173.0">So you need to use a different</text>
-  <text class="line small" x="30" y="197.0">port number for each service.</text>
+  <text class="line big" x="200" y="20">yes!</text>
+  <text class="line small" x="30" y="77.0">the limits: it can only use the</text>
+  <text class="line small" x="30" y="101.0">TLS server name indicator (like</text>
+  <text class="line small" x="30" y="125.0">db.example.com) or the port</text>
+  <text class="line small" x="30" y="149.0">number (like "8080") to decide</text>
+  <text class="line small" x="30" y="173.0">where to send the request.</text>
+  <text class="line small" x="30" y="197.0">It can't use HTTP headers!</text>
   </svg>
