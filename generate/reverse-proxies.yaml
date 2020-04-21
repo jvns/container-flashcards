@@ -66,7 +66,7 @@ can-tcp-lb-serve-multiple:
         big: |
             yes!
         small: |
-            the limits: it can only use the TLS server name indicator (like db.example.com) or the port number (like "8080") to decide where to send the request.
+            it can only use the TLS server name indicator (like db.example.com) or the port number (like "8080") to decide where to send the request.
             It can't use HTTP headers!
 
 can-tcp-lb-modify-response:
@@ -77,7 +77,7 @@ can-tcp-lb-modify-response:
         big: |
             technically it can...
         small: |
-            but usually the idea is that L4 proxies just blindly forward whatever bytes they get.
+            but usually the idea is that L4 proxies just blindly forward whatever bytes they get (except for encrypting/decrypting)
 
 tcp-encrypted:
     question:

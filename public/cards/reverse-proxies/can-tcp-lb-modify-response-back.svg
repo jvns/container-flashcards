@@ -19,7 +19,8 @@
 }
 </style>
   <text class="line big" x="200" y="20">technically it can...</text>
-  <text class="line small" x="30" y="113.0">but usually the idea is that L4</text>
-  <text class="line small" x="30" y="137.0">proxies just blindly forward</text>
-  <text class="line small" x="30" y="161.0">whatever bytes they get.</text>
+  <text class="line small" x="30" y="101.0">but usually the idea is that L4</text>
+  <text class="line small" x="30" y="125.0">proxies just blindly forward</text>
+  <text class="line small" x="30" y="149.0">whatever bytes they get (except</text>
+  <text class="line small" x="30" y="173.0">for encrypting/decrypting)</text>
   </svg>
