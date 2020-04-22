@@ -10,7 +10,7 @@ count:
     answer: 
         big: 1!
         small: |
-            COUNT(*) returns the number of rows in the table. The LIMIT doesn't do anything here.
+            `COUNT(*)` returns the number of rows in the table. The `LIMIT` doesn't do anything here.
 case:
     question: 
         big: |
@@ -21,10 +21,8 @@ case:
     answer: 
         big: nope!
         small: |
-            You can write 
-            `    sElEcT * fRoM cats`
-            if you want.
-            I like to use all caps for readability though.
+            `sElEcT * fRoM cats`
+            is a totally valid query! I like to use all caps for readability though.
 
 query-order:
     question: 
@@ -49,7 +47,7 @@ null-equals:
             how many rows does
             this query return?
         small: |
-            `SELECT * from fish`
+            `SELECT * FROM fish`
             `WHERE name = NULL`
     answer: 
         big: 0!
@@ -57,6 +55,52 @@ null-equals:
             `name = NULL` & `name != NULL` always return false, because nothing is equal to `NULL` (not even `NULL`)
 
             Use `name IS NULL` instead
+
+coalesce:
+    question: 
+        big: |
+            what does
+            `COALESCE(NULL, 23, 49)`
+            evaluate to?
+        small: |
+            a. NULL
+            b. 23
+            c. 49
+    answer: 
+        big: 23!
+        small: |
+            `COALESCE` evaluates to the first non-NULL argument you give it. This is useful for setting default values!
+
+
+null-integer:
+    question:
+        big: |
+            can an integer column
+            have `NULL` values?
+        small: |
+            a. yes, any type of column can have NULL values
+            b. no, an empty integer defaults to 0
+
+    answer:
+        big: |
+            yes!
+        small: |
+            any column can have `NULL` values
+            (unless you set a `NOT NULL` or `PRIMARY KEY` constraint or something on it when defining the table)
+
+no-nulls:
+    question: 
+        big: |
+            if your tables have no NULLs in them, does that mean you don't have to
+            worry about handling NULL values?
+        small: |
+            a. yes!
+            b. nope!
+    answer: 
+        big: nope!
+        small: |
+            if you do a LEFT JOIN you can still end up with NULLs in the resulting table!
+
 
 
 where-aggregation:
@@ -105,8 +149,8 @@ strings:
         big: "'single quotes'"
         small: |
             double quotes don't represent strings in every SQL variant.
-            Single quotes are safe.
 
+            Single quotes are always strings.
 
 inner-join-every-row:
     question: 
@@ -121,18 +165,45 @@ inner-join-every-row:
         small: |
             `INNER JOIN`s only include rows that match the `ON` condition.
 
+left-join-every-row:
+    question: 
+        big: |
+            do the results of
+            `fish LEFT JOIN people` have data from every row in the `fish` table?
+        small: |
+            a. yes!
+            b. nope!
+    answer: 
+        big: yes!
+        small: |
+            `LEFT JOIN`s always include every row in the left table.
+
+
+index-effectiveness:
+    question: 
+        big: |
+            can an index make your query run 10000 times faster?
+        small: |
+            a. yes!
+            b. no, indexes are good but not THAT good.
+    answer: 
+        big: yes, for a big table!
+        small: |
+            if you have many billions of rows, an index can easily make a query run 10000 times faster! The details depend on the exact query and the size of the table.
+
+
 explain:
     question: 
         big: |
             what's then name of the feature that tells you why your queries are slow?
         small: |
-            a. 
+            a. DESCRIBE 
             b. PROFILE
             c. EXPLAIN
             
     answer: 
-        big: EXPLAIN!
+        big: depends on the SQL variant!
         small: |
-            `EXPLAIN` can tell you which indexes your query used and much more.
+            In MySQL and PostgreSQL it's called `EXPLAIN`. It can tell you which indexes your query used and much more
 
 

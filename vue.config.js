@@ -49,6 +49,12 @@ module.exports = {
         title: 'flashcards: reverse proxies',
         template: 'public/index.html',
         filename: 'reverse-proxies/index.html',
+    },
+    "sql-basics": {
+        entry: 'src/pages/sql-basics.ts',
+        title: 'SQL flashcards',
+        template: 'public/index.html',
+        filename: 'sql-basics/index.html',
     }
   }
 }
