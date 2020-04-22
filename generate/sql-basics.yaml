@@ -108,6 +108,7 @@ where-aggregation:
             is this a valid query?
         small: |
             `SELECT city, COUNT(*)`
+            `FROM census`
             `WHERE COUNT(*) > 5 `
             `GROUP BY city`
             `ORDER BY COUNT(*) DESC`

@@ -19,8 +19,9 @@
 }
 </style>
   <text class="line big" x="200" y="20">is this a valid query?</text>
-  <text class="line small" x="30" y="101.0"><tspan class="code">SELECT city, COUNT(*)</tspan></text>
-  <text class="line small" x="30" y="125.0"><tspan class="code">WHERE COUNT(*) &gt; 5</tspan></text>
-  <text class="line small" x="30" y="149.0"><tspan class="code">GROUP BY city</tspan></text>
-  <text class="line small" x="30" y="173.0"><tspan class="code">ORDER BY COUNT(*) DESC</tspan></text>
+  <text class="line small" x="30" y="89.0"><tspan class="code">SELECT city, COUNT(*)</tspan></text>
+  <text class="line small" x="30" y="113.0"><tspan class="code">FROM census</tspan></text>
+  <text class="line small" x="30" y="137.0"><tspan class="code">WHERE COUNT(*) &gt; 5</tspan></text>
+  <text class="line small" x="30" y="161.0"><tspan class="code">GROUP BY city</tspan></text>
+  <text class="line small" x="30" y="185.0"><tspan class="code">ORDER BY COUNT(*) DESC</tspan></text>
   </svg>
