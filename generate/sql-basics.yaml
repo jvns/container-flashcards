@@ -91,13 +91,12 @@ null-integer:
 no-nulls:
     question: 
         big: |
-            if your tables have no NULLs in them, does that mean you don't have to
-            worry about handling NULL values?
+            if your tables have no NULLs in them, do you still have to worry about handling NULL values?
         small: |
             a. yes!
             b. nope!
     answer: 
-        big: nope!
+        big: yes!
         small: |
             if you do a LEFT JOIN you can still end up with NULLs in the resulting table!
 

@@ -18,7 +18,7 @@
     font-family: 'Inconsolata';
 }
 </style>
-  <text class="line big" x="200" y="20">nope!</text>
+  <text class="line big" x="200" y="20">yes!</text>
   <text class="line small" x="30" y="113.0">if you do a LEFT JOIN you can</text>
   <text class="line small" x="30" y="137.0">still end up with NULLs in the</text>
   <text class="line small" x="30" y="161.0">resulting table!</text>

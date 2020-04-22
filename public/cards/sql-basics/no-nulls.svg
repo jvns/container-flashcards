@@ -19,10 +19,9 @@
 }
 </style>
   <text class="line big" x="200" y="20">if your tables have no NULLs</text>
-  <text class="line big" x="200" y="48">in them, does that mean you</text>
-  <text class="line big" x="200" y="76">don't have to</text>
-  <text class="line big" x="200" y="104">worry about handling NULL</text>
-  <text class="line big" x="200" y="132">values?</text>
-  <text class="line small" x="30" y="181.0">a. yes!</text>
-  <text class="line small" x="30" y="205.0">b. nope!</text>
+  <text class="line big" x="200" y="48">in them, do you still have to</text>
+  <text class="line big" x="200" y="76">worry about handling NULL</text>
+  <text class="line big" x="200" y="104">values?</text>
+  <text class="line small" x="30" y="167.0">a. yes!</text>
+  <text class="line small" x="30" y="191.0">b. nope!</text>
   </svg>
