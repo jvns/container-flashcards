@@ -30,8 +30,8 @@
                     </div>
                 </div>
                 <div class="flex flex-row flex-wrap justify-center mt-2">
+                    <button class="bg-blue-600 text-white rounded px-3 py-2 my-1" @click="button('learned')">I learned something!</button>
                     <button class="bg-pink-600 text-white rounded px-3 py-2 mx-4 my-1" @click="button('knew')">I knew that!</button>
-                    <button class="bg-blue-600 text-white rounded px-3 py-2 mx-4 my-1" @click="button('learned')">I learned something!</button>
                     <button class="bg-orange-600 text-white rounded px-3 py-2 my-1" @click="button('confusing')">That's confusing</button>
                 </div>
             </div>
