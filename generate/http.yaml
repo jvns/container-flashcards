@@ -1,0 +1,77 @@
+fragment:
+    question: 
+        big: |
+            you go to the URL
+            `https://fruit.com/#banana`
+            Does `#banana` get sent to the server?
+        small: |
+            a. yes
+            b. no
+    answer: 
+        big: no!
+        small: |
+            The fragment (`#banana`) isn't sent in the HTTP request the browser sends, so only frontend code can see it.
+            
+            
+browser-view-http-request:
+    question: 
+        big: |
+            when your browser makes a HTTP request, can you see the request and response?
+        small: |
+            a. yes! it's my browser!
+            b. no, not if it's encrypted.
+    answer: 
+        big: yes! it's your browser!
+        small: |
+            You can use the Network tab in developer tools to view every single HTTP request your browser is making for you!
+            
+ 
+request-method-get:
+    question: 
+        big: |
+            when you go to `http://fruit.com/page` in your browser, what request method does it use?
+        small: |
+            a. GET
+            b. POST
+            c. CONNECT
+    answer: 
+        big: GET
+        small: |
+            every time you visit a webpage, your browser makes a `GET` request to the server. The request looks like this:
+
+            `GET /page HTTP/1.1`
+            `Host: fruit.com`
+            `User-Agent: mozilla-or-whatever`
+        
+request-method-post:
+    question: 
+        big: |
+            when you submit a form, what request method does your browser use?
+        small: |
+            a. GET
+            b. POST
+            c. it depends!
+    answer: 
+        big: it depends!
+        small: |
+            The default is `POST`, but you can use `<form method="GET">` to send a GET request.
+
+            `POST` puts the form data in the request body.
+            `GET` puts the data in the URL.
+ 
+js-request-limits:
+    question: 
+        big: |
+            can your frontend Javascript code make any HTTP request it wants?
+        small: |
+            a. yeah, it's a program, of course!
+            b. no, there are limits!
+    answer: 
+        big: no!
+        small: |
+            The browser runs your Javascript code, and it puts limits (for
+            security reasons) on what HTTP requests it can make.
+            
+            The main limit is called the
+            "Same-origin policy"
+
