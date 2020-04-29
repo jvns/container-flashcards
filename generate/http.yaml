@@ -90,6 +90,21 @@ what-part-redirect:
             a. the response code!
         small: |
             If the response code is 301 or 302, your browser will redirect to the URL in the `Location` header.
+
+what-header-login:
+    question: 
+        big: |
+            what part of the HTTP request does your browser use to keep you logged into a website?
+        small: |
+            a. the method
+            b. the path
+            c. the headers
+            d. the body
+    answer: 
+        big: |
+            c. the headers!
+        small: |
+            Your browser will send `Cookie` headers with whatever the website set your cookies to when you logged in. That's what keeps you logged in.
         
 request-method-get:
     question: 
@@ -153,7 +168,6 @@ browser-view-http-request:
         small: |
             You can use the Network tab in developer tools to view every single HTTP request your browser is making for you!
             
- 
 500-error:
     question: 
         big: |
@@ -165,8 +179,11 @@ browser-view-http-request:
     answer: 
         big: b. server error
         small: |
-            technically a HTTP server can return whatever response code it wants
-            But according to the specification, codes starting 5 mean a server error.
+            Technically a HTTP server can return any response code it wants
+
+            But according to the spec,
+            4xx means client error and
+            5xx means server error.
 
 js-request-limits:
     question: 
