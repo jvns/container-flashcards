@@ -81,7 +81,7 @@ request-method-post:
             `POST` puts the form data in the request body.
             `GET` puts the data in the URL.
  
-what-part-html:
+content-type:
     question: 
         big: |
             what should the
