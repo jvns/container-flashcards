@@ -47,7 +47,36 @@ response-parts:
             2. the headers
             3. the body
 
+what-part-html:
+    question: 
+        big: |
+            which part of the HTTP response contains a website's HTML?
+        small: |
+            a. the response code
+            b. the headers
+            c. the body
+    answer: 
+        big: |
+            c. the body!
+        small: |
+            the body is the content of an HTTP response.
+            It's usually HTML, XML, JSON, CSS, Javascript, or an image, but it can be anything.
 
+what-part-caching:
+    question: 
+        big: |
+            which part of the HTTP response determines whether it should be cached?
+        small: |
+            a. the response code
+            b. the headers
+            c. the body
+    answer: 
+        big: |
+            b. the headers!
+        small: |
+            there are a few different headers that control caching. The
+            `Cache-Control` header is one of them.
+        
 request-method-get:
     question: 
         big: |
