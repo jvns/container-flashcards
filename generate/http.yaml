@@ -76,6 +76,20 @@ what-part-caching:
         small: |
             there are a few different headers that control caching. The
             `Cache-Control` header is one of them.
+
+what-part-redirect:
+    question: 
+        big: |
+            which part of the HTTP response determines whether the browser should redirect to another page?
+        small: |
+            a. the response code
+            b. the headers
+            c. the body
+    answer: 
+        big: |
+            a. the response code!
+        small: |
+            If the response code is 301 or 302, your browser will redirect to the URL in the `Location` header.
         
 request-method-get:
     question: 
