@@ -1,9 +1,9 @@
 fragment:
     question: 
         big: |
-            you go to the URL
-            `https://fruit.com/#banana`
-            Does `#banana` get sent to the server?
+            when you go to the URL
+            `https://fruit.com/#banana`,
+            does `#banana` get sent to the server?
         small: |
             a. yes
             b. no
@@ -12,16 +12,26 @@ fragment:
         small: |
             The fragment (`#banana`) isn't sent in the HTTP request the browser sends, so only frontend code can see it.
             
+ request-parts:
+    question: 
+        big: |
+            what are the 4 parts of a HTTP request?
+    answer: 
+        small: |
+            1. the method (like `GET` or `POST`)
+            2. the path (like `/cat.png`)
+            3. the headers
+            4. the body
             
 browser-view-http-request:
     question: 
         big: |
             when your browser makes a HTTP request, can you see the request and response?
         small: |
-            a. yes! it's my browser!
+            a. yes! I can see anything my browser does!
             b. no, not if it's encrypted.
     answer: 
-        big: yes! it's your browser!
+        big: yes!
         small: |
             You can use the Network tab in developer tools to view every single HTTP request your browser is making for you!
             
