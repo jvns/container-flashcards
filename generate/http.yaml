@@ -36,20 +36,18 @@ request-parts:
             2. the path (like /cat.png)
             3. the headers
             4. the body
-            
-browser-view-http-request:
+
+response-parts:
     question: 
         big: |
-            when your browser makes a HTTP request, can you see the request and response?
-        small: |
-            a. yes! I can see anything my browser does!
-            b. no, not if it's encrypted.
+            what are the 3 parts of a HTTP response?
     answer: 
-        big: yes!
         small: |
-            You can use the Network tab in developer tools to view every single HTTP request your browser is making for you!
-            
- 
+            1. the response code (like 200)
+            2. the headers
+            3. the body
+
+
 request-method-get:
     question: 
         big: |
@@ -82,6 +80,36 @@ request-method-post:
 
             `POST` puts the form data in the request body.
             `GET` puts the data in the URL.
+ 
+what-part-html:
+    question: 
+        big: |
+            what should the
+            Content-Type header be
+            for a request/response
+            with a JSON body?
+        small: |
+            a. application/json
+            b. json
+            c. text/json
+    answer: 
+        big: |
+            a. application/json
+        small: |
+            if you don't set `Content-Type` to the right value, often the client/server on the other end won't recognize it!
+            
+browser-view-http-request:
+    question: 
+        big: |
+            when your browser makes a HTTP request, can you see the request and response?
+        small: |
+            a. yes! I can see anything my browser does!
+            b. no, not if it's encrypted.
+    answer: 
+        big: yes!
+        small: |
+            You can use the Network tab in developer tools to view every single HTTP request your browser is making for you!
+            
  
 500-error:
     question: 
