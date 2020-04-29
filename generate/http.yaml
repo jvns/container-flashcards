@@ -12,14 +12,28 @@ fragment:
         small: |
             The fragment (`#banana`) isn't sent in the HTTP request the browser sends, so only frontend code can see it.
             
- request-parts:
+every-website-http:
+    question: 
+        big: |
+            does every website use HTTP?
+        small: |
+            a. yes!
+            b. no!
+    answer: 
+        big: |
+            a. yes!
+        small: |
+            every time your browser visits a website, it uses the HTTP
+            protocol
+
+request-parts:
     question: 
         big: |
             what are the 4 parts of a HTTP request?
     answer: 
         small: |
-            1. the method (like `GET` or `POST`)
-            2. the path (like `/cat.png`)
+            1. the method (like GET)
+            2. the path (like /cat.png)
             3. the headers
             4. the body
             
@@ -69,6 +83,20 @@ request-method-post:
             `POST` puts the form data in the request body.
             `GET` puts the data in the URL.
  
+500-error:
+    question: 
+        big: |
+            if a request's response code is 500, what does it mean?
+        small: |
+            a. client error
+            b. server error
+            c. it could mean anything!
+    answer: 
+        big: b. server error
+        small: |
+            technically a HTTP server can return whatever response code it wants
+            But according to the specification, codes starting 5 mean a server error.
+
 js-request-limits:
     question: 
         big: |
