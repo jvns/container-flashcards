@@ -1,10 +1,14 @@
 <template>
     <div>
-        <h1 class="text-4xl text-center my-8 w-full"> {{title}} </h1>
+        <div class="w-10/12 lg:w-1/3 m-0 m-auto my-8">
+            <h1 class="text-4xl text-center"> {{title}} </h1>
+            <a href="/">&#5130; back to all flashcards</a>
+        </div>
 
         <div class="flex flex-row flex-wrap justify-center">
             <!-- put the perspective up here instead of in the flashcard because a perspective creates a new stacking context and we want everything to be in the same stacking-context -->
             <div v-if="!done" class="w-10/12 lg:w-1/3">
+
                 <p class="text-l mb-4 text-center">
                 The point of this game is to learn something, not to get them
                 all "right"! The more you learn, the better. <br>(knowing the answers is ok too though)
