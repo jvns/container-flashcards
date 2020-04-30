@@ -5,14 +5,20 @@
         <p class="py-4">
         Here are all the sets of flashcards so far:
         </p>
-        <p class="underline text-blue-800">
+        On networking:
+        <p class="underline text-blue-800 my-2 px-4">
         <ul>
-            <li><a class="hover:text-blue-400" href="/container-basics">Container basics</a></li>
             <li><a class="hover:text-blue-400" href="/linux">Linux</a></li>
             <li><a class="hover:text-blue-400" href="/dns">DNS</a></li>
             <li><a class="hover:text-blue-400" href="/tls">TLS</a></li>
             <li><a class="hover:text-blue-400" href="/network-packets">Network packets</a></li>
             <li><a class="hover:text-blue-400" href="/HTTP">HTTP</a></li>
+        </ul>
+        </p>
+        Other topics:
+        <p class="underline text-blue-800 my-2 px-4">
+        <ul>
+            <li><a class="hover:text-blue-400" href="/container-basics">Container basics</a></li>
             <li><a class="hover:text-blue-400" href="/sql-basics">SQL basics</a></li>
         </ul>
         </p>
