@@ -55,6 +55,19 @@ module.exports = {
         title: 'SQL flashcards',
         template: 'public/index.html',
         filename: 'sql-basics/index.html',
+    },
+    "http": {
+        entry: 'src/pages/http.ts',
+        title: 'HTTP flashcards',
+        template: 'public/index.html',
+        filename: 'http/index.html',
+    },
+    "advanced-containers": {
+        entry: 'src/pages/advanced-containers.ts',
+        title: 'more container flashcards',
+        template: 'public/index.html',
+        filename: 'advanced-containers/index.html',
     }
+
   }
 }

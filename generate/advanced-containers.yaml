@@ -1,7 +1,7 @@
 kernel-features:
     question: 
         big: |
-            name 2 Linux kernel features that make containers work?
+            name 2 Linux kernel features that make containers work
     answer: 
         small: |
             1. cgroups

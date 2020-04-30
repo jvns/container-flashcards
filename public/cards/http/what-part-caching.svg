@@ -1,0 +1,27 @@
+<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg">
+  <style>
+@import url("/fonts/stylesheet.css");
+.big {
+    white-space: pre;
+    font-size: 24px;
+    text-anchor: middle;
+}
+.line {
+    dominant-baseline: hanging;
+    font-family: 'juliabold';
+}
+.small {
+    white-space: pre;
+    font-size: 20px;
+}
+.code {
+    font-family: 'Inconsolata';
+}
+</style>
+  <text class="line big" x="200" y="20">which part of the HTTP</text>
+  <text class="line big" x="200" y="48">response determines whether</text>
+  <text class="line big" x="200" y="76">it should be cached?</text>
+  <text class="line small" x="30" y="141.0">a. the response code</text>
+  <text class="line small" x="30" y="165.0">b. the headers</text>
+  <text class="line small" x="30" y="189.0">c. the body</text>
+  </svg>

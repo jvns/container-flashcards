@@ -1,0 +1,26 @@
+<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg">
+  <style>
+@import url("/fonts/stylesheet.css");
+.big {
+    white-space: pre;
+    font-size: 24px;
+    text-anchor: middle;
+}
+.line {
+    dominant-baseline: hanging;
+    font-family: 'juliabold';
+}
+.small {
+    white-space: pre;
+    font-size: 20px;
+}
+.code {
+    font-family: 'Inconsolata';
+}
+</style>
+  <text class="line big" x="200" y="20">namespaces</text>
+  <text class="line small" x="30" y="101.0">the container has its own PID</text>
+  <text class="line small" x="30" y="125.0">namespace, so it can only see</text>
+  <text class="line small" x="30" y="149.0">processes inside its PID</text>
+  <text class="line small" x="30" y="173.0">namespace</text>
+  </svg>
