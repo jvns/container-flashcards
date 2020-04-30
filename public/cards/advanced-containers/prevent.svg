@@ -19,12 +19,11 @@
 }
 </style>
   <text class="line big" x="200" y="20">which 2 Linux kernel features</text>
-  <text class="line big" x="200" y="48">can prevent a container from</text>
-  <text class="line big" x="200" y="76">using privileged system</text>
-  <text class="line big" x="200" y="104">calls?</text>
-  <text class="line small" x="30" y="131.0">1. cgroups</text>
-  <text class="line small" x="30" y="155.0">2. namespaces</text>
-  <text class="line small" x="30" y="179.0">3. capabilities</text>
-  <text class="line small" x="30" y="203.0">4. seccomp-bpf</text>
-  <text class="line small" x="30" y="227.0">5. overlayfs</text>
+  <text class="line big" x="200" y="48">can block privileged system</text>
+  <text class="line big" x="200" y="76">calls?</text>
+  <text class="line small" x="30" y="117.0">1. cgroups</text>
+  <text class="line small" x="30" y="141.0">2. namespaces</text>
+  <text class="line small" x="30" y="165.0">3. capabilities</text>
+  <text class="line small" x="30" y="189.0">4. seccomp-bpf</text>
+  <text class="line small" x="30" y="213.0">5. overlayfs</text>
   </svg>

@@ -29,8 +29,7 @@ kernel-feature-memory:
 ps-processes:
     question: 
         big: |
-            which kernel feature prevents you from seeing other processes on
-            the computer when you run `ps` in a container?
+            which kernel feature hides outside processes from the container?
         small: |
             a. cgroups
             b. namespaces
@@ -109,7 +108,7 @@ namespace-command:
 prevent:
     question: 
         big: |
-            which 2 Linux kernel features can prevent a container from using privileged system calls?
+            which 2 Linux kernel features can block privileged system calls?
         small: |
             1. cgroups
             2. namespaces

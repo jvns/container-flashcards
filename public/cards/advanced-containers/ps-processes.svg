@@ -18,14 +18,12 @@
     font-family: 'Inconsolata';
 }
 </style>
-  <text class="line big" x="200" y="20">which kernel feature prevents</text>
-  <text class="line big" x="200" y="48">you from seeing other</text>
-  <text class="line big" x="200" y="76">processes on</text>
-  <text class="line big" x="200" y="104">the computer when you run</text>
-  <text class="line big" x="200" y="132"><tspan class="code">ps</tspan> in a container?</text>
-  <text class="line small" x="30" y="145.0">a. cgroups</text>
-  <text class="line small" x="30" y="169.0">b. namespaces</text>
-  <text class="line small" x="30" y="193.0">c. capabilities</text>
-  <text class="line small" x="30" y="217.0">d. seccomp-bpf</text>
-  <text class="line small" x="30" y="241.0">e. overlayfs</text>
+  <text class="line big" x="200" y="20">which kernel feature hides</text>
+  <text class="line big" x="200" y="48">outside processes from the</text>
+  <text class="line big" x="200" y="76">container?</text>
+  <text class="line small" x="30" y="117.0">a. cgroups</text>
+  <text class="line small" x="30" y="141.0">b. namespaces</text>
+  <text class="line small" x="30" y="165.0">c. capabilities</text>
+  <text class="line small" x="30" y="189.0">d. seccomp-bpf</text>
+  <text class="line small" x="30" y="213.0">e. overlayfs</text>
   </svg>
