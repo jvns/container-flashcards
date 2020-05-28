@@ -7,7 +7,6 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-python start-local-server.py
 vue-cli-service serve
 ```
 

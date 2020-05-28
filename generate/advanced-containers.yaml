@@ -87,6 +87,7 @@ just-use-cgroups:
         small: |
             all of the "container" kernel features (cgroups, namespaces, capabilities, etc) can be used independently of one another
 
+# just namespaces probably 
 whats-inside:
     question: 
         big: |
@@ -108,7 +109,7 @@ namespace-command:
 prevent:
     question: 
         big: |
-            which 2 Linux kernel features can block privileged system calls?
+            what Linux kernel features lets you block privileged system calls?
         small: |
             1. cgroups
             2. namespaces
@@ -118,10 +119,10 @@ prevent:
 
     answer: 
         big: |
-            capabilities
-            and seccomp-bpf!
+            seccomp-bpf!
         small: |
-            seccomp-bpf whitelists system calls and capabilities only allow certain categories of activity
+            # todo: fix
+            seccomp-bpf l
 
 exceed-memory:
     question: 

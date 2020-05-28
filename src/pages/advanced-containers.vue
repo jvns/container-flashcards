@@ -13,7 +13,6 @@
         "prevent",
         "exceed-memory",
         "ip-address",
-        "ip-address",
         "memory-tracking",
         ]'
         basedir='advanced-containers'
